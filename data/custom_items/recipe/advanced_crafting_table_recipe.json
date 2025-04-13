@@ -1,0 +1,60 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+      "ABA",
+      "CDC",
+      "CEC"
+    ],
+    "key": {
+      "A": [
+        "minecraft:redstone_torch"
+      ],
+      "B": [
+        "minecraft:hopper"
+      ],
+      "C": [
+        "minecraft:iron_ingot"
+      ],
+      "D": [
+        "minecraft:crafter"
+      ],
+      "E": [
+        "minecraft:redstone"
+      ]
+    },
+    "result": {
+      "id": "minecraft:armor_stand",
+      "components": {
+        "minecraft:entity_data": {
+          "id": "minecraft:armor_stand",
+          "CustomName": {
+            "text": "改良型作業台",
+            "type": "text",
+            "color": "aqua"
+          },
+          "CustomNameVisible": false,
+          "Tags": [
+            "craft_pos"
+          ],
+          "Invisible": true,
+          "Marker": true,
+          "NoBasePlate": false,
+          "ShowArms": false,
+          "Small": true,
+          "DisabledSlots": 32
+        },
+        "minecraft:enchantments": {},
+        "minecraft:tooltip_display": {
+          "hide_tooltip": false,
+          "hidden_components": [
+            "minecraft:enchantments"
+          ]
+        },
+        "minecraft:custom_name": {"text":"改良型作業台","italic":false},
+        "minecraft:rarity": "rare",
+        "minecraft:lore": [{"text":"右クリックで設置、近くに立ってスニーク長押しで破壊します！","italic":false},{"text":"クラフト素材を入れるとクラフト結果が出ます！その状態でスニークするとアイテムを入手できます。","italic":false},{"text":"注意：クラフト素材は一個分の素材を入れてください！","bold":true,"italic":false}]
+      },
+      "count": 1
+    }
+  }

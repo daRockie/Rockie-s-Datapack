@@ -1,0 +1,31 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "AAA",
+      "ABA",
+      "AAA"
+    ],
+    "key": {
+      "A": [
+        "minecraft:slime_ball"
+      ],
+      "B": [
+        "minecraft:slime_block"
+      ]
+    },
+    "result": {
+      "id": "minecraft:slime_ball",
+      "components": {
+        "minecraft:custom_name": {
+          "text": "圧縮されたスライムボール",
+          "color": "#19f044",
+          "bold": true,
+          "italic": false
+        },
+        "minecraft:enchantment_glint_override": true,
+        "minecraft:lore": [
+          "すっごいベタベタ。"
+        ]
+      }
+    }
+  }

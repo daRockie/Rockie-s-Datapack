@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "bonus_rolls": 0,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:gunpowder",
+            "weight": 1,
+            "functions": [{
+                "function": "minecraft:set_components",
+                "components":{
+                    "minecraft:rarity": "uncommon",
+                    "minecraft:custom_name": {"text":"強化型火薬","italic":false},
+                    "minecraft:lore": [
+                        {"text":"とても焦げ臭い...","italic":false}
+                    ]
+                }
+          }]
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "functions": [],
+            "name": "minecraft:rotten_flesh"
+          }
+        ],
+        "rolls": 2
+      }
+    ]
+  }

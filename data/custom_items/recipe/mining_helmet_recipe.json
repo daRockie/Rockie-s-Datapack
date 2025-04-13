@@ -1,0 +1,44 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "CAC",
+      "ABA",
+      "CAC"
+    ],
+    "key": {
+      "A": [
+        "minecraft:iron_ingot"
+      ],
+      "B": [
+        "minecraft:golden_helmet"
+      ],
+      "C": [
+        "coal"
+      ]
+    },
+    "result": {
+      "id": "minecraft:leather_helmet",
+      "components": {
+        "minecraft:custom_name": {
+          "text": "鉱夫のヘルメット",
+          "color": "dark_red",
+          "bold": true,
+          "italic": false
+        },
+        "minecraft:enchantment_glint_override": true,
+        "minecraft:trim": {
+          "material": "minecraft:gold",
+          "pattern": "minecraft:sentry"
+        },
+        "minecraft:dyed_color": 0,
+        "minecraft:attribute_modifiers": [
+          {
+            "type": "minecraft:block_break_speed",
+            "id": "",
+            "amount": 1,
+            "operation": "add_value"
+          }
+        ]
+      }
+    }
+  }

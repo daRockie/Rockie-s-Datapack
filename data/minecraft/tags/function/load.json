@@ -1,5 +1,7 @@
 {
   "values": [
-    "summonmob_main:reload"
+    "summonmob_main:reload",
+    "custom_ai:load",
+    "custom_items:load"
     ]
 }

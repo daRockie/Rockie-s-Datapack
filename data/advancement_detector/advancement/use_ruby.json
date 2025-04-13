@@ -1,0 +1,23 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:red_wool"
+      },
+      "title": "ちょっと！もったいないよ！！",
+      "description": "ルビーを染色に使用する。"
+    },
+    "parent": "advancement_detector:ruby_craft",
+    "criteria": {
+      "use": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": "minecraft:red_dye",
+            "components": {
+              "minecraft:enchantment_glint_override": true
+            }
+          }
+        }
+      }
+    }
+  }

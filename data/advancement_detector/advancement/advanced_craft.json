@@ -1,0 +1,23 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:crafting_table",
+        "count": 1
+      },
+      "title": {
+        "text": "産業の革新"
+      },
+      "description": {
+        "text": "改良型作業台をクラフトする"
+      }
+    },
+    "parent": "advancement_detector:install",
+    "criteria": {
+      "get_item": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": "custom_items:advanced_crafting_table_recipe"
+        }
+      }
+    }
+  }

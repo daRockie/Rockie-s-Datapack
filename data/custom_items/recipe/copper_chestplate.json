@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "A A",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": [
+        "minecraft:copper_ingot"
+      ]
+    },
+    "result": {
+      "id": "minecraft:leather_chestplate",
+      "components": {
+        "minecraft:custom_name": "銅のチェストプレート",
+        "minecraft:enchantments": {
+          "minecraft:unbreaking": 1,
+          "minecraft:protection": 1
+        },
+        "minecraft:trim": {
+          "material": "minecraft:copper",
+          "pattern": "minecraft:bolt"
+        },
+        "minecraft:dyed_color": 16746552
+      }
+    },
+    "show_notification": true
+  }

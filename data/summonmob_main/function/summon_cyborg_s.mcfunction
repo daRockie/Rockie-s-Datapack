@@ -1,0 +1,5 @@
+data modify entity @s DeathTime set value 19
+data modify entity @s Silent set value 1b
+execute at @s run summon area_effect_cloud ~ ~ ~ {Particle:{type:large_smoke},Radius:0,Duration:4,Tags:["kill_item"]}
+execute at @s run summon skeleton ~ ~ ~ {CustomName:[{text:"サイボーグスケルトン"}],Health:25,Silent:1b,Tags:["spawned","proceed","cyborg_s"],equipment:{mainhand:{id:bow},head:{id:player_head,components:{profile:{properties:[{value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2EwOGE4ODlhNjQwNTQwYmE1YzcxZGM4OWJlMzgyNWVkMWJlYmYzNjlkNzFiY2U5YWJhYzI0ZWMyM2YyYTQ1YyJ9fX0=",name:textures}]},custom_name:[{text:"サイボーグヘッド",italic:false,color:green}],lore:[[{text:"最新のCPU　Vintel Gore die7が入っている。",italic:false}],"",[{text:"クラフト素材",italic:false,bold:true,underlined:true,color:yellow}]]}},chest:{id:iron_chestplate}},attributes:[{id:movement_speed,base:0.5f},{id:max_health,base:25f}]}
+kill @s

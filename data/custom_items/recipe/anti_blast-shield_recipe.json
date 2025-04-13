@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "key": {
+    "A": [
+      "minecraft:gunpowder"
+    ],
+    "B": [
+      "minecraft:shield"
+    ]
+  },
+  "result": {
+    "id": "minecraft:shield",
+    "components": {
+      "minecraft:custom_name": {"text":"対爆シールド","italic":false},
+      "minecraft:lore": [{"text":"近くに爆発するモブがいる場合、耐性Iと再生IIを付与します。","italic":false}],
+      "minecraft:rarity": "uncommon",
+      "base_color": "lime",
+      "banner_patterns": [{"pattern":"bricks","color":"green"},{"pattern":"gradient","color":"lime"},{"pattern":"creeper","color":"black"},{"pattern":"border","color":"green"}],
+      "minecraft:tooltip_display": {
+        "hide_tooltip": false,
+        "hidden_components": [
+          "minecraft:banner_patterns"
+        ]
+      }
+    },
+    "count": 1
+  }
+}

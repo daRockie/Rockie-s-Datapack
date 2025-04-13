@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:tnt",
+      "count": 1
+    },
+    "title": {
+      "text": "爆発物処理班"
+    },
+    "description": {
+      "text": "爆発するアンデッドを倒す"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "advancement_detector:install",
+  "criteria": {
+    "kill": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": [
+            "minecraft:husk",
+            "minecraft:zombie"
+          ],
+          "nbt": "{Tags:[\"boomer_zombie\",\"spawned\",\"proceed\"]}"
+        }
+      }
+    }
+  }
+}

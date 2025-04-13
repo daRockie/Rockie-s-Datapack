@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:grass_block",
+      "count": 1
+    },
+    "title": {
+      "text": "帰省"
+    },
+    "description": {
+      "text": "ネザーから帰還する"
+    },
+    "frame": "goal"
+  },
+  "parent": "minecraft:story/enter_the_nether",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "from": "minecraft:the_nether",
+        "to": "minecraft:overworld"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  }
+}
