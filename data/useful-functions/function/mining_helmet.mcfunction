@@ -1,0 +1,1 @@
+execute if predicate useful-functions:mining_helmet run function useful-functions:auto_torch

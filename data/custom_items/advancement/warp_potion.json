@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "use_potion": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:player_head",
+          "components": {
+            "minecraft:rarity": "epic",
+            "minecraft:custom_name": {"text":"転移のポーション","italic":false}
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "custom_items:warp_potion"
+  }
+}

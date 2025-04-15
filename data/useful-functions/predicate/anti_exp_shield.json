@@ -1,0 +1,38 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "offhand": {
+        "items": "minecraft:shield",
+        "count": 1,
+        "components": {
+          "minecraft:tooltip_display": {
+            "hidden_components": [
+              "minecraft:banner_patterns"
+            ]
+          },
+          "minecraft:rarity": "uncommon",
+          "minecraft:banner_patterns": [
+            {
+              "color": "green",
+              "pattern": "minecraft:bricks"
+            },
+            {
+              "color": "lime",
+              "pattern": "minecraft:gradient"
+            },
+            {
+              "color": "black",
+              "pattern": "minecraft:creeper"
+            },
+            {
+              "color": "green",
+              "pattern": "minecraft:border"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

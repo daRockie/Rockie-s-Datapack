@@ -4,5 +4,5 @@ execute at @s if score @s bombTimer matches 1 run playsound minecraft:item.flint
 execute at @s if score @s bombTimer matches 1 run playsound minecraft:entity.tnt.primed hostile @a ~ ~ ~ 10 1
 execute if score @s bombTimer matches 50.. run effect give @s speed 2 2
 # execute at @s if entity @e[type=zombie,nbt={Tags:["proceed","spawned","boomer_zombie","ignited"],OnGround:1b},distance=0.2..] run function custom_ai:step_away
-execute at @s if score @s bombTimer matches 80.. run summon tnt ~ ~ ~ {fuse:0}
-execute if score @s bombTimer matches 80.. run kill @s
+execute at @s if score @s bombTimer matches 80.. run function summonmob_main:kill_and_boom
+execute at @s if block ~ ~ ~ water run function summonmob_main:kill_and_boom

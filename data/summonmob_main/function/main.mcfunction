@@ -2,6 +2,7 @@ function summonmob_main:addcreepertarget
 function summonmob_main:addskeletontarget
 function summonmob_main:addzombietarget
 function summonmob_main:addemantarget
+function summonmob_main:explosive_mobs
 
 # エリアエフェクトクラウドの処理
 execute as @e[type=minecraft:area_effect_cloud,tag=kill_item] at @s run kill @e[type=item,distance=0..2]
@@ -23,11 +24,19 @@ execute as @e[type=creeper,tag=!proceed] if score @s spawnRandom matches 0..20 r
 # ドルフィン・ライダー
 execute as @e[type=dolphin,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon_d_rider
 
+# イカドラウンド
+execute as @e[type=squid,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summmon_squid
+
+# スカウトゾンビ
+execute as @e[type=zombie,tag=!proceed] if score @s spawnRandom matches 30..42 run function summonmob_main:summon_scout_z
+
 # ヌカクリーパー
 execute as @e[type=creeper,tag=!proceed] if score @s spawnRandom matches 30..33 run function summonmob_main:summon_nuka_creeper
 
 # ベイビーブーマーゾンビ　召喚
 execute as @e[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..30 run function summonmob_main:summon_bz_baby
+
+execute as @e[type=iron_golem] at @s run data modify entity @s AngryAt set from entity @e[type=creeper,distance=0..16,limit=1]
 
 # 使者script
 execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] if score @s ai_timer matches 60 at @s run function summonmob_main:sisha1_pre_explode

@@ -5,4 +5,5 @@ tag @e[type=minecraft:wandering_trader] add crep_target
 tag @e[type=minecraft:snow_golem] add crep_target
 tag @e[type=minecraft:cat] add crep_target
 tag @e[type=minecraft:ocelot] add crep_target
+tag @e[type=zombie_villager] remove crep_target
 tag @a[gamemode=!adventure,gamemode=!survival] remove crep_target

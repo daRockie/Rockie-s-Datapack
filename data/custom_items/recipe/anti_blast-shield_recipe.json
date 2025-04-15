@@ -2,16 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    " A ",
+    "CAC",
     "ABA",
-    " A "
+    "CAC"
   ],
   "key": {
     "A": [
       "minecraft:gunpowder"
     ],
     "B": [
-      "minecraft:shield"
+      "minecraft:iron_block"
+    ],
+    "C": [
+      "minecraft:gold_ingot"
     ]
   },
   "result": {

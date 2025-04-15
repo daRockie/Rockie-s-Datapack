@@ -1,89 +1,17 @@
 [
-    {
-        "condition": "minecraft:location_check",
-        "offsetX": 1,
-        "offsetZ": 1,
-        "predicate": {
-          "block": {
-            "blocks": [
-              "minecraft:soul_campfire",
-              "minecraft:campfire"
-            ]
-          }
-        }
-    },
-    {
-        "condition": "minecraft:location_check",
-        "offsetX": -1,
-        "offsetZ": -1,
-        "predicate": {
-          "block": {
-            "blocks": [
-              "minecraft:soul_campfire",
-              "minecraft:campfire"
-            ]
-          }
-        }
-    },    
-    {
-        "condition": "minecraft:location_check",
-        "offsetX": 1,
-        "offsetZ": -1,
-        "predicate": {
-          "block": {
-            "blocks": [
-              "minecraft:soul_campfire",
-              "minecraft:campfire"
-            ]
-          }
-        }
-    },
-    {
-        "condition": "minecraft:location_check",
-        "offsetZ": -1,
-        "predicate": {
-          "block": {
-            "blocks": [
-              "minecraft:soul_campfire",
-              "minecraft:campfire"
-            ]
-          }
-        }
-    },
-    {
-        "condition": "minecraft:location_check",
-        "offsetZ": 1,
-        "predicate": {
-          "block": {
-            "blocks": [
-              "minecraft:soul_campfire",
-              "minecraft:campfire"
-            ]
-          }
-        }
-    },
-    {
-        "condition": "minecraft:location_check",
-        "offsetX": -1,
-        "predicate": {
-          "block": {
-            "blocks": [
-              "minecraft:soul_campfire",
-              "minecraft:campfire"
-            ]
-          }
-        }
-    },
-    {
-      "condition": "minecraft:location_check",
-      "offsetX": 1,
-      "predicate": {
-        "block": {
-          "blocks": [
-            "minecraft:soul_campfire",
-            "minecraft:campfire"
-          ]
-        }
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "dimension": "minecraft:overworld"
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "effects": {
+        "minecraft:regeneration": {}
       }
     }
+  }
 ]

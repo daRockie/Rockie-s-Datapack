@@ -1,0 +1,1 @@
+execute at @s[nbt={OnGround:1b}] if entity @e[tag=zombies_target,distance=2..4] run function custom_ai:chase_jump

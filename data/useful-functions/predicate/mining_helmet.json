@@ -1,0 +1,38 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "head": {
+        "items": "minecraft:leather_helmet",
+        "count": 1,
+        "components": {
+          "minecraft:attribute_modifiers": [
+            {
+              "type": "minecraft:block_break_speed",
+              "id": "minecraft:mining_speed",
+              "amount": 1,
+              "operation": "add_value",
+              "slot": "head"
+            }
+          ],
+          "minecraft:tooltip_display": {
+            "hidden_components": [
+              "minecraft:trim",
+              "minecraft:dyed_color"
+            ]
+          },
+          "minecraft:lore": [
+            {"text":"暗い場所にいる時に装備していると、松明を自動で設置します。（一度に2個消費）","italic":false}
+          ],
+          "minecraft:custom_name": {"text": "鉱夫のヘルメット","color": "dark_red","bold": true,"italic": false},
+          "minecraft:trim": {
+            "material": "minecraft:gold",
+            "pattern": "minecraft:sentry"
+          },
+          "minecraft:dyed_color": 0
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,2 @@
 function crafter_main:villager_craft
+function crafter_main:ruby_chestplate_craft

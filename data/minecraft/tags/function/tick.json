@@ -3,6 +3,7 @@
     "summonmob_main:main",
     "custom_ai:main",
     "custom_items:main",
-    "crafter_main:villager_craft"
+    "crafter_main:villager_craft",
+    "useful-functions:main"
   ]
 }
