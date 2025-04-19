@@ -1,0 +1,1 @@
+give @p skeleton_spawn_egg[custom_name=[{"text":"エリートスケルトンのスポーンエッグ","italic":false}],entity_data={id:skeleton,CustomName:[{text:"エリートスケルトン"}],CanPickUpLoot:1b,Tags:[spawned,proceed,elite_skeleton],equipment:{mainhand:{id:bow,components:{custom_data:{HasAlready:1}}},head:{id:iron_helmet}},attributes:[{id:follow_range,base:32f}]}] 1

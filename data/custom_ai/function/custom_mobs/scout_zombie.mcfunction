@@ -1,0 +1,1 @@
+execute at @s[nbt={OnGround:1b}] if entity @e[tag=zombies_target,distance=2..4] unless block ^ ^ ^1 #air run function custom_ai:movements/chase_jump
