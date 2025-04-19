@@ -1,1 +1,8 @@
+# エリートスケルトン
 give @p skeleton_spawn_egg[custom_name=[{"text":"エリートスケルトンのスポーンエッグ","italic":false}],entity_data={id:skeleton,CustomName:[{text:"エリートスケルトン"}],CanPickUpLoot:1b,Tags:[spawned,proceed,elite_skeleton],equipment:{mainhand:{id:bow,components:{custom_data:{HasAlready:1}}},head:{id:iron_helmet}},attributes:[{id:follow_range,base:32f}]}] 1
+
+# ブーマーゾンビ
+give @p zombie_spawn_egg[custom_name=[{"text":"ブーマーゾンビのスポーンエッグ","italic":false}],entity_data={id:zombie,CustomName:[{text:"ブーマー　ゾンビ"}],Health:25,Silent:1b,Tags:[boomer_zombie,proceed,spawned],equipment:{head:{id:tnt}},attributes:[{id:movement_speed,base:0.3f},{id:max_health,base:25f}]}] 1
+
+# 見習い魔導士
+give @p skeleton_spawn_egg[custom_name=[{"text":"見習い魔導士のスポーンエッグ","italic":false}],entity_data={id:skeleton,CustomName:[{text:"見習い魔導士"}],Health:20,Tags:[wizard_1,proceed,spawned],equipment:{mainhand:{id:bow},offhand:{id:tipped_arrow,components:{potion_contents:{custom_color:6192150,custom_effects:[{id:slowness,duration:3,amplifier:1}]},custom_name:[{text:"麻酔薬が塗られた矢",italic:false}]}},head:{id:player_head,components:{profile:{properties:[{value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTQwN2RhYTg3YzQyZjg2YzA3ODk1ZmQ0NTUwMTkwZDEwOGFlNzJiYThiNzllYzMzNTEzNmEyYmQ0MDczY2Y5ZCJ9fX0=",name:textures}]},custom_name:[{text:"見習い魔導士のゴーグル",italic:false,bold:true}],lore:[[{text:"見習い魔導士がつける仮面。",italic:false}],[{text:"これがないと魔導士として認めてもらえない",italic:false}],"",[{text:"クラフト素材",italic:false,underlined:true,color:yellow,bold:true}]]}},chest:{id:chainmail_chestplate},legs:{id:iron_leggings},feet:{id:leather_boots}},drop_chances:{head:0.1f},attributes:[{id:movement_speed,base:0.4f},{id:follow_range,base:64f},{id:max_health,base:20f}]}] 1

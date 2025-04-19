@@ -40,8 +40,8 @@ execute as @e[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if score @s sp
 execute as @e[type=iron_golem] at @s run data modify entity @s AngryAt set from entity @e[type=creeper,distance=0..16,limit=1]
 
 # 使者script
-execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] if score @s ai_timer matches 60 at @s run function summonmob_main:sisha1_pre_explode
-execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] if score @s ai_timer matches 80.. at @s if entity @e[tag=eman_target,limit=1,distance=0..4] run function summonmob_main:sisha1_explode
+execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] if score @s ai_timer matches 60 at @s run function custom_ai:movements/sisha1_explode
+execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] if score @s ai_timer matches 80.. at @s if entity @e[tag=eman_target,limit=1,distance=0..4] run function custom_ai:movements/sisha1_explode
 execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] at @s run particle witch ~ ~2 ~ 1 1 1 0.05 2
 execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] at @s run particle enchant ~ ~2 ~ 0.5 0.5 0.5 0.05 3
 
@@ -83,14 +83,14 @@ execute as @e[tag=!spawned] run function summonmob_main:mobspawning
 
 # ブーマーゾンビの処理実行
 execute as @e[type=minecraft:zombie,tag=boomer_zombie] at @s if entity @e[distance=0..5,tag=zombies_target,limit=1,sort=nearest] run tag @s add ignited
-execute as @e[type=minecraft:zombie,tag=boomer_zombie,tag=ignited] run function summonmob_main:bz_script
+execute as @e[type=minecraft:zombie,tag=boomer_zombie,tag=ignited] run function custom_ai:custom_mobs/bz_script
 
 execute as @e[type=minecraft:husk,tag=boomer_zombie] at @s if entity @e[distance=0..5,tag=zombies_target,limit=1,sort=nearest] run tag @s add ignited
-execute as @e[type=minecraft:husk,tag=boomer_zombie,tag=ignited] run function summonmob_main:bz_script
+execute as @e[type=minecraft:husk,tag=boomer_zombie,tag=ignited] run function custom_ai:custom_mobs/bz_script
 
 
 # 見習い魔導士の処理実行
-execute as @e[type=minecraft:skeleton,tag=wizard_1] if score @s bombTimer matches 80.. at @s if entity @e[tag=skeleton_t,distance=0..3] at @s anchored feet unless block ^ ^-0.5 ^-4 #air anchored eyes if block ^ ^ ^-4 air if block ^ ^-1 ^-4 air run function summonmob_main:wz1_script
+execute as @e[type=minecraft:skeleton,tag=wizard_1] if score @s bombTimer matches 80.. at @s if entity @e[tag=skeleton_t,distance=0..3] at @s anchored feet unless block ^ ^-0.5 ^-4 #air anchored eyes if block ^ ^ ^-4 air if block ^ ^-1 ^-4 air run function custom_ai:movements/wizard_warp
 execute as @e[type=minecraft:skeleton,tag=wizard_1] if score @s bombTimer matches ..99 run scoreboard players add @s bombTimer 1
 execute as @e[type=skeleton,tag=wizard_1] run scoreboard players add @s bombTimer 0
 
