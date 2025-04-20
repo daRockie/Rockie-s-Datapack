@@ -1,9 +1,8 @@
-execute store result score @s funValue run random value 0..1
+summon marker ^ ^ ^5 {Tags:["jump_marker"]}
 
-execute if score @s funValue matches 0 run summon marker ^2 ^ ^3 {Tags:["jump_marker"]}
-execute if score @s funValue matches 0 run summon marker ^-2 ^ ^3 {Tags:["jump_marker"]}
+execute at @s run teleport @s ~ ~ ~ facing entity @e[tag=skeleton_t,limit=1,sort=nearest]
 
-execute at @s run teleport @s ~ ~ ~ facing entity @e[tag=zombies_target,limit=1,sort=nearest]
+execute at @s run tp @s ~ ~ ~ ~180 ~
 
 execute at @s store result score @s x run data get entity @s Pos[0] 500
 execute at @s store result score @s z run data get entity @s Pos[2] 500
@@ -11,12 +10,7 @@ execute at @s store result score @s z run data get entity @s Pos[2] 500
 execute at @s store result score @s xDis run data get entity @e[limit=1,sort=nearest,tag=jump_marker] Pos[0] 500
 execute at @s store result score @s zDis run data get entity @e[limit=1,sort=nearest,tag=jump_marker] Pos[2] 500
 
-scoreboard players operation @s xDis -= @s x
-scoreboard players operation @s zDis -= @s z
-
-kill @e[type=marker,distance=0..16,tag=jump_marker]
-
-# tellraw @a [{"score":{"objective":"xDis","name":"@s"}},", ",{"score":{"objective":"yDis","name":"@s"}},", ",{"score":{"objective":"zDis","name":"@s"}}]
+tellraw @a [{"score":{"objective":"xDis","name":"@s"}},", ",{"score":{"objective":"yDis","name":"@s"}},", ",{"score":{"objective":"zDis","name":"@s"}}]
 
 execute store result entity @s Motion[0] double 0.0005 run scoreboard players get @s xDis
 data modify entity @s Motion[1] set value 0.4

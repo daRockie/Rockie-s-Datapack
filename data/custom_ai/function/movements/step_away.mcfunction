@@ -1,5 +1,5 @@
 summon marker ^ ^ ^-6 {Tags:["jump_marker"]}
-execute at @s run teleport @s ~ ~ ~ facing entity @e[tag=zombies_target,limit=1,sort=nearest]
+execute at @s run teleport @s ~ ~ ~ facing entity @e[tag=skeleton_t,limit=1,sort=nearest]
 
 execute at @s store result score @s x run data get entity @s Pos[0] 500
 execute at @s store result score @s z run data get entity @s Pos[2] 500

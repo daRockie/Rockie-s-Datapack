@@ -1,0 +1,2 @@
+execute at @s run summon armor_stand ~ ~-2.5 ~ {Tags:["mummy_reviving","proceed","spawned"],Pose:{Head:[8f,11f,0f]},Invisible:1b,NoBasePlate:1b,DisabledSlots:4144959,Invulnerable:1b,NoGravity:1b,equipment:{head:{id:player_head,components:{profile:{properties:[{value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTcwMGY5MzRkOTU4MWY0YjhmNzBlN2U5NzZjZjgyNDRjY2MyYTc3MjU0M2Y0OWU2MjQ4MmRmYjU2MzRkMTgxZiJ9fX0=",name:textures}]}}}}}
+kill @s

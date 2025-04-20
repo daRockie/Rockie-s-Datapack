@@ -1,0 +1,4 @@
+particle minecraft:block{block_state:sand} ~ ~2 ~ 0.5 0.5 0.5 5 40
+playsound minecraft:entity.zombie.break_wooden_door hostile @a ~ ~ ~ 1 1
+summon husk ~ ~1.5 ~ {CustomName:[{text:"ミイラ",bold:false}],DeathLootTable:"custom_ai:mummy",Tags:["mummy_revived","proceed","spawned"],equipment:{head:{id:player_head,components:{profile:{properties:[{value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTAzMDdmNDkzZmRkYTc2ODU4ZTVkYWE1MTFlM2ZkYjRiN2VkMjQxZjdkM2E3YTIyNjU2ZWQ1YzZiYWNiZjUyIn19fQ==",name:textures}]}}}},drop_chances:{head:0f},attributes:[{id:follow_range,base:64f},{id:movement_speed,base:0.4f},{id:step_height,base:1f}],Motion:[0f,0.5f,0f]}
+kill @s

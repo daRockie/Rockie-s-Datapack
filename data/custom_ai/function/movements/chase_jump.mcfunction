@@ -12,5 +12,5 @@ scoreboard players operation @s zDis -= @s z
 # tellraw @a [{"score":{"objective":"xDis","name":"@s"}},", ",{"score":{"objective":"yDis","name":"@s"}},", ",{"score":{"objective":"zDis","name":"@s"}}]
 
 execute store result entity @s Motion[0] double 0.0005 run scoreboard players get @s xDis
-data modify entity @s Motion[1] set value 0.5
+data modify entity @s Motion[1] set value 0.45
 execute store result entity @s Motion[2] double 0.0005 run scoreboard players get @s zDis
