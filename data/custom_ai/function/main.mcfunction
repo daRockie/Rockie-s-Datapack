@@ -1,8 +1,8 @@
 # 自動起爆
-execute as @e[type=creeper,nbt={Tags:["proceed","spawned"]}] run function custom_ai:advanced_ai/auto_explode
+execute as @e[type=creeper,nbt={Tags:["proceed","spawned"]}] run function custom_ai:advanced_ai/creeper/auto_explode
 
 # ヌカクリーパー
-execute as @e[type=creeper,nbt={Tags:["nuka_c","spawned","proceed"]}] run function custom_ai:custom_mobs/nuka_creeper
+execute as @e[type=creeper,nbt={Tags:["nuka_c","spawned","proceed"],ignited:1b}] run function custom_ai:custom_mobs/nuka_creeper
 
 # ブルードマザー
 execute as @e[type=minecraft:spider,tag=powered_spider] at @s if predicate useful-functions:is_dark run function custom_ai:custom_mobs/bloodmother
@@ -28,6 +28,10 @@ execute as @e[type=creeper,tag=speed_crp] run function custom_ai:custom_mobs/sco
 # ジャンプマーカー自動処理
 execute as @e[type=marker,tag=jump_marker,tag=proceed] run kill @s
 
+# ワープポイント処理
+execute as @e[type=armor_stand,tag=spread] run scoreboard players add @s ai_timer 1
+execute as @e[type=armor_stand,tag=spread] if score @s ai_timer matches 40.. run kill @s
+
 # ミイラ蘇生
 execute as @e[type=minecraft:armor_stand,tag=death_finder] on vehicle if entity @s[nbt={DeathTime:19s}] as @e[type=armor_stand,tag=death_finder,tag=!vehicleiskilled] run tag @s add vehicleiskilled
 execute as @e[type=armor_stand,tag=death_finder,tag=vehicleiskilled,nbt={OnGround:1b}] at @s run function custom_ai:movements/mummy/mummy_revive
@@ -47,3 +51,6 @@ execute as @e[type=armor_stand,tag=mummy_reviving] at @s run function custom_ai:
 
 # 蘇生後ミイラ
 execute as @e[type=husk,tag=mummy_revived] at @s run function custom_ai:custom_mobs/scout_zombie
+
+# 強化ウィッチ
+execute as @e[type=witch,nbt={Tags:["spawned","proceed"]}] at @s run function custom_ai:advanced_ai/witch/main

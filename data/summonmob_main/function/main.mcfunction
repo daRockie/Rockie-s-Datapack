@@ -4,12 +4,13 @@ function summonmob_main:targets/zombie
 function summonmob_main:targets/eman
 function summonmob_main:targets/explosive_mobs
 function summonmob_main:targets/projectiles
+function summonmob_main:targets/witch
 
 # エリアエフェクトクラウドの処理
 execute as @e[type=minecraft:area_effect_cloud,tag=kill_item] at @s run kill @e[type=item,distance=0..2]
 
 # スポーン後処理
-execute as @e[tag=!proceed] run function summonmob_main:proceed
+execute as @e[tag=!proceed] run function summonmob_main:system/proceed
 execute as @e[tag=proceed] run scoreboard players reset @s lifeTime
 
 # ブーマーゾンビ　召喚
@@ -85,7 +86,7 @@ execute as @e[type=minecraft:drowned,tag=!proceed] if score @s spawnRandom match
 execute as @e[type=enderman,tag=elite_eman] at @s if entity @e[tag=eman_target,limit=1,distance=0..32] run scoreboard players add @s ai_timer 1
 
 # スポーン乱数
-execute as @e[tag=!spawned] run function summonmob_main:mobspawning
+execute as @e[tag=!spawned] run function summonmob_main:system/mobspawning
 
 # ブーマーゾンビの処理実行
 execute as @e[type=minecraft:zombie,tag=boomer_zombie] at @s if entity @e[distance=0..5,tag=zombies_target,limit=1,sort=nearest] run tag @s add ignited
@@ -96,9 +97,10 @@ execute as @e[type=minecraft:husk,tag=boomer_zombie,tag=ignited] run function cu
 
 
 # 見習い魔導士の処理実行
-execute as @e[type=minecraft:skeleton,tag=wizard_1] if score @s bombTimer matches 80.. at @s if entity @e[tag=skeleton_t,distance=0..3] at @s anchored feet unless block ^ ^-0.5 ^-4 #air anchored eyes if block ^ ^ ^-4 air if block ^ ^-1 ^-4 air run function custom_ai:movements/wizard/apprentice/wizard_warp
-execute as @e[type=minecraft:skeleton,tag=wizard_1] if score @s bombTimer matches ..99 run scoreboard players add @s bombTimer 1
-execute as @e[type=skeleton,tag=wizard_1] run scoreboard players add @s bombTimer 0
+execute as @e[type=minecraft:skeleton,tag=wizard_1] if score @s mana matches 80.. at @s if entity @e[tag=skeleton_t,distance=0..3] at @s anchored feet unless block ^ ^-0.5 ^-4 #air anchored eyes if block ^ ^ ^-4 air if block ^ ^-1 ^-4 air run function custom_ai:movements/wizard/apprentice/wizard_warp
+execute as @e[type=skeleton,tag=wizard_1] run scoreboard players add @s mana 0
+execute as @e[type=minecraft:skeleton,tag=wizard_1] if score @s mana matches ..99 run scoreboard players add @s mana 1
+execute as @e[type=skeleton,tag=wizard_1] run scoreboard players add @s mana 0
 
 # マジック処理
 scoreboard players reset @e magicTarget

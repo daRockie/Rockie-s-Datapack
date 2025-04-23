@@ -53,7 +53,7 @@
         },
         "minecraft:custom_name": {"text":"改良型作業台","italic":false},
         "minecraft:rarity": "rare",
-        "minecraft:lore": [{"text":"右クリックで設置、近くに立ってスニーク長押しで破壊します！","italic":false},{"text":"クラフト素材を入れるとクラフト結果が出ます！その状態でスニークするとアイテムを入手できます。","italic":false},{"text":"注意：クラフト素材は一個分の素材を入れてください！","bold":true,"italic":false}]
+        "minecraft:lore": [{"text":"右クリックで設置、近くに立ってスニーク長押しで破壊します！","italic":false},{"text":"クラフト素材を入れるとクラフト結果が出ます！その状態でスニークするとアイテムを入手できます。","italic":false}]
       },
       "count": 1
     }

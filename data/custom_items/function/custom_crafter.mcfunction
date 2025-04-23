@@ -6,3 +6,6 @@ execute if score @a[distance=0..2,sort=nearest,limit=1] sneakTimer matches 1 run
 execute unless entity @a[distance=0..2] run scoreboard players set @s ai_timer 0
 execute unless block ~ ~ ~ dispenser{Items:[]} if score @s ai_timer matches 20.. if score @s isSuccess matches 1 run function crafter_main:do_craft
 execute if score @s ai_timer matches 40.. run function custom_items:destroy_crafter
+
+# データの定義
+execute as @s run function crafter_main:set_counts
