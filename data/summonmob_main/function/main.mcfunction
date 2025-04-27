@@ -47,13 +47,10 @@ execute as @e[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if score @s sp
 execute as @e[type=iron_golem] at @s run data modify entity @s AngryAt set from entity @e[type=creeper,distance=0..16,limit=1]
 
 # 使者script
-execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] if score @s ai_timer matches 60 at @s run function custom_ai:movements/sisha/1/explode
-execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] if score @s ai_timer matches 80.. at @s if entity @e[tag=eman_target,limit=1,distance=0..4] run function custom_ai:movements/sisha/1/pre_explode
-execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] at @s run particle witch ~ ~2 ~ 1 1 1 0.05 2
-execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] at @s run particle enchant ~ ~2 ~ 0.5 0.5 0.5 0.05 3
+execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] at @s run function custom_ai:custom_mobs/messenger/0
 
 # 見習い魔導士　召喚
-execute as @e[type=minecraft:skeleton,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/summon_wz1
+execute as @e[type=minecraft:skeleton,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/wizard/apprentice
 
 # エリートスケルトン　召喚
 execute as @e[type=minecraft:skeleton,tag=!proceed] if score @s spawnRandom matches 15..30 run function summonmob_main:summon/summon_elite_s
@@ -71,7 +68,7 @@ execute as @e[tag=!proceed,tag=homing_at_players] at @s run function custom_ai:m
 execute as @e[type=minecraft:horse,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/summon_s_rider
 
 # 最果てのシ者　召喚
-execute as @e[type=minecraft:enderman,tag=!proceed] if score @s spawnRandom matches 0..10 run function summonmob_main:summon/summon_sisha1
+execute as @e[type=minecraft:enderman,tag=!proceed] if score @s spawnRandom matches 0..10 run function summonmob_main:summon/sisha/1
 
 # ガチギレエンダーマン
 # execute as @e[type=enderman,tag=!elite_eman] at @s run data modify entity @s AngryAt set from entity @e[tag=eman_target,distance=0..16,limit=1] UUID
@@ -81,9 +78,6 @@ execute as @e[type=enderman,tag=elite_eman] at @s run data modify entity @s Angr
 
 # 潜水ガキ
 execute as @e[type=minecraft:drowned,tag=!proceed] if score @s spawnRandom matches 0..10 run function summonmob_main:summon/summon_divingkid
-
-# エリートダーマンのタイマー設定
-execute as @e[type=enderman,tag=elite_eman] at @s if entity @e[tag=eman_target,limit=1,distance=0..32] run scoreboard players add @s ai_timer 1
 
 # スポーン乱数
 execute as @e[tag=!spawned] run function summonmob_main:system/mobspawning

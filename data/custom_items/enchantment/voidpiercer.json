@@ -1,0 +1,54 @@
+{
+  "description": {
+    "text": "ヴォイドピアサー",
+    "type": "text",
+    "italic": false,
+    "hover_event": {
+      "action": "show_text",
+      "value": {
+        "text": "エンドに関連するモブに対してダメージが上昇します。"
+      }
+    }
+  },
+  "exclusive_set": "#minecraft:exclusive_set/damage",
+  "supported_items": "#minecraft:enchantable/weapon",
+  "primary_items": "#minecraft:enchantable/sword",
+  "weight": 2,
+  "max_level": 5,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 6
+  },
+  "max_cost": {
+    "base": 25,
+    "per_level_above_first": 6
+  },
+  "anvil_cost": 3,
+  "slots": [],
+  "effects": {
+    "minecraft:damage": [
+      {
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type": [
+              "minecraft:ender_dragon",
+              "minecraft:shulker",
+              "minecraft:endermite",
+              "minecraft:enderman"
+            ]
+          }
+        },
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": 2.5,
+            "per_level_above_first": 2.5
+          }
+        }
+      }
+    ]
+  }
+}

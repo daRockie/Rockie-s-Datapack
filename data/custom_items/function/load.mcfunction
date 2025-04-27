@@ -2,7 +2,7 @@ scoreboard objectives add sneakTimer minecraft.custom:minecraft.sneak_time "ス�
 scoreboard objectives add isSuccess dummy "コマンド成功是非"
 scoreboard objectives add item_count dummy "アイテム管理"
 scoreboard objectives add deathCount deathCount "死亡回数管理"
-scoreboard objectives add health health "体力"
+scoreboard objectives add health dummy "体力"
 scoreboard objectives add willReplaceItem dummy "アイテム置き換え是非"
 scoreboard objectives add recipe_id dummy "レシピID"
 
