@@ -17,5 +17,14 @@
     "tick": {
       "trigger": "minecraft:tick"
     }
+  },
+  "rewards": {
+    "recipes": [
+    "custom_items:anti_blast-shield_recipe",
+    "custom_items:compressed_slimeball","custom_items:copper_chestplate",
+    "custom_items:copper_leggings","custom_items:mining_helmet_recipe",
+    "custom_items:quiver",
+    "custom_items:advanced_crafting_table_recipe"
+  ]
   }
 }

@@ -6,12 +6,11 @@
         "item": {
           "items": "minecraft:stick",
           "components": {
-            "minecraft:rarity": "uncommon",
-            "minecraft:custom_name": {
+              "minecraft:custom_name": {
               "text": "ヒーリングワンド",
-              "type": "text",
               "italic": false
-            }
+            },
+              "minecraft:rarity": "uncommon"
           }
         }
       }

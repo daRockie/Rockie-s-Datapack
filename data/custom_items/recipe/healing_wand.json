@@ -9,13 +9,13 @@
   "key": {
     "A": [
       "minecraft:iron_ingot",
-      "gold_ingot"
+      "minecraft:gold_ingot"
     ],
     "B": "minecraft:apple",
-    "C": "stick"
+    "C": "minecraft:stick"
   },
   "result": {
-    "id": "stick",
+    "id": "minecraft:stick",
     "components": {
       "minecraft:custom_name": {
         "text": "ヒーリングワンド",

@@ -4,6 +4,8 @@ tag @s[tag=add_clicking_tag] add clicking
 execute store success score @s ability.right_click run tag @s remove add_clicking_tag
 
 # クールダウン処理
+scoreboard players add @s abilityCooldown.healing_wand 0
+
 execute if score @s abilityCooldown.healing_wand matches 1.. run scoreboard players remove @s abilityCooldown.healing_wand 1
 
 # マナ関連の処理

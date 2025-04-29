@@ -19,5 +19,8 @@
           "recipe_id": "custom_items:advanced_crafting_table_recipe"
         }
       }
+    },
+    "rewards":{
+      "recipes": ["custom_items:ruby_recipe"]
     }
   }
