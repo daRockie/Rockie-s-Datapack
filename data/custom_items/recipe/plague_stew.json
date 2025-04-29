@@ -1,0 +1,67 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:rotten_flesh",
+    "minecraft:bone",
+    "minecraft:rotten_flesh",
+    "minecraft:bone",
+    "minecraft:rotten_flesh",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "minecraft:beetroot_soup",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "病巣鍋",
+        "type": "text",
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "病巣を啜る者よ、己をも蝕むことを知れ。"
+        },
+        {
+          "text": ""
+        },
+        {
+          "text": "空腹 (0:10)",
+          "color": "red",
+          "italic": false
+        },
+        {
+          "text": "攻撃力上昇II (0:30)",
+          "type": "text",
+          "color": "blue",
+          "italic": false
+        }
+      ],
+      "minecraft:food": {
+        "nutrition": 6,
+        "saturation": 1
+      },
+      "minecraft:consumable": {
+        "animation": "eat",
+        "sound": "minecraft:block.honey_block.break",
+        "on_consume_effects": [
+          {
+            "type": "minecraft:apply_effects",
+            "effects": [
+              {
+                "id": "minecraft:strength",
+                "amplifier": 1,
+                "duration": 600
+              },
+              {
+                "id": "minecraft:hunger",
+                "amplifier": 0,
+                "duration": 200
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "count": 1
+  }
+}

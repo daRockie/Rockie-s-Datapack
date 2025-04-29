@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "plague_stew": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:mushroom_stew"
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "custom_items:plague_stew"
+    ]
+  }
+}

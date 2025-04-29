@@ -12,6 +12,7 @@ execute if entity @s[scores={health=..10},tag=!final_surge] if items entity @s w
 
 execute at @e[tag=final_surge] run particle trial_spawner_detection ~ ~1 ~ 0.5 0.5 0.5 0 1
 
-execute at @e[tag=final_surge] if items entity @s weapon.mainhand *[minecraft:enchantments={"custom_items:final_surge":1}] run effect give @s strength 3 0
-execute at @e[tag=final_surge] if items entity @s weapon.mainhand *[minecraft:enchantments={"custom_items:final_surge":2}] run effect give @s strength 3 1
-execute at @e[tag=final_surge] if items entity @s weapon.mainhand *[minecraft:enchantments={"custom_items:final_surge":3}] run effect give @s strength 3 2
+execute at @e[tag=final_surge] if items entity @s weapon.mainhand *[minecraft:enchantments={"custom_items:final_surge":1}] run effect give @s strength 1 0
+execute at @e[tag=final_surge] if items entity @s weapon.mainhand *[minecraft:enchantments={"custom_items:final_surge":2}] run effect give @s strength 1 1
+execute at @e[tag=final_surge] if items entity @s weapon.mainhand *[minecraft:enchantments={"custom_items:final_surge":3}] run effect give @s strength 1 2
+execute at @e[tag=final_surge] if items entity @s weapon.mainhand *[minecraft:enchantments={"custom_items:final_surge":3}] run effect give @s resistance 1 1

@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "using_healing_wand": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:stick",
+          "components": {
+            "minecraft:rarity": "uncommon",
+            "minecraft:custom_name": {
+              "text": "ヒーリングワンド",
+              "type": "text",
+              "italic": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "custom_items:items/healing_wand/right_click"
+  }
+}

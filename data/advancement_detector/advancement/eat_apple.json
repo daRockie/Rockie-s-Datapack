@@ -10,7 +10,7 @@
     "description": {
       "text": "そんなもの、食べちゃダメだ！（隠し進捗）"
     },
-    "frame": "challenge",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true
@@ -25,5 +25,8 @@
         }
       }
     }
+  },
+  "rewards": {
+    "recipes": ["custom_items:healing_wand"]
   }
 }

@@ -1,0 +1,2 @@
+execute store result score @s mana store result score @s mana run scoreboard players get @s mana.max
+title @s actionbar ["",{"text":"Mana: (","color":"aqua"},{"color":"aqua","score":{"objective":"mana","name":"@s"}},{"color":"aqua","text":" / "},{"color":"aqua","score":{"objective":"mana.max","name":"@s"}},{"color":"aqua","text":")"}]

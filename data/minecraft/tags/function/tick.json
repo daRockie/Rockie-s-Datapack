@@ -3,6 +3,7 @@
     "summonmob_main:main",
     "custom_ai:main",
     "custom_items:main",
-    "useful-functions:main"
+    "useful-functions:main",
+    "system:main"
   ]
 }

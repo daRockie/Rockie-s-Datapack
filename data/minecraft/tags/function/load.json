@@ -2,6 +2,7 @@
   "values": [
     "summonmob_main:reload",
     "custom_ai:load",
-    "custom_items:load"
+    "custom_items:load",
+    "system:load"
     ]
 }

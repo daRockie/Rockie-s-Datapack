@@ -1,12 +1,15 @@
 # 自動起爆
-execute as @e[type=creeper,nbt={Tags:["proceed","spawned"]}] run function custom_ai:advanced_ai/creeper/auto_explode
+execute as @e[type=creeper,nbt={Tags:["proceed","spawned"]},tag=!nuka_c] run function custom_ai:advanced_ai/creeper/auto_explode
 
 # ヌカクリーパー
 execute as @e[type=creeper,nbt={Tags:["nuka_c","spawned","proceed"],ignited:1b}] run function custom_ai:custom_mobs/nuka_creeper
+execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s ignited set value 1b
+execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s NoAI set value 1b
 
 # ブルードマザー
 execute as @e[type=minecraft:spider,tag=powered_spider] at @s if predicate useful-functions:is_dark run function custom_ai:custom_mobs/bloodmother
 execute as @e[type=minecraft:spider,tag=mini_spider] at @s if predicate useful-functions:is_dark run function custom_ai:custom_mobs/mini_spider
+execute as @e[type=spider,tag=powered_spider] on attacker run tag @s add spider.target
 
 # イカドラウンド
 execute as @e[type=minecraft:drowned,tag=squid_drowned,nbt={HurtTime:10s}] at @s run function custom_ai:movements/splash_ink
@@ -15,15 +18,27 @@ execute as @e[type=drowned,tag=squid_drowned] at @s run function custom_ai:custo
 # スカウトゾンビ
 execute as @e[type=zombie,tag=scout_z] at @s run function custom_ai:custom_mobs/scout_zombie
 
+# 通常ゾンビ強化
+execute as @e[type=husk,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName run attribute @s movement_speed base set 0.25
+execute as @e[type=zombie,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName run attribute @s movement_speed base set 0.25
+execute as @e[type=zombie_villager,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName run attribute @s movement_speed base set 0.25
+execute as @e[type=zombie,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName at @s[nbt={OnGround:1b}] unless block ^ ^ ^1 #air if entity @e[tag=zombies_target,distance=3..3.5] run function custom_ai:movements/chase_jump
+execute as @e[type=husk,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName at @s[nbt={OnGround:1b}] unless block ^ ^ ^1 #air if entity @e[tag=zombies_target,distance=3..3.5] run function custom_ai:movements/chase_jump
+execute as @e[type=zombie_villager,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName at @s[nbt={OnGround:1b}] unless block ^ ^ ^1 #air if entity @e[tag=zombies_target,distance=3..3.5] run function custom_ai:movements/chase_jump
+
+execute as @e[type=#undead] on attacker run tag @s add zombies_target
+
 # エリートスケルトン
 execute as @e[type=skeleton,tag=elite_skeleton] at @s run function custom_ai:custom_mobs/elite_skeleton
 
 # 村破壊ガチ勢
 execute as @e[type=zombie,nbt={Tags:["spawned","proceed"]}] run data modify entity @s CanBreakDoors set value 1b
 execute as @e[type=husk,nbt={Tags:["spawned","proceed"]}] run data modify entity @s CanBreakDoors set value 1b
+execute as @e[type=zombie_villager,nbt={Tags:["spawned","proceed"]}] run data modify entity @s CanBreakDoors set value 1b
 
 # スカウトクリーパー
-execute as @e[type=creeper,tag=speed_crp] run function custom_ai:custom_mobs/scout_creeper
+execute as @e[type=creeper,tag=speed_crp] run function custom_ai:custom_mobs/scout_creeper with entity @s equipment.head
+execute as @e[type=creeper,tag=speed_crp] at @s run loot replace entity @s armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe
 
 # ジャンプマーカー自動処理
 execute as @e[type=marker,tag=jump_marker,tag=proceed] run kill @s

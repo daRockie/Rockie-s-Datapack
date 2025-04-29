@@ -10,8 +10,8 @@
     "description": "データパックを導入する",
     "background": "minecraft:block/resin_bricks",
     "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false
+    "show_toast": true,
+    "announce_to_chat": true
   },
   "criteria": {
     "tick": {

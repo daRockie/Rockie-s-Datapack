@@ -9,6 +9,9 @@ execute as @a if score @s willReplaceItem matches 1 run function custom_items:re
 execute as @a if items entity @s container.* minecraft:player_head[minecraft:custom_name={text:"転移のポーション",italic:0b},!minecraft:rarity=epic] store success score @s willReplaceItem run clear @s player_head[minecraft:custom_name={text:"転移のポーション",italic:0b},!minecraft:rarity=epic] 1
 execute as @a if score @s willReplaceItem matches 1 run function custom_items:replace_potion
 
+execute as @a if items entity @s container.* minecraft:player_head[minecraft:custom_name={text:"魔法の帽子",italic:0b},!minecraft:rarity=rare] run give @s player_head[profile={properties:[{value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGU4YWM5YzU5Nzg5MjFmNWE1OTU1Njg1Y2FlMzdmYzhiOGFhNjE5MThjNzllNTk3MzRmN2RhY2NhNDc3YmJkOCJ9fX0=",name:textures}]},custom_name=[{"text":"魔法の帽子","italic":false}],lore=[[{"text":"魔導士のゴーグルを使用してクラフトできる防具。","italic":false}],[{"text":"マナの最大値を20増やす。","italic":false}]],rarity=rare,attribute_modifiers=[{type:armor,amount:3,slot:head,id:"minecraft_armor",operation:add_value}]]
+execute as @a if items entity @s container.* minecraft:player_head[minecraft:custom_name={text:"魔法の帽子",italic:0b},!minecraft:rarity=rare] run clear @s player_head[minecraft:custom_name={text:"魔法の帽子",italic:0b},!minecraft:rarity=rare] 1
+
 execute as @e store result score @s health run data get entity @s Health 1
 
 execute as @e if entity @s[scores={health=7..},tag=final_surge_1] at @s run function custom_items:enchantment/surge/deactivate_1

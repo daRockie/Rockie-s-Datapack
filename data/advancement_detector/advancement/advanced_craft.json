@@ -14,9 +14,9 @@
     "parent": "advancement_detector:install",
     "criteria": {
       "get_item": {
-        "trigger": "minecraft:recipe_unlocked",
+        "trigger": "minecraft:recipe_crafted",
         "conditions": {
-          "recipe": "custom_items:advanced_crafting_table_recipe"
+          "recipe_id": "custom_items:advanced_crafting_table_recipe"
         }
       }
     }
