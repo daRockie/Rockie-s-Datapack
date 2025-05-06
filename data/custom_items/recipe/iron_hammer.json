@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "AAA",
+    "AB ",
+    " B "
+  ],
+  "key": {
+    "A": "minecraft:iron_block",
+    "B": "minecraft:stick"
+  },
+  "result": {
+    "id": "minecraft:iron_axe",
+    "components": {
+      "minecraft:custom_model_data": {
+        "strings": [
+          "iron_hammer"
+        ]
+      },
+      "minecraft:custom_name": {
+        "text": "鉄のハンマー",
+        "italic": false
+      },
+      "minecraft:enchantments": {
+        "custom_items:guard_smash": 1
+      },
+      "minecraft:enchantment_glint_override": false
+    },
+    "count": 1
+  }
+}
