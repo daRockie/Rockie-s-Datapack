@@ -5,6 +5,7 @@ function summonmob_main:targets/eman
 function summonmob_main:targets/explosive_mobs
 function summonmob_main:targets/projectiles
 function summonmob_main:targets/witch
+function summonmob_main:targets/wither_skeleton
 
 # エリアエフェクトクラウドの処理
 execute as @e[type=minecraft:area_effect_cloud,tag=kill_item] at @s run kill @e[type=item,distance=0..2]
@@ -54,6 +55,9 @@ execute as @e[type=minecraft:skeleton,tag=!proceed] if score @s spawnRandom matc
 
 # エリートスケルトン　召喚
 execute as @e[type=minecraft:skeleton,tag=!proceed] if score @s spawnRandom matches 15..30 run function summonmob_main:summon/summon_elite_s
+
+# エリートウィザースケルトン　召喚
+execute as @e[type=minecraft:wither_skeleton,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/summon_elite_wither_skeleton
 
 # クモの親子　召喚
 execute as @e[type=minecraft:spider,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summon_spiderfamily

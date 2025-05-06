@@ -30,6 +30,7 @@ execute as @e[type=#undead] on attacker run tag @s add zombies_target
 
 # エリートスケルトン
 execute as @e[type=skeleton,tag=elite_skeleton] at @s run function custom_ai:custom_mobs/elite_skeleton
+execute as @e[type=wither_skeleton,tag=elite_skeleton] at @s run function custom_ai:custom_mobs/elite_skeleton
 
 # 村破壊ガチ勢
 execute as @e[type=zombie,nbt={Tags:["spawned","proceed"]}] run data modify entity @s CanBreakDoors set value 1b
