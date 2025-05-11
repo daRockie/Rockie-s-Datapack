@@ -1,0 +1,127 @@
+{
+    "description": {
+        "text": "ワン・フォー・オール",
+        "color": "light_purple",
+        "bold": true,
+        "italic": false
+      },
+  "exclusive_set": "#custom_items:ultimate_enchant",
+  "supported_items": "#minecraft:enchantable/sharp_weapon",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 1
+  },
+  "max_cost": {
+    "base": 35,
+    "per_level_above_first": 3
+  },
+  "anvil_cost": 5,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:armor_effectiveness": [
+        {
+          "effect": {
+            "type": "minecraft:add",
+            "value": -1
+          }
+        }
+      ],
+    "minecraft:post_attack": [
+      {
+        "effect": {
+          "type": "minecraft:spawn_particles",
+          "particle": {
+            "type": "minecraft:sonic_boom"
+          },
+          "horizontal_position": {
+            "type": "entity_position"
+          },
+          "vertical_position": {
+            "type": "entity_position",
+            "offset": 1
+          },
+          "horizontal_velocity": {},
+          "vertical_velocity": {},
+          "speed": 0.05
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      },
+      {
+        "effect": {
+          "type": "minecraft:spawn_particles",
+          "particle": {
+            "type": "minecraft:soul_fire_flame"
+          },
+          "horizontal_position": {
+            "type": "entity_position"
+          },
+          "vertical_position": {
+            "type": "entity_position",
+            "offset": 1
+          },
+          "horizontal_velocity": {},
+          "vertical_velocity": {},
+          "speed": 0.05
+        },
+        "enchanted": "attacker",
+        "affected": "victim"
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:play_sound",
+          "sound": "minecraft:item.mace.smash_air",
+          "volume": 2,
+          "pitch": 0.5
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:play_sound",
+          "sound": "minecraft:item.totem.use",
+          "volume": 2,
+          "pitch": 2
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:damage_entity",
+          "damage_type": "minecraft:generic_kill",
+          "min_damage": 15,
+          "max_damage": 35
+        }
+      },
+      {
+        "enchanted": "attacker",
+        "affected": "attacker",
+        "effect": {
+          "type": "minecraft:change_item_damage",
+          "amount": {
+            "type": "minecraft:clamped",
+            "value": 0,
+            "min": 400,
+            "max": 700
+          }
+        }
+      }
+    ],
+    "minecraft:knockback": [
+        {
+          "effect": {
+            "type": "minecraft:add",
+            "value": 10
+          }
+        }
+    ]
+  }
+}

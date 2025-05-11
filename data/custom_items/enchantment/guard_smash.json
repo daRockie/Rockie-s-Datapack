@@ -4,7 +4,7 @@
     "type": "text",
     "italic": false
   },
-  "supported_items": "#minecraft:enchantable/mining",
+  "supported_items": "#minecraft:enchantable/weapon",
   "weight": 1,
   "max_level": 1,
   "min_cost": {

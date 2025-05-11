@@ -1,0 +1,117 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "ACA",
+    " B ",
+    " B "
+  ],
+  "key": {
+    "A": [
+      "minecraft:iron_ingot",
+      "copper_ingot",
+      "gold_ingot"
+    ],
+    "B": "minecraft:stick",
+    "C": [
+      "minecraft:magma_block"
+    ]
+  },
+  "result": {
+    "id": "stick",
+    "components": {
+      "minecraft:custom_model_data": {
+        "strings": [
+          "iron_hammer"
+        ]
+      },
+      "minecraft:item_model": "wooden_hoe",
+      "minecraft:food": {
+        "nutrition": 0,
+        "saturation": 0,
+        "can_always_eat": true
+      },
+      "minecraft:consumable": {
+        "consume_seconds": 10000000,
+        "animation": "bow",
+        "has_consume_particles": false
+      },
+      "minecraft:custom_name": {
+        "text": "ファイアリーワンド",
+        "italic": false
+      },
+      "minecraft:rarity": "uncommon",
+      "minecraft:lore": [
+        {
+          "text": "\"ヒャッハー！汚物は消毒だぜ！\"",
+          "color": "dark_gray",
+          "italic": true
+        },
+        {
+          "text": "ヒットした敵に",
+          "extra": [
+            {
+              "text": "6ダメージ",
+              "color": "red",
+              "italic": false
+            },
+            {
+              "text": "を与え、",
+              "color": "gray"
+            },
+            {
+              "text": "燃え上がらせます。",
+              "color": "red"
+            }
+          ],
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "text": "炎上中の爆破系モブ",
+          "extra": [
+            {
+              "text": "にヒットすると、",
+              "color": "gray"
+            },
+            {
+              "text": "即座に着火し、"
+            },
+            {
+              "text": "起爆します！",
+              "bold": true
+            }
+          ],
+          "color": "red",
+          "italic": false
+        },
+        "",
+        {
+          "text": "クールダウン：",
+          "extra": [
+            {
+              "text": "0.3秒",
+              "color": "green",
+              "italic": false
+            }
+          ],
+          "color": "dark_gray",
+          "italic": false
+        },
+        {
+          "text": "マナ使用量：",
+          "extra": [
+            {
+              "text": "25",
+              "color": "dark_aqua",
+              "italic": false
+            }
+          ],
+          "color": "dark_gray",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}

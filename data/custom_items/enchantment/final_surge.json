@@ -6,8 +6,9 @@
     "bold": true,
     "italic": false
   },
-  "supported_items": "#minecraft:enchantable/sword",
-  "weight": 3,
+  "exclusive_set": "#custom_items:ultimate_enchant",
+  "supported_items": "#minecraft:enchantable/sharp_weapon",
+  "weight": 1,
   "max_level": 3,
   "min_cost": {
     "base": 8,

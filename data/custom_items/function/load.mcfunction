@@ -6,6 +6,7 @@ scoreboard objectives add health dummy "体力"
 scoreboard objectives setdisplay below_name health
 scoreboard objectives add willReplaceItem dummy "アイテム置き換え是非"
 scoreboard objectives add recipe_id dummy "レシピID"
+scoreboard objectives add RD.flame dummy "燃焼時間"
 
 # Microsoft許すべからず
 scoreboard objectives add slot0 dummy "スロット0"

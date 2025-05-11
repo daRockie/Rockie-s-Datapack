@@ -1,0 +1,28 @@
+{
+  "values": [
+    "minecraft:glow_item_frame",
+    "minecraft:item_frame",
+    "minecraft:painting",
+    "minecraft:armor_stand",
+    "minecraft:tnt",
+    "#minecraft:arrows",
+    "#minecraft:redirectable_projectile",
+    "#minecraft:impact_projectiles",
+    "minecraft:item",
+    "minecraft:minecart",
+    "minecraft:chest_minecart",
+    "minecraft:tnt_minecart",
+    "minecraft:hopper_minecart",
+    "minecraft:furnace_minecart",
+    "#minecraft:boat",
+    "minecraft:leash_knot",
+    "minecraft:ender_pearl",
+    "minecraft:eye_of_ender",
+    "minecraft:falling_block",
+    "minecraft:experience_bottle",
+    "minecraft:splash_potion",
+    "minecraft:area_effect_cloud",
+    "minecraft:lingering_potion",
+    "minecraft:experience_bottle"
+  ]
+}

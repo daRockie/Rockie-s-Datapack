@@ -25,7 +25,7 @@ execute as @e[type=minecraft:husk,tag=!proceed,nbt={IsBaby:1b}] if score @s spaw
 execute as @e[type=minecraft:husk,tag=!proceed] if score @s spawnRandom matches 21..30 run function summonmob_main:summon/summon_mummy
 
 # タンクゾンビ　召喚
-execute as @e[type=zombie,tag=!proceed] if score @s spawnRandom matches 33..40 run function summonmob_main:summon/summon_tank_z
+execute as @e[type=zombie,tag=!proceed,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 33..40 run function summonmob_main:summon/summon_tank_z
 
 # スカウトクリーパー
 execute as @e[type=creeper,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summon_scout_c
@@ -37,7 +37,7 @@ execute as @e[type=dolphin,tag=!proceed] if score @s spawnRandom matches 0..15 r
 execute as @e[type=squid,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summmon_squid
 
 # スカウトゾンビ
-execute as @e[type=zombie,tag=!proceed] if score @s spawnRandom matches 20..32 run function summonmob_main:summon/summon_scout_z
+execute as @e[type=zombie,tag=!proceed,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 20..32 run function summonmob_main:summon/summon_scout_z
 
 # ヌカクリーパー
 execute as @e[type=creeper,tag=!proceed] if score @s spawnRandom matches 30..33 run function summonmob_main:summon/summon_nuka_creeper
@@ -45,7 +45,8 @@ execute as @e[type=creeper,tag=!proceed] if score @s spawnRandom matches 30..33 
 # ベイビーブーマーゾンビ　召喚
 execute as @e[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..10 run function summonmob_main:summon/summon_bz_baby
 
-execute as @e[type=iron_golem] at @s run data modify entity @s AngryAt set from entity @e[type=creeper,distance=0..16,limit=1]
+# ベイビーブーマーゾンビジョッキー　召喚
+execute as @e[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..10 on vehicle if entity @s[type=chicken] run function summonmob_main:summon/summon_bz_jockey
 
 # 使者script
 execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] at @s run function custom_ai:custom_mobs/messenger/0

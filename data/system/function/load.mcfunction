@@ -5,4 +5,6 @@ scoreboard objectives add mana.timer dummy "マナ回復タイマー"
 scoreboard objectives add mana.operation dummy "マナ計算"
 
 scoreboard objectives add ability.right_click dummy "アビリティ：右クリ検知"
+
 scoreboard objectives add abilityCooldown.healing_wand dummy "ヒーリングワンドのクールダウン"
+scoreboard objectives add abilityCooldown.fiery_wand dummy "ファイアリーワンドのクールダウン"

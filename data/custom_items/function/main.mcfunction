@@ -13,6 +13,7 @@ execute as @a if items entity @s container.* minecraft:player_head[minecraft:cus
 execute as @a if items entity @s container.* minecraft:player_head[minecraft:custom_name={text:"魔法の帽子",italic:0b},!minecraft:rarity=rare] run clear @s player_head[minecraft:custom_name={text:"魔法の帽子",italic:0b},!minecraft:rarity=rare] 1
 
 execute as @e store result score @s health run data get entity @s Health 1
+execute as @e store result score @s RD.flame run data get entity @s Fire 1
 
 execute as @e if entity @s[scores={health=7..},tag=final_surge_1] at @s run function custom_items:enchantment/surge/deactivate_1
 execute as @e if entity @s[scores={health=9..},tag=final_surge_2] at @s run function custom_items:enchantment/surge/deactivate_2

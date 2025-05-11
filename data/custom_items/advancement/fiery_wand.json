@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "using_healing_wand": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:stick",
+          "components": {
+              "minecraft:custom_name": {
+              "text": "ファイアリーワンド",
+              "italic": false
+            },
+              "minecraft:rarity": "uncommon"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "custom_items:items/fiery_wand/right_click"
+  }
+}
