@@ -23,7 +23,8 @@
         "italic": false
       },
       "minecraft:enchantments": {
-        "custom_items:guard_smash": 1
+        "custom_items:guard_smash": 1,
+        "custom_items:blacksmith": 1
       },
       "minecraft:enchantment_glint_override": false
     },

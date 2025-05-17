@@ -1,0 +1,106 @@
+{
+  "description": "金床修復",
+  "supported_items": "#minecraft:axes",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:hit_block": [
+      {
+        "effect": {
+          "type": "minecraft:replace_block",
+          "block_state": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "minecraft:anvil"
+            }
+          },
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:chipped_anvil"
+          }
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:block_state_property",
+          "block": "minecraft:chipped_anvil"
+        },
+        "effect": {
+          "type": "minecraft:play_sound",
+          "sound": "minecraft:entity.zombie.attack_iron_door",
+          "volume": 1,
+          "pitch": 1
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:block_state_property",
+          "block": "minecraft:chipped_anvil"
+        },
+        "effect": {
+          "type": "minecraft:change_item_damage",
+          "amount": {
+            "type": "minecraft:clamped",
+            "value": 0,
+            "min": 50,
+            "max": 80
+          }
+        }
+      },
+      {
+        "effect": {
+          "type": "minecraft:replace_block",
+          "block_state": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "minecraft:chipped_anvil"
+            }
+          },
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:damaged_anvil"
+          }
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:block_state_property",
+          "block": "minecraft:damaged_anvil"
+        },
+        "effect": {
+          "type": "minecraft:play_sound",
+          "sound": "minecraft:entity.zombie.attack_iron_door",
+          "volume": 1,
+          "pitch": 0.95
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:block_state_property",
+          "block": "minecraft:damaged_anvil"
+        },
+        "effect": {
+          "type": "minecraft:change_item_damage",
+          "amount": {
+            "type": "minecraft:clamped",
+            "value": 0,
+            "min": 50,
+            "max": 80
+          }
+        }
+      }
+    ]
+  }
+}
