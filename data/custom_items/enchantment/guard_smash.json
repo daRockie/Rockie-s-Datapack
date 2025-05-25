@@ -1,40 +1,30 @@
 {
-  "description": {
-    "text": "ガードブレイク",
-    "type": "text",
-    "italic": false
-  },
+  "description": "ガードブレイク",
   "supported_items": "#minecraft:enchantable/weapon",
   "weight": 1,
-  "max_level": 1,
+  "max_level": 3,
   "min_cost": {
-    "base": 99999,
-    "per_level_above_first": 99999
+    "base": 7,
+    "per_level_above_first": 3
   },
   "max_cost": {
-    "base": 99999,
-    "per_level_above_first": 99999
+    "base": 30,
+    "per_level_above_first": 4
   },
   "anvil_cost": 0,
-  "slots": [],
+  "slots": [
+    "mainhand"
+  ],
   "effects": {
-    "minecraft:post_attack": [
-        {
-          "effect": {
-            "type": "minecraft:play_sound",
-            "sound": "minecraft:item.mace.smash_air",
-            "volume": 1,
-            "pitch": 1
-          },
-          "enchanted": "attacker",
-          "affected": "attacker"
-        }
-      ],
     "minecraft:armor_effectiveness": [
       {
         "effect": {
           "type": "minecraft:add",
-          "value": -0.5
+          "value": {
+            "type": "minecraft:linear",
+            "base": -0.25,
+            "per_level_above_first": -0.25
+          }
         }
       }
     ]

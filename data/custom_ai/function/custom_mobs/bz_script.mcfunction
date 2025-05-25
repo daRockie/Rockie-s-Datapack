@@ -4,5 +4,5 @@ execute at @s if score @s ai_timer matches 1 run playsound minecraft:item.flinta
 execute at @s if score @s ai_timer matches 1 run playsound minecraft:entity.tnt.primed hostile @a ~ ~ ~ 10 1
 execute if score @s ai_timer matches 50.. run effect give @s speed 2 1
 # execute at @s if entity @e[type=zombie,nbt={Tags:["proceed","spawned","boomer_zombie","ignited"],OnGround:1b},distance=0.2..] run function custom_ai:step_away
-execute at @s if score @s ai_timer matches 80.. run function custom_ai:movements/boomer_zombie/kill_and_boom
+execute at @s if score @s ai_timer matches 80.. run function custom_ai:movements/boomer_zombie/kill_and_boom with entity @s
 execute at @s if block ~ ~ ~ water run function custom_ai:movements/boomer_zombie/kill_and_boom

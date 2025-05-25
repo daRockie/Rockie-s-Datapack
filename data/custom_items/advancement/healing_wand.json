@@ -4,7 +4,7 @@
       "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
-          "items": "minecraft:stick",
+          "items": "minecraft:debug_stick",
           "components": {
             "minecraft:custom_data":
             {
