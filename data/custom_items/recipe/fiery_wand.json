@@ -53,6 +53,8 @@
           "color": "dark_gray",
           "italic": true
         },
+        "",
+        {"text":"アビリティ：イグニッション","color": "gold","italic": false, "extra": [{"text":"右クリックで発動","bold": true,"italic": false,"color": "yellow"}]},
         {
           "text": "ヒットした敵に",
           "extra": [

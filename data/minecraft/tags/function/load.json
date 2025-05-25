@@ -3,6 +3,7 @@
     "summonmob_main:reload",
     "custom_ai:load",
     "custom_items:load",
-    "system:load"
+    "system:load",
+    "p_motion:system/load"
     ]
 }

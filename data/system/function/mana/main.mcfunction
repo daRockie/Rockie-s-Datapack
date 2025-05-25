@@ -6,9 +6,11 @@ execute store success score @s ability.right_click run tag @s remove add_clickin
 # クールダウン処理
 scoreboard players add @s abilityCooldown.healing_wand 0
 scoreboard players add @s abilityCooldown.fiery_wand 0
+scoreboard players add @s abilityCooldown.wand_of_ardor 0
 
 execute if score @s abilityCooldown.healing_wand matches 1.. run scoreboard players remove @s abilityCooldown.healing_wand 1
 execute if score @s abilityCooldown.fiery_wand matches 1.. run scoreboard players remove @s abilityCooldown.fiery_wand 1
+execute if score @s abilityCooldown.wand_of_ardor matches 1.. run scoreboard players remove @s abilityCooldown.wand_of_ardor 1
 
 # マナ関連の処理
 scoreboard players add @s mana 0

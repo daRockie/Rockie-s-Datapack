@@ -8,3 +8,4 @@ scoreboard objectives add ability.right_click dummy "アビリティ：右クリ
 
 scoreboard objectives add abilityCooldown.healing_wand dummy "ヒーリングワンドのクールダウン"
 scoreboard objectives add abilityCooldown.fiery_wand dummy "ファイアリーワンドのクールダウン"
+scoreboard objectives add abilityCooldown.wand_of_ardor dummy "慈愛の杖のクールダウン"

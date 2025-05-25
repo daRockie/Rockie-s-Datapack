@@ -1,0 +1,5 @@
+Got inspiration from Chuzume's True-Crafter-Mode
+https://github.com/Chuzume/True-Crafter-Mode
+
+Player-Motion Library by Hirobao1
+https://github.com/Hirobao1/CustomEnchant_PlayerMotion/tree/Ver1.21.5?tab=readme-ov-file

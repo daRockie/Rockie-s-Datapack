@@ -1,14 +1,13 @@
 {
   "criteria": {
-    "using_fiery_wand": {
+    "used_woa": {
       "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
           "items": "minecraft:debug_stick",
           "components": {
-            "minecraft:custom_data":
-            {
-              "Weapon_ID": 1
+            "minecraft:custom_data": {
+              "Weapon_ID": 2
             }
           }
         }
@@ -16,6 +15,6 @@
     }
   },
   "rewards": {
-    "function": "custom_items:items/fiery_wand/right_click"
+    "function": "custom_items:items/wand_of_ardor/right_click"
   }
 }
