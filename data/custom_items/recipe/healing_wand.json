@@ -17,6 +17,10 @@
   "result": {
     "id": "minecraft:stick",
     "components": {
+      "minecraft:custom_data":
+      {
+        "Weapon_ID": 0
+      },
       "minecraft:custom_name": {
         "text": "ヒーリングワンド",
         "italic": false

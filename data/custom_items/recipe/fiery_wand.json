@@ -20,6 +20,10 @@
   "result": {
     "id": "stick",
     "components": {
+      "minecraft:custom_data":
+      {
+        "Weapon_ID": 1
+      },
       "minecraft:custom_model_data": {
         "strings": [
           "iron_hammer"

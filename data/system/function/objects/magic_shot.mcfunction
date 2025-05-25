@@ -1,4 +1,9 @@
-execute at @p run tp @s[tag=!pos_set] ~ ~1 ~ ~ ~
+execute at @p run tp @s[tag=!pos_set] ~ ~1 ~
+data modify entity @s[tag=!pos_set] Pose.Head[1] set from entity @p Rotation[0]
+data modify entity @s[tag=!pos_set] Pose.Head[0] set from entity @p Rotation[1]
+data modify entity @s[tag=!pos_set] Rotation[0] set from entity @p Rotation[0]
+data modify entity @s[tag=!pos_set] Rotation[1] set from entity @p Rotation[1]
+
 execute if score @s ai_timer matches 2.. run tag @s add pos_set
 
 execute if score @s ai_timer matches 3 run playsound minecraft:entity.firework_rocket.launch player @a ~ ~ ~ 1 2

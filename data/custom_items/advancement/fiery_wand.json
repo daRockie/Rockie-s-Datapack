@@ -6,11 +6,10 @@
         "item": {
           "items": "minecraft:stick",
           "components": {
-              "minecraft:custom_name": {
-              "text": "ファイアリーワンド",
-              "italic": false
-            },
-              "minecraft:rarity": "uncommon"
+            "minecraft:custom_data":
+            {
+              "Weapon_ID": 1
+            }
           }
         }
       }
