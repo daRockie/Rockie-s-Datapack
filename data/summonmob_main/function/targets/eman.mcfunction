@@ -13,4 +13,3 @@ tag @e[type=cat] add eman_target
 tag @e[type=ocelot] add eman_target
 tag @e[type=llama] add eman_target
 tag @a[gamemode=!adventure,gamemode=!survival] remove eman_target
-

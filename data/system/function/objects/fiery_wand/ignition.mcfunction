@@ -1,5 +1,13 @@
-execute as @e[distance=..1.9,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 6 mob_attack by @p[distance=1..32,sort=furthest]
-execute as @e[distance=2..4,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 3 mob_attack by @p[distance=1..32,sort=furthest]
+#$execute as @e[distance=..1.9,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 6 mob_attack by $(parent)
+#$execute as @e[distance=2..4,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 3 mob_attack by $(parent)
+
+$say $(parent)
+$data modify entity @s CustomName set value $(parent)
+data modify entity @s CustomNameVisible set value 1b
+
+execute as @e[distance=..1.9,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 6 mob_attack by @p
+execute as @e[distance=2..4,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 3 mob_attack by @p
+
 execute as @e[distance=..4,tag=!fire_shot,type=!#unliving_objects] run data modify entity @s Fire set value 100
 execute as @e[distance=..4,tag=!fire_shot,type=!#unliving_objects] run effect give @s slowness 5 0 true
 execute as @e[distance=..4,tag=!fire_shot,type=creeper,scores={RD.flame=1..}] run data modify entity @s ignited set value 1b
@@ -12,4 +20,6 @@ particle ash ~ ~0.7 ~ 1 1 1 0 25
 particle block{block_state:{Name:"blackstone"}} ~ ~0.7 ~ 0.5 0.5 0.5 0.05 50
 fill ~4 ~-1 ~4 ~-4 ~1 ~-4 air replace #grasses destroy
 fill ~4 ~-1 ~4 ~-4 ~1 ~-4 air replace light
+data modify entity @s CustomNameVisible set value 1b
+function system:objects/remove_data with entity @s
 kill @s

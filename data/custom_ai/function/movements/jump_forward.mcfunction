@@ -1,6 +1,6 @@
 summon marker ^ ^ ^5 {Tags:["jump_marker"]}
 
-execute at @s run teleport @s ~ ~ ~ facing entity @e[tag=skeleton_t,limit=1,sort=nearest]
+execute at @s run teleport @s ~ ~ ~ facing entity @e[tag=skeleton.target,limit=1,sort=nearest]
 
 execute at @s run tp @s ~ ~ ~ ~180 ~
 

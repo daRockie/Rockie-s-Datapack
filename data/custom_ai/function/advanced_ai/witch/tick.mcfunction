@@ -1,0 +1,1 @@
+execute as @e[type=witch] at @s if entity @s[predicate=summonmob_main:in_hostile] run function custom_ai:advanced_ai/witch/moveset

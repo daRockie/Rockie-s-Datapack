@@ -1,5 +1,5 @@
 scoreboard players add @s ai_timer 0
-execute if entity @e[tag=zombies_target,distance=0..8] if score @s ai_timer matches ..60 run scoreboard players add @s ai_timer 1
+execute if entity @e[tag=zombies.target,distance=0..8] if score @s ai_timer matches ..60 run scoreboard players add @s ai_timer 1
 execute if score @s ai_timer matches ..40 if block ~ ~1 ~ #air at @s run tp @s ~ ~-0.25 ~
 
 scoreboard players set #mod4 ai_timer 4

@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:villager",
+    "minecraft:player",
+    "minecraft:wandering_trader",
+    "minecraft:iron_golem",
+    "minecraft:cat",
+    "minecraft:snow_golem"
+  ]
+}

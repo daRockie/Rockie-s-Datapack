@@ -1,6 +1,3 @@
-# 自動起爆
-execute as @e[type=creeper,nbt={Tags:["proceed","spawned"]},tag=!nuka_c] run function custom_ai:advanced_ai/creeper/auto_explode
-
 # ヌカクリーパー
 execute as @e[type=creeper,nbt={Tags:["nuka_c","spawned","proceed"],ignited:1b}] run function custom_ai:custom_mobs/nuka_creeper
 execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s ignited set value 1b
@@ -15,30 +12,15 @@ execute as @e[type=spider,tag=powered_spider] on attacker run tag @s add spider.
 execute as @e[type=minecraft:drowned,tag=squid_drowned,nbt={HurtTime:10s}] at @s run function custom_ai:movements/splash_ink
 execute as @e[type=drowned,tag=squid_drowned] at @s run function custom_ai:custom_mobs/squid_drowned
 
-# スカウトゾンビ
-execute as @e[type=zombie,tag=scout_z] at @s run function custom_ai:custom_mobs/scout_zombie
-
 # 通常ゾンビ強化
-execute as @e[type=husk,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName run attribute @s movement_speed base set 0.25
-execute as @e[type=zombie,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName run attribute @s movement_speed base set 0.25
-execute as @e[type=zombie_villager,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName run attribute @s movement_speed base set 0.25
-execute as @e[type=zombie,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName at @s[nbt={OnGround:1b}] unless block ^ ^ ^1 #air if entity @e[tag=zombies_target,distance=3..3.5] run function custom_ai:movements/chase_jump
-execute as @e[type=husk,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName at @s[nbt={OnGround:1b}] unless block ^ ^ ^1 #air if entity @e[tag=zombies_target,distance=3..3.5] run function custom_ai:movements/chase_jump
-execute as @e[type=zombie_villager,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName at @s[nbt={OnGround:1b}] unless block ^ ^ ^1 #air if entity @e[tag=zombies_target,distance=3..3.5] run function custom_ai:movements/chase_jump
+execute as @e[type=#zombies,nbt={Tags:["spawned","proceed"]}] run data modify entity @s CanBreakDoors set value 1b
+execute as @e[type=#zombies,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName run attribute @s movement_speed base set 0.25
+execute as @e[type=zombie,nbt={Tags:["proceed","spawned"]}] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/zombie/tick
 
-execute as @e[type=#undead] on attacker run tag @s add zombies_target
+# スケルトン
+execute as @e[type=#skeletons] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/skeleton/tick
 
-# エリートスケルトン
-execute as @e[type=skeleton,tag=elite_skeleton] at @s run function custom_ai:custom_mobs/elite_skeleton
-execute as @e[type=wither_skeleton,tag=elite_skeleton] at @s run function custom_ai:custom_mobs/elite_skeleton
-
-# 村破壊ガチ勢
-execute as @e[type=zombie,nbt={Tags:["spawned","proceed"]}] run data modify entity @s CanBreakDoors set value 1b
-execute as @e[type=husk,nbt={Tags:["spawned","proceed"]}] run data modify entity @s CanBreakDoors set value 1b
-execute as @e[type=zombie_villager,nbt={Tags:["spawned","proceed"]}] run data modify entity @s CanBreakDoors set value 1b
-
-# スカウトクリーパー
-execute as @e[type=creeper,tag=speed_crp] run function custom_ai:custom_mobs/scout_creeper with entity @s equipment.head
+execute as @e[type=creeper] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/creeper/tick
 execute as @e[type=creeper,tag=speed_crp] at @s run loot replace entity @s armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe
 
 # ジャンプマーカー自動処理
@@ -53,7 +35,7 @@ execute as @e[type=minecraft:armor_stand,tag=death_finder] on vehicle if entity 
 execute as @e[type=armor_stand,tag=death_finder,tag=vehicleiskilled,nbt={OnGround:1b}] at @s run function custom_ai:movements/mummy/mummy_revive
 
 # 長時間友好モブが近くにいなかった場合、勝手に潜伏
-execute as @e[type=husk,tag=mummy] at @s unless entity @e[tag=zombies_target,distance=0..32] run scoreboard players add @s ai_timer 1
+execute as @e[type=husk,tag=mummy] at @s unless entity @e[type=#custom_ai:inhostile,distance=0..32] run scoreboard players add @s ai_timer 1
 execute as @e[type=husk,tag=mummy] if score @s ai_timer matches 300.. run kill @s
 
 # タンクゾンビの被弾音
@@ -65,8 +47,11 @@ execute as @e[tag=tank] at @s positioned ~ ~0.5 ~ run function custom_ai:movemen
 # 蘇生中ミイラ
 execute as @e[type=armor_stand,tag=mummy_reviving] at @s run function custom_ai:movements/mummy/mummy_revive_obj
 
-# 蘇生後ミイラ
-execute as @e[type=husk,tag=mummy_revived] at @s run function custom_ai:custom_mobs/scout_zombie
-
 # 強化ウィッチ
-execute as @e[type=witch,nbt={Tags:["spawned","proceed"]}] at @s run function custom_ai:advanced_ai/witch/main
+execute as @e[type=witch,nbt={Tags:["spawned","proceed"]}] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/witch/tick
+
+execute as @e[type=enderman] at @s if entity @s[predicate=summonmob_main:in_hostile] run function summonmob_main:targets/eman
+
+execute as @e[type=spider] at @s if entity @s[predicate=summonmob_main:in_hostile] run function summonmob_main:targets/spider
+
+execute as @e[type=wither_skeleton] at @s if entity @s[predicate=summonmob_main:in_hostile] run function summonmob_main:targets/wither_skeleton

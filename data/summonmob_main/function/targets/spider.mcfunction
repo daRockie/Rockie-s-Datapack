@@ -1,3 +1,2 @@
-tag @e[type=player] add spider.target
-tag @e[type=snow_golem] add spider.target
-tag @e[type=iron_golem] add spider.target
+execute on target run tag @s add spider.target
+tag @n[tag=spider.target] remove spider.target

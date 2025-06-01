@@ -1,4 +1,4 @@
-execute as @e[type=armor_stand,tag=fire_shot] at @s run function system:objects/magic_shot
+execute as @e[type=armor_stand,tag=fire_shot] at @s run function system:objects/fiery_wand/magic_shot with entity @s
 
 execute as @e[type=vindicator,tag=fire] run scoreboard players add @s ai_timer 1
 execute as @e[type=vindicator,tag=fire] if score @s ai_timer matches 8.. run tp @s ~ ~-200 ~
