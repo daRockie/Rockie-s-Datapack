@@ -1,9 +1,9 @@
 #$execute as @e[distance=..1.9,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 6 mob_attack by $(parent)
 #$execute as @e[distance=2..4,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 3 mob_attack by $(parent)
-data modify entity @s CustomNameVisible set value 1b
+$execute as @e[distance=..1.9,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 6 mob_attack by @p[nbt={UUID:$(UUID)}]
+$execute as @e[distance=2..4,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 3 mob_attack by @p[nbt={UUID:$(UUID)}]
 
-execute as @e[distance=..1.9,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 6 mob_attack by @p
-execute as @e[distance=2..4,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 3 mob_attack by @p
+#$execute as @a[nbt={UUID:$(UUID)}] run say I DID
 
 execute as @e[distance=..4,tag=!fire_shot,type=!#unliving_objects] run data modify entity @s Fire set value 100
 execute as @e[distance=..4,tag=!fire_shot,type=!#unliving_objects] run effect give @s slowness 5 0 true

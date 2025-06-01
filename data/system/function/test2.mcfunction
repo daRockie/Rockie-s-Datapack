@@ -1,1 +1,0 @@
-$execute as @a if entity @s[nbt={UUID:$(ID)}] run tellraw @a [{"text":"<"},{"selector":"@s"},{"text":">"},{"text":" hi"}]
