@@ -23,5 +23,5 @@ execute if block ~ ~ ~ water run particle large_smoke ~ ~ ~ 0.5 0 0.5 0.05 15
 execute if block ~ ~ ~ water run kill @s
 
 # 着火、起爆
-$execute if score @s ai_timer matches 8.. if entity @e[tag=!fire_shot,distance=0.01..1.5,type=!#minecraft:unliving_objects] run function system:objects/fiery_wand/ignition with storage rockietools:uuid datas."$(UUID)".parent
-$execute at @s unless block ~ ~0.5 ~ air unless block ~ ~0.5 ~ light unless block ~ ~ ~ water run function system:objects/fiery_wand/ignition with storage rockietools:uuid datas."$(UUID)".parent
+execute if score @s ai_timer matches 8.. if entity @e[tag=!fire_shot,distance=0.01..1.5,type=!#minecraft:unliving_objects] run function system:objects/fiery_wand/ignition
+execute at @s unless block ~ ~0.5 ~ air unless block ~ ~0.5 ~ light unless block ~ ~ ~ water run function system:objects/fiery_wand/ignition

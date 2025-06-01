@@ -3,10 +3,8 @@ execute as @e[type=creeper,nbt={Tags:["nuka_c","spawned","proceed"],ignited:1b}]
 execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s ignited set value 1b
 execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s NoAI set value 1b
 
-# ブルードマザー
-execute as @e[type=minecraft:spider,tag=powered_spider] at @s if predicate useful-functions:is_dark run function custom_ai:custom_mobs/bloodmother
-execute as @e[type=minecraft:spider,tag=mini_spider] at @s if predicate useful-functions:is_dark run function custom_ai:custom_mobs/mini_spider
-execute as @e[type=spider,tag=powered_spider] on attacker run tag @s add spider.target
+# クモ
+execute as @e[type=minecraft:spider] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/spider/tick
 
 # イカドラウンド
 execute as @e[type=minecraft:drowned,tag=squid_drowned,nbt={HurtTime:10s}] at @s run function custom_ai:movements/splash_ink

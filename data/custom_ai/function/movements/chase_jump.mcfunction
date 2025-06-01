@@ -3,8 +3,8 @@ execute at @s run teleport @s ~ ~ ~ facing entity @e[tag=zombies.target,limit=1,
 execute at @s store result score @s x run data get entity @s Pos[0] 500
 execute at @s store result score @s z run data get entity @s Pos[2] 500
 
-execute at @s store result score @s xDis run data get entity @e[limit=1,sort=nearest,tag=zombies.target] Pos[0] 500
-execute at @s store result score @s zDis run data get entity @e[limit=1,sort=nearest,tag=zombies.target] Pos[2] 500
+execute at @s store result score @s xDis run data get entity @e[limit=1,sort=nearest,tag=zombies.target,distance=0.1..] Pos[0] 500
+execute at @s store result score @s zDis run data get entity @e[limit=1,sort=nearest,tag=zombies.target,distance=0.1..] Pos[2] 500
 
 scoreboard players operation @s xDis -= @s x
 scoreboard players operation @s zDis -= @s z
