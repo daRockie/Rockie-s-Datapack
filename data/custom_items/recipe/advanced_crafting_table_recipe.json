@@ -51,9 +51,11 @@
             "minecraft:enchantments"
           ]
         },
+        "enchantment_glint_override":true,
         "minecraft:custom_name": {"text":"改良型作業台","italic":false},
         "minecraft:rarity": "rare",
-        "minecraft:lore": [{"text":"右クリックで設置、近くに立ってスニーク長押しで破壊します！","italic":false},{"text":"クラフト素材を入れるとクラフト結果が出ます！その状態でスニークするとアイテムを入手できます。","italic":false}]
+        "minecraft:lore": [{"text":"右クリックで設置、近くに立ってスニーク長押しで破壊します！","italic":false},{"text":"クラフト素材を入れるとクラフト結果が出ます！その状態でスニークするとアイテムを入手できます。","italic":false}],
+        "item_model": "crafting_table"
       },
       "count": 1
     }

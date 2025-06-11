@@ -20,10 +20,7 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": [
-            "minecraft:husk",
-            "minecraft:zombie"
-          ],
+          "type": "#minecraft:zombies",
           "nbt": "{Tags:[\"boomer_zombie\",\"spawned\",\"proceed\"]}"
         }
       }

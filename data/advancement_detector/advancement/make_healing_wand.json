@@ -28,6 +28,6 @@
     }
   },
   "rewards": {
-    "recipes": []
+    "recipes": ["custom_items:wand_of_ardor"]
   }
 }

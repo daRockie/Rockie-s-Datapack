@@ -39,9 +39,6 @@ execute as @e[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if score @s sp
 # ベイビーブーマーゾンビジョッキー　召喚
 execute as @e[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..10 on vehicle if entity @s[type=chicken] run function summonmob_main:summon/summon_bz_jockey
 
-# 使者script
-execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"] at @s run function custom_ai:custom_mobs/messenger/0
-
 # 見習い魔導士　召喚
 execute as @e[type=minecraft:skeleton,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/wizard/apprentice
 
@@ -70,7 +67,7 @@ execute as @e[type=minecraft:enderman,tag=!proceed] if score @s spawnRandom matc
 # execute as @e[type=enderman,tag=!elite_eman] at @s run data modify entity @s AngryAt set from entity @e[tag=eman_target,distance=0..16,limit=1] UUID
 
 # ガチギレエンダーマン　改
-execute as @e[type=enderman,tag=elite_eman] at @s run data modify entity @s AngryAt set from entity @e[tag=eman_target,distance=0..10,limit=1] UUID
+execute as @e[type=enderman,tag=elite_eman,predicate=!summonmob_main:in_hostile] at @s run data modify entity @s AngryAt set from entity @e[type=#custom_ai:inhostile,distance=0..10,limit=1] UUID
 
 # 潜水ガキ
 execute as @e[type=minecraft:drowned,tag=!proceed] if score @s spawnRandom matches 0..10 run function summonmob_main:summon/summon_divingkid

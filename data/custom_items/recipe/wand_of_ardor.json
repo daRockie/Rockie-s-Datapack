@@ -2,17 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    "BA ",
-    " CA",
-    "  C"
+    " AB",
+    " DA",
+    "C  "
   ],
   "key": {
     "A": [
       "minecraft:iron_ingot",
       "minecraft:gold_ingot"
     ],
-    "B": "minecraft:apple",
-    "C": "minecraft:stick"
+    "B": "minecraft:golden_apple",
+    "C": "minecraft:stick",
+    "D": "diamond"
   },
   "result": {
     "id": "minecraft:debug_stick",

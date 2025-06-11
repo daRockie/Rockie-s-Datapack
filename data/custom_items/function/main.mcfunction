@@ -1,4 +1,7 @@
 execute as @e[type=armor_stand,tag=craft_pos] at @s run function custom_items:custom_crafter
+
+execute as @e[type=item,tag=SampleItem,nbt={NoGravity:1b}] at @s unless entity @e[type=armor_stand,tag=craft_pos,dy=-1] run kill @s
+
 scoreboard players set @a sneakTimer 0
 execute as @a if dimension overworld run scoreboard players set @s deathCount 0
 execute as @e[type=player] if score @s deathCount matches 3.. run function custom_items:give_warp_potion

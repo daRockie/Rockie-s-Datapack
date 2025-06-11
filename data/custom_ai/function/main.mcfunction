@@ -11,15 +11,24 @@ execute as @e[type=minecraft:drowned,tag=squid_drowned,nbt={HurtTime:10s}] at @s
 execute as @e[type=drowned,tag=squid_drowned] at @s run function custom_ai:custom_mobs/squid_drowned
 
 # 通常ゾンビ強化
-execute as @e[type=#zombies,nbt={Tags:["spawned","proceed"]}] run data modify entity @s CanBreakDoors set value 1b
-execute as @e[type=#zombies,nbt={Tags:["proceed","spawned"]}] unless data entity @s CustomName run attribute @s movement_speed base set 0.25
+execute as @e[type=#zombies,tag=!RD.notNormal] unless data entity @s CustomName run data modify entity @s CanBreakDoors set value 1b
+execute as @e[type=#zombies,tag=!RD.notNormal] unless data entity @s CustomName run attribute @s movement_speed base set 0.27
+
 execute as @e[type=zombie,nbt={Tags:["proceed","spawned"]}] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/zombie/tick
+
+# ブーマーゾンビ　処理
+execute as @e[type=#minecraft:zombies,tag=boomer_zombie] at @s if entity @e[distance=0..5,type=#custom_ai:inhostile,limit=1,sort=nearest,type=!player] run tag @s add ignited
+execute as @e[type=#zombies,tag=boomer_zombie] on target at @s if entity @s[type=player,gamemode=!creative,gamemode=!spectator,distance=0..5] as @e[type=#minecraft:zombies,tag=boomer_zombie,distance=0..5] run tag @s add ignited
+execute as @e[type=#minecraft:zombies,tag=boomer_zombie,tag=ignited] at @s run function custom_ai:custom_mobs/bz_script
 
 # スケルトン
 execute as @e[type=#skeletons] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/skeleton/tick
 
 execute as @e[type=creeper] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/creeper/tick
-execute as @e[type=creeper,tag=speed_crp] at @s run loot replace entity @s armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe
+execute as @e[type=creeper,tag=speed_crp] at @s run loot replace entity @s armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe[enchantments={silk_touch:1},custom_data={"getID":true}]
+
+# 使者
+execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者",predicate=summonmob_main:in_hostile] at @s run function custom_ai:custom_mobs/messenger/0
 
 # ジャンプマーカー自動処理
 execute as @e[type=marker,tag=jump_marker,tag=proceed] run kill @s
