@@ -7,26 +7,26 @@
     " B "
   ],
   "key": {
-    "A": "minecraft:iron_block",
+    "A": "minecraft:gold_block",
     "B": "minecraft:stick"
   },
   "result": {
-    "id": "minecraft:iron_axe",
+    "id": "minecraft:golden_axe",
     "components": {
       "minecraft:custom_model_data": {
         "strings": [
-          "iron_hammer"
+          "golden_hammer"
         ]
       },
       "minecraft:custom_name": {
-        "text": "鉄のハンマー",
+        "text": "黄金のハンマー",
         "italic": false,
         "color": "white"
       },
       "minecraft:lore":[
       {"text": ""},
       {
-        "text": "鍛冶屋が愛用する、かなり重いハンマー。",
+        "text": "富裕層を演じたい鍛冶屋が用いる、比較的軽めのハンマー。",
         "color": "gray",
         "italic": false
       },
@@ -36,7 +36,7 @@
         "italic": false,
         "extra": [
           {
-            "text": "50%",
+            "text": "25%",
             "color": "red",
             "italic": false
           },
@@ -66,7 +66,7 @@
         ]
       },
       {
-        "text": "金床を",
+        "text": "ハンマーを犠牲に金床を",
         "color": "gray",
         "italic": false,
         "extra": [
@@ -84,7 +84,7 @@
       }
       ],
       "minecraft:enchantments": {
-        "custom_items:guard_smash": 2,
+        "custom_items:guard_smash": 1,
         "custom_items:blacksmith": 1
       },
       "minecraft:enchantment_glint_override": false,

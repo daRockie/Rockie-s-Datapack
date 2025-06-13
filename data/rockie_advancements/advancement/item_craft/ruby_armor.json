@@ -16,7 +16,7 @@
       "frame": "challenge",
       "show_toast": true
     },
-    "parent": "advancement_detector:ruby_craft",
+    "parent": "rockie_advancements:item_craft/ruby_craft",
     "criteria": {
       "craft": {
         "trigger": "minecraft:inventory_changed",

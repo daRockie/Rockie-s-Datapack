@@ -15,7 +15,7 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "advancement_detector:install",
+  "parent": "rockie_advancements:install",
   "criteria": {
     "eat": {
       "trigger": "minecraft:consume_item",

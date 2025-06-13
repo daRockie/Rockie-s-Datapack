@@ -11,7 +11,7 @@
         "text": "改良型作業台をクラフトする"
       }
     },
-    "parent": "advancement_detector:install",
+    "parent": "rockie_advancements:install",
     "criteria": {
       "get_item": {
         "trigger": "minecraft:recipe_crafted",

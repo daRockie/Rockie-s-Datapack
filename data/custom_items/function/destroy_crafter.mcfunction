@@ -1,10 +1,10 @@
-playsound entity.item.break block @a ~ ~ ~ 2 1
-playsound entity.generic.explode block @a ~ ~ ~ 1 0.5
-particle explosion ~ ~ ~
-particle lava ~ ~ ~ 0.05 0.05 0.05 0.025 10
+#playsound entity.item.break block @a ~ ~ ~ 2 1
+playsound entity.chicken.egg block @a ~ ~ ~ 1 1
+#particle explosion ~ ~ ~
+particle cloud ~ ~ ~ 0.05 0.05 0.05 0.025 5
+$data remove storage rockietools:custom_crafter entity_data."$(UUID)"
 setblock ~ ~ ~ air destroy
 kill @e[type=item,distance=0..2,nbt={Item:{components:{"minecraft:custom_name":{text:"改良型作業台",bold:1b}},id:"minecraft:dispenser"}}]
-kill @e[type=block_display,limit=1,sort=nearest,tag=RD.block.customCrafter]
-summon item ~ ~1 ~ {Item:{id:"minecraft:armor_stand",count:1,components:{"minecraft:entity_data":{id:"minecraft:armor_stand",Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,Tags:["craft_pos"],CustomName:{"color":"aqua","text":"改良型作業台","italic":0b}},"item_model":"crafting_table",enchantment_glint_override:1b,"minecraft:custom_name":{text:"改良型作業台",italic:0b},"minecraft:lore":[{text:"右クリックで設置、近くに立ってスニーク長押しで破壊します！",italic:0b},{text:"クラフト素材を入れるとクラフト結果が出ます！その状態でスニークするとアイテムを入手できます。",italic:0b}],"minecraft:tooltip_display":{hide_tooltip:false},"minecraft:rarity":"rare"}}}
-data remove storage minecraft:slots count
+kill @e[type=block_display,sort=nearest,tag=RD.block.customCrafter,limit=1]
+summon item ~ ~1 ~ {Item:{id:"minecraft:armor_stand",count:1,components:{"minecraft:entity_data":{id:"minecraft:armor_stand",Small:1b,Marker:1b,Invisible:1b,Tags:["craft_pos"],CustomName:{"color":"yellow","text":"改良型作業台","italic":0b}},"item_model":"crafting_table",enchantment_glint_override:1b,"minecraft:custom_name":{text:"改良型作業台",color:"yellow",italic:0b},"minecraft:lore":[{"text":"普通の作業台では作れないモノを作れる、フシギな作業台。","italic":false,"color":"gray"},{"text":"クラフト素材を入れるとクラフト結果が出て、その状態でスニークするとアイテムを入手できる。","italic":false,"color": "gray"}],"minecraft:rarity":"rare","minecraft:max_stack_size":64}}}
 kill @s

@@ -1,0 +1,16 @@
+{
+  "criteria": {
+    "grap": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+            "items": "minecraft:fishing_rod"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "loot": ["minecraft:archaeology/desert_pyramid"]
+
+  }
+}

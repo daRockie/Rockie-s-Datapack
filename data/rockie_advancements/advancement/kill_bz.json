@@ -8,13 +8,13 @@
       "text": "爆発物処理班"
     },
     "description": {
-      "text": "爆発するアンデッドを倒す"
+      "text": "自爆しに向かってくる敵を返り討ちにする"
     },
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": true
+    "hidden": false
   },
-  "parent": "advancement_detector:install",
+  "parent": "rockie_advancements:install",
   "criteria": {
     "kill": {
       "trigger": "minecraft:player_killed_entity",

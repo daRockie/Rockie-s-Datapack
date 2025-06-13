@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:golden_axe",
+      "components": {
+        "custom_model_data": {"strings": ["golden_hammer"]} 
+      }
+    },
+    "title": {
+      "text": "鍛冶屋Ⅰ",
+      "type": "text",
+      "italic": false
+    },
+    "description": {
+      "text": "金のハンマーを作り、鍛冶の道を志す"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "rockie_advancements:install",
+  "criteria": {
+    "craft": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "custom_items:golden_hammer"
+      }
+    }
+  },
+  "rewards": {
+    "recipes": ["custom_items:iron_hammer"],
+    "experience": 50
+  }
+}

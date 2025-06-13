@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:netherite_axe",
+      "components": {
+        "custom_model_data": {"strings": ["netherite_hammer"]} 
+      }
+    },
+    "title": {
+      "text": "鍛冶屋Ⅲ",
+      "type": "text",
+      "italic": false
+    },
+    "description": {
+      "text": "ネザライトのハンマーを作り、鍛冶屋の境地に辿り着く"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "custom_items:hammer/2",
+  "criteria": {
+    "craft": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "custom_items:netherite_hammer"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 400
+  }
+}

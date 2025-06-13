@@ -1,2 +1,2 @@
 execute if score @s mana matches 50.. if score @s abilityCooldown.wand_of_ardor matches 0 run function custom_items:items/wand_of_ardor/used
-advancement revoke @s only custom_items:wand_of_ardor
+advancement revoke @s only custom_items:item_used/weapons/wand_of_ardor

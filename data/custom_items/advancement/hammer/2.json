@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_axe",
+      "components": {
+        "custom_model_data": {"strings": ["iron_hammer"]} 
+      }
+    },
+    "title": {
+      "text": "鍛冶屋Ⅱ",
+      "type": "text",
+      "italic": false
+    },
+    "description": {
+      "text": "鉄のハンマーを作り、鍛冶とは何かを知る"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "custom_items:hammer/1",
+  "criteria": {
+    "craft": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "custom_items:iron_hammer"
+      }
+    }
+  },
+  "rewards": {
+    "recipes": ["custom_items:netherite_hammer"],
+    "experience": 100
+  }
+}

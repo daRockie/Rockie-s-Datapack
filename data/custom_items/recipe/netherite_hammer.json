@@ -7,26 +7,27 @@
     " B "
   ],
   "key": {
-    "A": "minecraft:iron_block",
+    "A": "minecraft:netherite_ingot",
     "B": "minecraft:stick"
   },
   "result": {
-    "id": "minecraft:iron_axe",
+    "id": "minecraft:netherite_axe",
     "components": {
+      "minecraft:rarity":"epic",
       "minecraft:custom_model_data": {
         "strings": [
-          "iron_hammer"
+          "netherite_hammer"
         ]
       },
       "minecraft:custom_name": {
-        "text": "鉄のハンマー",
+        "text": "ネザライトのハンマー",
         "italic": false,
-        "color": "white"
+        "color": "light_purple"
       },
       "minecraft:lore":[
       {"text": ""},
       {
-        "text": "鍛冶屋が愛用する、かなり重いハンマー。",
+        "text": "達人の鍛冶屋のみが使うことを許された、禁断のハンマー。",
         "color": "gray",
         "italic": false
       },
@@ -36,7 +37,7 @@
         "italic": false,
         "extra": [
           {
-            "text": "50%",
+            "text": "75%",
             "color": "red",
             "italic": false
           },
@@ -84,7 +85,7 @@
       }
       ],
       "minecraft:enchantments": {
-        "custom_items:guard_smash": 2,
+        "custom_items:guard_smash": 3,
         "custom_items:blacksmith": 1
       },
       "minecraft:enchantment_glint_override": false,

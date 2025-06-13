@@ -12,13 +12,14 @@
       "italic": false
     },
     "description": {
-      "text": "ヒーリングワンドをクラフトする。"
+      "text": "治癒の魔法を発見し、更なる発展を望む"
     },
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": true
+    "announce_to_chat": true,
+    "hidden": true
   },
-  "parent": "advancement_detector:eat_apple",
+  "parent": "rockie_advancements:healing_wands/eat_apple",
   "criteria": {
     "craft": {
       "trigger": "minecraft:recipe_crafted",

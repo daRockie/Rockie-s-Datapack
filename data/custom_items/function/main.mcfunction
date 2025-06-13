@@ -25,3 +25,6 @@ execute as @e if entity @s[scores={health=11..},tag=final_surge_3] at @s run fun
 execute as @e[tag=final_surge,tag=final_surge_1] at @s if data entity @s SelectedItem unless items entity @s weapon.mainhand *[minecraft:enchantments={"custom_items:final_surge":1}] run function custom_items:enchantment/surge/deactivate_1
 execute as @e[tag=final_surge,tag=final_surge_2] at @s if data entity @s SelectedItem unless items entity @s weapon.mainhand *[minecraft:enchantments={"custom_items:final_surge":2}] run function custom_items:enchantment/surge/deactivate_2
 execute as @e[tag=final_surge,tag=final_surge_3] at @s if data entity @s SelectedItem unless items entity @s weapon.mainhand *[minecraft:enchantments={"custom_items:final_surge":3}] run function custom_items:enchantment/surge/deactivate_3
+
+# Equipment
+execute as @a run function custom_items:equipments/mining_helmet/main

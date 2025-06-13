@@ -1,2 +1,2 @@
 execute if score @s mana matches 15.. if score @s abilityCooldown.fiery_wand matches 0 run function custom_items:items/fiery_wand/used
-advancement revoke @s only custom_items:fiery_wand
+advancement revoke @s only custom_items:item_used/weapons/fiery_wand

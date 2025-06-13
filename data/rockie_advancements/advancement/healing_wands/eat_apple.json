@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:apple",
+      "count": 1
+    },
+    "title": {
+      "text": "知恵の目覚め"
+    },
+    "description": {
+      "text": "リンゴを食べ、秘められた可能性に気付く"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rockie_advancements:install",
+  "criteria": {
+    "eat": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:apple"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "recipes": ["custom_items:healing_wand"]
+  }
+}

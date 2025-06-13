@@ -7,7 +7,7 @@
       "description": "ルビーを染色に使用する。",
       "hidden": true
     },
-    "parent": "advancement_detector:ruby_craft",
+    "parent": "rockie_advancements:item_craft/ruby_craft",
     "criteria": {
       "use": {
         "trigger": "minecraft:using_item",
