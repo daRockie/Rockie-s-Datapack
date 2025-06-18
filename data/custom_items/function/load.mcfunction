@@ -5,16 +5,9 @@ scoreboard objectives add deathCount deathCount "死亡回数管理"
 scoreboard objectives add health dummy "体力"
 scoreboard objectives setdisplay below_name health
 scoreboard objectives add willReplaceItem dummy "アイテム置き換え是非"
-scoreboard objectives add recipe_id dummy "レシピID"
+scoreboard objectives add RD.recipe_id dummy "レシピID"
 scoreboard objectives add RD.flame dummy "燃焼時間"
 
-# Microsoft許すべからず
-scoreboard objectives add slot0 dummy "スロット0"
-scoreboard objectives add slot1 dummy "スロット1"
-scoreboard objectives add slot2 dummy "スロット2"
-scoreboard objectives add slot3 dummy "スロット3"
-scoreboard objectives add slot4 dummy "スロット4"
-scoreboard objectives add slot5 dummy "スロット5"
-scoreboard objectives add slot6 dummy "スロット6"
-scoreboard objectives add slot7 dummy "スロット7"
-scoreboard objectives add slot8 dummy "スロット8"
+# めんどい
+scoreboard objectives add RD.isCrafting dummy "モード識別"
+

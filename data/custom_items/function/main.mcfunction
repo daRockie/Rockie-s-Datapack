@@ -1,4 +1,6 @@
-execute as @e[type=armor_stand,tag=craft_pos] at @s run function custom_items:custom_crafter
+kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{TempItem:1b}}}}]
+
+execute as @e[type=armor_stand,tag=craft_pos] at @s run function custom_items:custom_block/advanced_crafter/main
 
 execute as @e[type=item,tag=SampleItem,nbt={NoGravity:1b}] at @s unless entity @e[type=armor_stand,tag=craft_pos,dy=-1] run kill @s
 

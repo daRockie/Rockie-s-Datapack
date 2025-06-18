@@ -12,3 +12,5 @@ scoreboard objectives add abilityCooldown.wand_of_ardor dummy "慈愛の杖の�
 
 data merge storage rockietools:uuid {datas:""}
 data modify storage rockietools:uuid datas set value {}
+
+execute if data storage rockietools:custom_crafter {} run data modify storage rockietools:custom_crafter data set value {}

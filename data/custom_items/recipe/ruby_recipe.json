@@ -28,10 +28,29 @@
       "minecraft:lore": [
         {
           "text": "ダイヤモンドの次に固い宝石だが、ダイヤモンドを素材に使用する。",
-          "color": "#39f1fe"
+          "color": "gray",
+          "italic": true
+        },
+        {
+          "text": "改良型作業台を使用することで、",
+          "color": "gray",
+          "italic": false,
+          "extra": [
+            {
+              "text": "強力な防具",
+              "color": "gold",
+              "italic": false
+            },
+            {
+              "text": "を作成できる。",
+              "color": "gray",
+              "italic": false
+            }
+          ]
         }
       ],
-      "minecraft:enchantment_glint_override": true
+      "minecraft:enchantment_glint_override": true,
+      "custom_data": {"CustomItem":"RD.ruby"}     
     }
   }
 }

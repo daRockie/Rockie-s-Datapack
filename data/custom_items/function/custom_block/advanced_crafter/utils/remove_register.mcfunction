@@ -1,0 +1,1 @@
+$data remove storage rockietools:custom_crafter data."$(UUID)"

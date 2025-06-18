@@ -1,0 +1,1 @@
+summon block_display ~-0.00025 ~-0.00025 ~-0.00025 {Tags:["RD.block.customCrafter"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[1.0005f,1.0005f,1.0005f],translation:[-0.5f,0f,-0.5f]},Invulnerable:1b,block_state:{Name:crafting_table},brightness:{block:1,sky:1}}

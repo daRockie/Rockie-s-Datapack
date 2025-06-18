@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "opened_custom_block": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:barrel",
+                "components": {
+                  "minecraft:custom_name": [
+                    {
+                      "text": "改良型作業台",
+                      "bold": true
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "custom_items:custom_block/stop_sound"
+  }
+}
