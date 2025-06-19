@@ -10,4 +10,7 @@ scoreboard objectives add RD.flame dummy "燃焼時間"
 
 # めんどい
 scoreboard objectives add RD.isCrafting dummy "モード識別"
+scoreboard objectives add RD.block.calculator dummy "計算機"
+scoreboard objectives add RD.block.calculator.temp1 dummy "仮置き空間1"
+scoreboard objectives add RD.block.calculator.temp2 dummy "仮置き空間2"
 

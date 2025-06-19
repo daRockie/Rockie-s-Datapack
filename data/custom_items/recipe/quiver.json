@@ -17,6 +17,7 @@
   "result": {
     "id": "minecraft:player_head",
     "components": {
+      "custom_data":{"CantPlace":true},
       "minecraft:profile": {
         "properties": [
             {

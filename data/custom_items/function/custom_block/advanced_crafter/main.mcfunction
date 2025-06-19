@@ -1,6 +1,6 @@
 execute if entity @s[tag=!placed_barrel] run setblock ~ ~ ~ barrel[facing=up]{CustomName:{"text":"改良型作業台","bold":true}}
 execute if entity @s[tag=!placed_barrel] run function custom_items:custom_block/advanced_crafter/utils/item_modify/fill_blank_craft_mode
-execute if entity @s[tag=!placed_barrel] run scoreboard players set @s isCrafting 1
+execute if entity @s[tag=!placed_barrel] run scoreboard players set @s RD.isCrafting 1
 tag @s add placed_barrel
 execute if entity @s[tag=placed_barrel] unless block ~ ~ ~ barrel[facing=up]{CustomName:{"text":"改良型作業台","bold":true}} run function custom_items:custom_block/advanced_crafter/destroy_crafter
 #function crafter_main:main

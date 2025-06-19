@@ -25,9 +25,12 @@ execute if score @s mana.max matches 0 run scoreboard players set @s mana.max 10
 execute if score @s mana.operation matches 0 if score @s mana < @s mana.max run function system:mana/add_mana
 execute if score @s mana > @s mana.max run function system:mana/reset_mana
 
-# アイテムチェック（装備）
-execute if items entity @s[tag=!eq.wizard_hat] armor.head player_head[minecraft:custom_name={text:"魔法の帽子",italic:0b},rarity=rare,minecraft:lore=[{text:"魔導士のゴーグルを使用してクラフトできる防具。",italic:0b},{text:"マナの最大値を20増やす。",italic:0b}]] run scoreboard players add @s mana.max 20
-execute if items entity @s[tag=!eq.wizard_hat] armor.head player_head[minecraft:custom_name={text:"魔法の帽子",italic:0b},rarity=rare,minecraft:lore=[{text:"魔導士のゴーグルを使用してクラフトできる防具。",italic:0b},{text:"マナの最大値を20増やす。",italic:0b}]] run tag @s add eq.wizard_hat
+execute if items entity @s weapon.* *[custom_data~{CantPlace:1b}] run attribute @s block_interaction_range base set 0
+execute unless items entity @s weapon.* *[custom_data~{CantPlace:1b}] run attribute @s block_interaction_range base set 5
 
-execute unless items entity @s[tag=eq.wizard_hat] armor.head player_head[minecraft:custom_name={text:"魔法の帽子",italic:0b},rarity=rare,minecraft:lore=[{text:"魔導士のゴーグルを使用してクラフトできる防具。",italic:0b},{text:"マナの最大値を20増やす。",italic:0b}]] run scoreboard players remove @s mana.max 20
-execute unless items entity @s[tag=eq.wizard_hat] armor.head player_head[minecraft:custom_name={text:"魔法の帽子",italic:0b},rarity=rare,minecraft:lore=[{text:"魔導士のゴーグルを使用してクラフトできる防具。",italic:0b},{text:"マナの最大値を20増やす。",italic:0b}]] run tag @s remove eq.wizard_hat
+# アイテムチェック（装備）
+execute if items entity @s[tag=!eq.wizard_hat] armor.head player_head[custom_data={CustomItem:"RD.equipment.wizard_hat"}] run scoreboard players add @s mana.max 20
+execute if items entity @s[tag=!eq.wizard_hat] armor.head player_head[custom_data={CustomItem:"RD.equipment.wizard_hat"}] run tag @s add eq.wizard_hat
+
+execute unless items entity @s[tag=eq.wizard_hat] armor.head player_head[custom_data={CustomItem:"RD.equipment.wizard_hat"}] run scoreboard players remove @s mana.max 20
+execute unless items entity @s[tag=eq.wizard_hat] armor.head player_head[custom_data={CustomItem:"RD.equipment.wizard_hat"}] run tag @s remove eq.wizard_hat

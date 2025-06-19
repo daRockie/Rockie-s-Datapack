@@ -6,6 +6,7 @@
         "item": {
           "items": "minecraft:player_head",
           "components": {
+            "custom_data": {"CantPlace": true},
             "minecraft:rarity": "common",
             "minecraft:custom_name": {"text":"矢筒","italic":false},
             "minecraft:profile": {
@@ -16,7 +17,7 @@
                 }
               ]
             },
-            "minecraft:lore": [{"text":"右クリックで矢を9個入手できます。","italic":false}]
+            "minecraft:lore": [{"text":"右クリックで矢を9個入手できます。","italic":false,"color":"gray"}]
           }
         }
       }
