@@ -1,13 +1,14 @@
 {
   "criteria": {
-    "using_fiery_wand": {
+    "using_reverberation": {
       "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
           "components": {
             "minecraft:custom_data":
             {
-              "CustomItem": ""
+              "CustomItem":"RD.reverberation",
+              "RD.recipeResult":true
             }
           }
         }
@@ -15,6 +16,6 @@
     }
   },
   "rewards": {
-    "function": "custom_items:items/fiery_wand/right_click"
+    "function": "custom_items:items/grimoire/reverberation/right_click"
   }
 }

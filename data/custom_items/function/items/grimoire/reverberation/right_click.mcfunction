@@ -1,0 +1,2 @@
+execute if score @s mana matches 80.. if score @s abilityCooldown.reverberation matches 0 run function custom_items:items/grimoire/reverberation/used
+advancement revoke @s only custom_items:item_used/weapons/reverberation

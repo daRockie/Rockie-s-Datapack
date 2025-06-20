@@ -10,11 +10,11 @@ item replace block ~ ~ ~ container.16 with player_head[profile={properties:[{val
 
 # 魔導書
 execute if score @s RD.recipe_id matches 3 run return run \
-item replace block ~ ~ ~ container.16 with knowledge_book[custom_name=[{"text":"魔導書","italic":false,"color":"yellow","bold":true}],lore=[[{"text":"魔法の基礎となる本","italic":false,"color":"gray"}]],minecraft:custom_data={"RD.recipeResult":1b,"CustomItem":"RD.grimoire"}]
+item replace block ~ ~ ~ container.16 with book[custom_name=[{"text":"魔導書","italic":false,"color":"yellow","bold":true}],lore=[[{"text":"魔法の基礎となる本","italic":false,"color":"gray"}]],minecraft:custom_data={"RD.recipeResult":1b,"CustomItem":"RD.grimoire"},item_model=knowledge_book]
 
 # 残響
 execute if score @s RD.recipe_id matches 4 run return run \
-item replace block ~ ~ ~ container.16 with tnt[custom_name=[{"text":"仮置き","italic":0b}],custom_data={"RD.recipeResult":1b}]
+item replace block ~ ~ ~ container.16 with book[custom_name=[{"text":"「残響」","italic":false,"color":"dark_aqua","bold":true},{"text":"の魔導書",color:"white",italic:0b,bold:0b}],lore=[[{"text":"古代文明の闇に眠るナゾ多き本","italic":true,color:"dark_gray"}],"",[{"text":"アビリティ：ソニックブーム ","italic":false,"color":"gold"},{"text":"右クリックで発動","italic":false,"color":"yellow","bold":true}],[{"text":"壁を貫通する衝撃波","italic":false,"color":"green"},{"text":"を発射し、","italic":false,"color":"gray"}],[{"text":"ヒットした敵に対し",color:"gray","italic":false,extra:[{"text":"30の防具貫通ダメージ","color":red,extra:[{"text":"を与える。","color":"gray","italic":0b}]}]}],"",[{"text":"クールダウン：","italic":false,"color":"dark_gray"},{"text":"8秒","italic":false,"color":"green"}],[{"text":"マナ消費量：","italic":false,"color":"dark_gray"},{"text":"120","italic":false,"color":"dark_aqua"}]],custom_data={"RD.recipeResult":1b,"CustomItem":"RD.reverberation"},food={nutrition:0,saturation:0,can_always_eat:true},consumable={animation:none,has_consume_particles:false,consume_seconds:210000},item_model="written_book",enchantment_glint_override=1b]
 
 # ルビーレギンス
 execute if score @s RD.recipe_id matches 5 run return run \
@@ -23,3 +23,7 @@ item replace block ~ ~ ~ container.16 with leather_leggings[trim={pattern:silenc
 # ルビーブーツ
 execute if score @s RD.recipe_id matches 6 run return run \
 item replace block ~ ~ ~ container.16 with leather_boots[trim={pattern:silence,material:redstone,show_in_tooltip:false},dyed_color=11546150,custom_name=[{"text":"ルビーのブーツ","italic":false}],lore=[[{"text":"煌めく","italic":false,"color":"gray"},{"text":"真紅の宝石","italic":false,"color":"red"},{"text":"を基に制作された防具。","italic":false,"color":"gray"}],[{"text":"装備すると最大体力が","italic":false,"color":"gray"},{"text":"♡","italic":false,"color":"red"},{"text":"2","italic":false,"color":"green"},{"text":"増加する。","italic":false,"color":"gray"}]],rarity=uncommon,enchantment_glint_override=true,attribute_modifiers=[{type:armor,amount:3.5,slot:feet,id:"ruby__boots",operation:add_value},{type:max_health,amount:2,slot:feet,id:"ruby__boots_health",operation:add_value},{id:"ruby__boots_toughness",amount:1.5,operation:add_value,type:"armor_toughness",slot:feet}],max_damage=462,tooltip_display={hidden_components:[dyed_color,trim]},custom_data={RD.recipeResult:1b,"CustomItem":"RD.rubyArmor"}] 1
+
+# ブリザード
+execute if score @s RD.recipe_id matches 7 run return run \
+item replace block ~ ~ ~ container.16 with knowledge_book[custom_name=[{"text":"「ブリザード」","italic":false,"color": 1"dark_aqua","bold":true},{"text":"の魔導書","italic":false}],lore=[[{"text":"冷たい素材で作る寒い本","color":"dark_gray"}],"",[{"text":"アビリティ：氷結弾 ","italic":false,"color":"gold"},{"text":"右クリックで発動","italic":false,"color":"yellow","bold":true}],[{"text":"敵に","italic":false,"color":"gray"},{"text":"鈍足効果を付与する氷結弾","italic":false,"color":"green"},{"text":"を放つ","italic":false,"color":"gray"}],"",[{"text":"クールダウン：","italic":false,"color":"dark_gray"},{"text":"0.2秒","italic":false,"color":"green"}],[{"text":"マナ消費量：","italic":false,"color":"dark_gray"},{"text":"20","italic":false,"color":"dark_aqua"}]],custom_data={RD.recipeResult:1b,"CustomItem":"RD.freeze"}]

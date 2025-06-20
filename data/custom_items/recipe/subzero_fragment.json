@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"
+  ],
+  "key": {
+    "A": [
+      "minecraft:ice"
+    ],
+    "B": [
+      "minecraft:packed_ice"
+    ],
+    "C": [
+      "minecraft:blue_ice"
+    ]
+  },
+  "result": {
+    "id": "minecraft:heart_of_the_sea",
+    "components": {
+      "minecraft:custom_name": {
+        "text": "氷点下の欠片",
+        "color": "#00a2b8",
+        "bold": true,
+        "italic": false
+      },
+      "minecraft:lore": [
+        {
+          "text": "持っているだけで凍えそう",
+          "color": "gray",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "minecraft:custom_data": {
+        "CustomItem": "RD.subzero"
+      }
+    }
+  }
+}
