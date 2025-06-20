@@ -7,7 +7,7 @@
           "components": {
             "minecraft:custom_data":
             {
-              "Weapon_ID": 1
+              "CustomItem": ""
             }
           }
         }

@@ -1,0 +1,72 @@
+レシピの追加の仕方
+
+------------------------------------------------------------------
+
+操作する必要のあるファイル
+1. recipe_data/（レシピ名）.mcfunction　←新しく作る！
+2. recipe_data/util/store_cost.mcfunction
+3. recipe_data/util/place_result.mcfunction
+
+------------------------------------------------------------------
+
+手順
+
+1 レシピデータを登録する
+
+まず、recipe_dataフォルダ内に、追加したいアイテム名のmcfunctionファイルを作成する。
+
+次に中身を書き換える。
+
+「if items block ~ ~ ~ container」
+
+...という感じに続く行を編集し、検知するアイテムを変更する。
+
+スロットを空白にしたい場合は、
+
+「unless items block ~ ~ ~ container.[id] * \」
+
+と書き込めばいい。
+
+if文最後の行にある「run return」の箇所には、アイテムのIDを入力する
+
+例：if items block ~ ~ ~ container.23 red_dye[custom_data~{CustomItem:"RD.ruby"}] run return 1
+
+アイテムを一通り指定し終わったら、一番最後の行の「return」を編集する。
+次のIDとなるアイテムが存在する場合は、次IDのアイテムレシピ検知functionを実行
+
+例：return run function custom_items:custom_block/advanced_crafter/recipe_data/wizard_hat
+
+次のIDとなるアイテムが存在しない場合は、「return 0」と入力する。
+
+------------------------------------------------------------------
+
+2 レシピの素材要求量を登録する
+
+2番目のファイルを開く。ここではアイテムが必要とする最低素材数を指定できる。
+
+定型
+$execute if score @s RD.recipe_id matches [ID] run return run \
+data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [1,1,1,1,1,1,1,1,1]
+
+下の例の場合、全スロット最低1個の素材を必要とする。
+
+例： 魔法使いの帽子
+$execute if score @s RD.recipe_id matches 3 run return run \
+data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [1,1,1,1,1,1,1,1,1]
+
+負の値を指定してはならない。
+
+------------------------------------------------------------------
+
+3 クラフト結果を表示する
+
+3番目のファイルを開く。ここではクラフト結果を操作することができる。
+
+execute if score @s RD.recipe_id matches [ID] run return run \
+item replace block ~ ~ ~ container.16 with [Item Name] 1
+
+例： ルビーCP
+execute if score @s RD.recipe_id matches 1 run return run \
+item replace block ~ ~ ~ container.16 with leather_chestplate[trim={pattern:silence,material:redstone,show_in_tooltip:false},dyed_color=11546150,custom_name=[{"text":"ルビーのチェストプレート","italic":false}],lore=[[{"text":"煌めく","italic":false,"color":"gray"},{"text":"真紅の宝石","italic":false,"color":"red"},{"text":"を基に制作された防具。","italic":false,"color":"gray"}],[{"text":"装備すると最大体力が","italic":false,"color":"gray"},{"text":"♡","italic":false,"color":"red"},{"text":"10","italic":false,"color":"green"},{"text":"増加する。","italic":false,"color":"gray"}]],rarity=uncommon,enchantment_glint_override=true,attribute_modifiers=[{type:armor,amount:7.5,slot:chest,id:"ruby__armor",operation:add_value},{type:max_health,amount:10,slot:chest,id:"ruby__health",operation:add_value},{id:"ruby__armor_toughness",amount:1.5,operation:add_value,type:"armor_toughness",slot:chest}],max_damage=625,tooltip_display={hidden_components:[dyed_color,trim]},custom_data={RD.recipeResult:1b}] 1
+
+基本的にカスタムデータを登録すること。{"RD.recipeResult":1b}は必須である。

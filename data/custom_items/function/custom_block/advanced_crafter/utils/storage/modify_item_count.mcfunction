@@ -1,3 +1,6 @@
+#say calculating items!
+playsound minecraft:entity.player.levelup block @a ~ ~ ~ 0.5 2
+
 # スロット 0
 $execute store result score @s RD.block.calculator.temp1 run data get storage rockietools:custom_crafter data."$(UUID)".cost[0] 1
 $execute store result score @s RD.block.calculator run data get storage rockietools:custom_crafter data."$(UUID)".slots[0] 1
@@ -60,3 +63,5 @@ $execute store result score @s RD.block.calculator run data get storage rockieto
 execute if score @s RD.block.calculator.temp1 matches 1.. run scoreboard players operation @s RD.block.calculator -= @s RD.block.calculator.temp1
 execute if score @s RD.block.calculator.temp1 matches 1.. run execute store result block ~ ~ ~ Items[{Slot:23b}].count int 1 run scoreboard players get @s RD.block.calculator
 execute if score @s RD.block.calculator matches ..0 run item replace block ~ ~ ~ container.23 with air
+
+tag @s remove RD.block.customCrafter.processing

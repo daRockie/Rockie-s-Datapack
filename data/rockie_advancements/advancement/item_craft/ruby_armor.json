@@ -12,7 +12,7 @@
         }
       },
       "title": "フィジカルストレンス",
-      "description": "ルビーからルビーアーマーをクラフトする。",
+      "description": "ルビーから体力が増強される強力な防具をクラフトする",
       "frame": "challenge",
       "show_toast": true
     },
@@ -23,11 +23,15 @@
         "conditions": {
           "items": [
             {
-              "items": "minecraft:leather_chestplate",
+              "items": [
+                "leather_chestplate",
+                "leather_leggings",
+                "leather_boots"
+              ],
               "components": {
-                "minecraft:trim": {
-                  "material": "minecraft:redstone",
-                  "pattern": "minecraft:silence"
+                "custom_data": {
+                  "RD.recipeResult":true,
+                  "CustomItem":"RD.rubyArmor"
                 }
               }
             }

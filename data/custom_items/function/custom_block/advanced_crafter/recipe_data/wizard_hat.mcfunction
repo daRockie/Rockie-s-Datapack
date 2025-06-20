@@ -6,7 +6,7 @@
 # -------------
 # 次IDとなるレシピが存在する場合は次に来るレシピIDの確認関数を呼び出し、存在しない場合は-1を返す
 
-#say checking recipe: WIZARD_HAT
+#say checking recipe: GRIMOIRE
 
 execute \
 if items block ~ ~ ~ container.3 lapis_lazuli \
@@ -18,5 +18,5 @@ if items block ~ ~ ~ container.14 iron_nugget \
 if items block ~ ~ ~ container.21 lapis_lazuli \
 if items block ~ ~ ~ container.22 iron_nugget \
 if items block ~ ~ ~ container.23 lapis_lazuli run return 2
-#say RECIPE IS WRONG! RETURN -1
-return 0
+#say RECIPE IS WRONG! RETURN NEXT RECIPE
+return run function custom_items:custom_block/advanced_crafter/recipe_data/grimoire

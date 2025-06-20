@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " B ",
+    "BAB",
+    " B "
+  ],
+  "key": {
+    "A": [
+      "minecraft:emerald"
+    ],
+    "B": [
+      "minecraft:lapis_lazuli"
+    ]
+  },
+  "result": {
+    "id": "minecraft:emerald",
+    "components": {
+      "minecraft:lore": [
+        {
+          "text": "魔導書の素材となる神聖な宝石",
+          "color": "gray",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "minecraft:custom_name": {
+        "text": "ペリドット",
+        "color": "#1eff00",
+        "bold": true,
+        "italic": false
+      },
+      "minecraft:enchantment_glint_override": false,
+      "minecraft:custom_data": {
+        "CustomItem": "RD.peridot"
+      }
+    }
+  }
+}
