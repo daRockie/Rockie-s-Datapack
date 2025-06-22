@@ -6,14 +6,16 @@ execute as @e[tag=!proceed] run function summonmob_main:system/proceed
 execute as @e[tag=proceed] run scoreboard players reset @s lifeTime
 
 # ブーマーゾンビ　召喚
-execute as @e[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summon_bz
+execute as @e[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/summon_bz
 
 # ブーマーミイラ　召喚
-execute as @e[type=minecraft:husk,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summon_bm
-execute as @e[type=minecraft:husk,tag=!proceed,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summon_bm_s
+execute as @e[type=minecraft:husk,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/summon_bm
+execute as @e[type=minecraft:husk,tag=!proceed,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/summon_bm_s
 
 # ミイラ　召喚
-execute as @e[type=minecraft:husk,tag=!proceed] if score @s spawnRandom matches 21..30 run function summonmob_main:summon/summon_mummy
+execute as @e[type=minecraft:husk,tag=!proceed] if score @s spawnRandom matches 16..30 run function summonmob_main:summon/summon_mummy
+
+execute as @e[type=minecraft:husk,tag=!proceed] if score @s spawnRandom matches 31..45 run function summonmob_main:summon/archer_husk
 
 # タンクゾンビ　召喚
 execute as @e[type=zombie,tag=!proceed,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 33..40 run function summonmob_main:summon/summon_tank_z
@@ -27,8 +29,8 @@ execute as @e[type=dolphin,tag=!proceed] if score @s spawnRandom matches 0..15 r
 # イカドラウンド
 execute as @e[type=squid,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summmon_squid
 
-# スカウトゾンビ
-execute as @e[type=zombie,tag=!proceed,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 20..32 run function summonmob_main:summon/summon_scout_z
+# アーチャーゾンビ
+execute as @e[type=zombie,tag=!proceed,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 15..30 run function summonmob_main:summon/archer_zombie
 
 # ヌカクリーパー
 execute as @e[type=creeper,tag=!proceed] if score @s spawnRandom matches 30..33 run function summonmob_main:summon/summon_nuka_creeper

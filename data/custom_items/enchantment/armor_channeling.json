@@ -1,0 +1,233 @@
+{
+  "description": {
+    "text": "避雷針"
+  },
+  "supported_items": "#enchantable/armor",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "chest"
+  ],
+  "effects": {
+    "minecraft:tick": [
+      {
+        "effect": {
+          "type": "minecraft:spawn_particles",
+          "particle": {
+            "type": "minecraft:electric_spark"
+          },
+          "horizontal_position": {
+            "type": "in_bounding_box",
+            "scale": 1.4
+          },
+          "vertical_position": {
+            "type": "in_bounding_box",
+            "scale": 0.5,
+            "offset": 0.1
+          },
+          "horizontal_velocity": {},
+          "vertical_velocity": {
+            "base": 0.4
+          },
+          "speed": 1
+        },
+        "requirements": [
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.6
+          },
+          {
+            "condition": "minecraft:weather_check",
+            "thundering": true
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "can_see_sky": true
+            }
+          }
+        ]
+      },
+      {
+        "effect": {
+          "type": "minecraft:all_of",
+          "effects": [
+            {
+              "type": "minecraft:summon_entity",
+              "entity": "minecraft:lightning_bolt"
+            },
+            {
+              "type": "minecraft:spawn_particles",
+              "particle": {
+                "type": "minecraft:end_rod"
+              },
+              "horizontal_position": {
+                "type": "in_bounding_box",
+                "offset": 0.1,
+                "scale": 3
+              },
+              "vertical_position": {
+                "type": "in_bounding_box",
+                "scale": 0.3
+              },
+              "horizontal_velocity": {},
+              "vertical_velocity": {},
+              "speed": 0
+            },
+            {
+              "type": "minecraft:spawn_particles",
+              "particle": {
+                "type": "minecraft:end_rod"
+              },
+              "horizontal_position": {
+                "type": "in_bounding_box",
+                "offset": 0.1,
+                "scale": 3
+              },
+              "vertical_position": {
+                "type": "in_bounding_box",
+                "scale": 0.3
+              },
+              "horizontal_velocity": {},
+              "vertical_velocity": {},
+              "speed": 0
+            },
+            {
+              "type": "minecraft:spawn_particles",
+              "particle": {
+                "type": "minecraft:end_rod"
+              },
+              "horizontal_position": {
+                "type": "in_bounding_box",
+                "offset": 0.1,
+                "scale": 3
+              },
+              "vertical_position": {
+                "type": "in_bounding_box",
+                "scale": 0.3
+              },
+              "horizontal_velocity": {},
+              "vertical_velocity": {},
+              "speed": 0
+            },
+            {
+              "type": "minecraft:spawn_particles",
+              "particle": {
+                "type": "minecraft:end_rod"
+              },
+              "horizontal_position": {
+                "type": "in_bounding_box",
+                "offset": 0.1,
+                "scale": 3
+              },
+              "vertical_position": {
+                "type": "in_bounding_box",
+                "scale": 0.3
+              },
+              "horizontal_velocity": {},
+              "vertical_velocity": {},
+              "speed": 0
+            },
+            {
+              "type": "minecraft:spawn_particles",
+              "particle": {
+                "type": "minecraft:end_rod"
+              },
+              "horizontal_position": {
+                "type": "in_bounding_box",
+                "offset": 0.1,
+                "scale": 3
+              },
+              "vertical_position": {
+                "type": "in_bounding_box",
+                "scale": 0.3
+              },
+              "horizontal_velocity": {},
+              "vertical_velocity": {},
+              "speed": 0
+            },
+            {
+              "type": "minecraft:spawn_particles",
+              "particle": {
+                "type": "instant_effect"
+              },
+              "horizontal_position": {
+                "type": "in_bounding_box",
+                "offset": 0.1,
+                "scale": 3
+              },
+              "vertical_position": {
+                "type": "in_bounding_box",
+                "scale": 0.3
+              },
+              "horizontal_velocity": {},
+              "vertical_velocity": {},
+              "speed": 0
+            },
+            {
+              "type": "minecraft:spawn_particles",
+              "particle": {
+                "type": "instant_effect"
+              },
+              "horizontal_position": {
+                "type": "in_bounding_box",
+                "offset": 0.1,
+                "scale": 3
+              },
+              "vertical_position": {
+                "type": "in_bounding_box",
+                "scale": 0.3
+              },
+              "horizontal_velocity": {},
+              "vertical_velocity": {},
+              "speed": 0
+            },
+            {
+              "type": "minecraft:spawn_particles",
+              "particle": {
+                "type": "instant_effect"
+              },
+              "horizontal_position": {
+                "type": "in_bounding_box",
+                "offset": 0.1,
+                "scale": 3
+              },
+              "vertical_position": {
+                "type": "in_bounding_box",
+                "scale": 0.3
+              },
+              "horizontal_velocity": {},
+              "vertical_velocity": {},
+              "speed": 0
+            }
+          ]
+        },
+        "requirements": [
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.003
+          },
+          {
+            "condition": "minecraft:weather_check",
+            "thundering": true
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "can_see_sky": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

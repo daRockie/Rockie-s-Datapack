@@ -6,6 +6,8 @@ scoreboard objectives add mana.operation dummy "マナ計算"
 
 scoreboard objectives add ability.right_click dummy "アビリティ：右クリ検知"
 
+scoreboard objectives add item.shortBow.cooldown dummy "ショートボウのクールダウン"
+
 scoreboard objectives add abilityCooldown.healing_wand dummy "ヒーリングワンドのクールダウン"
 scoreboard objectives add abilityCooldown.fiery_wand dummy "ファイアリーワンドのクールダウン"
 scoreboard objectives add abilityCooldown.wand_of_ardor dummy "慈愛の杖のクールダウン"

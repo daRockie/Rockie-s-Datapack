@@ -7,6 +7,7 @@ scoreboard objectives setdisplay below_name health
 scoreboard objectives add willReplaceItem dummy "アイテム置き換え是非"
 scoreboard objectives add RD.recipe_id dummy "レシピID"
 scoreboard objectives add RD.flame dummy "燃焼時間"
+scoreboard objectives add RD.temp0 dummy "仮置きスコアボード"
 
 # めんどい
 scoreboard objectives add RD.isCrafting dummy "モード識別"

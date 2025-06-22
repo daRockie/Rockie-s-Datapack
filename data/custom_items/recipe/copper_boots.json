@@ -1,9 +1,9 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
+      "   ",
       "A A",
-      "AAA",
-      "AAA"
+      "A A"
     ],
     "key": {
       "A": [
@@ -11,21 +11,22 @@
       ]
     },
     "result": {
-      "id": "minecraft:leather_chestplate",
+      "id": "minecraft:leather_boots",
       "components": {
-        "enchantments":{
-          "custom_items:armor_channeling": 1
-        },
-        "minecraft:custom_name": {"text":"銅のチェストプレート","italic":false},
-        "max_damage": 210,
+    
+        "minecraft:custom_name": {"text":"銅のブーツ","italic":false},
+        "max_damage": 180,
         "equippable":{
-          "slot": "chest",
+          "slot": "feet",
           "equip_sound": "item.armor.equip_chain",
           "asset_id": "leather"
         },
         "attribute_modifiers": [
-          {"id": "copper_chest","amount": 4.5, "operation": "add_value","slot": "chest","type": "armor"}
+          {"id": "copper_boots","amount": 2, "operation": "add_value","slot": "feet","type": "armor"}
         ],
+        "enchantments":{
+          "custom_items:armor_channeling": 1
+        },
         "repairable":{
           "items": "copper_ingot"
         },

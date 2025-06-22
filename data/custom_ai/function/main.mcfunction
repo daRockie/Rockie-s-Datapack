@@ -18,6 +18,7 @@ execute as @e[type=zombie,nbt={Tags:["proceed","spawned"]}] at @s if entity @a[d
 # ブーマーゾンビ　処理
 execute as @e[type=#minecraft:zombies,tag=boomer_zombie] at @s if entity @e[distance=0..5,type=#custom_ai:inhostile,limit=1,sort=nearest,type=!player] run tag @s add ignited
 execute as @e[type=#zombies,tag=boomer_zombie] on target at @s if entity @s[type=player,gamemode=!creative,gamemode=!spectator,distance=0..5] as @e[type=#minecraft:zombies,tag=boomer_zombie,distance=0..5] run tag @s add ignited
+execute as @e[type=#zombies,tag=boomer_zombie] if entity @e[tag=zombies.target,distance=0..5] run tag @s add ignited
 execute as @e[type=#minecraft:zombies,tag=boomer_zombie,tag=ignited] at @s run function custom_ai:custom_mobs/bz_script
 
 # スケルトン
@@ -45,7 +46,7 @@ execute as @e[type=husk,tag=mummy] at @s unless entity @e[type=#custom_ai:inhost
 execute as @e[type=husk,tag=mummy] if score @s ai_timer matches 300.. run kill @s
 
 # タンクゾンビの被弾音
-execute as @e[type=zombie,tag=tank,nbt={HurtTime:9s}] at @s run playsound minecraft:entity.zombie.attack_iron_door hostile @a ~ ~ ~ 1 0.5
+execute as @e[type=#zombies,tag=tank,nbt={HurtTime:9s}] at @s run playsound minecraft:entity.zombie.attack_iron_door hostile @a ~ ~ ~ 1 0.5
 
 # 飛び道具はじくマン
 execute as @e[tag=tank] at @s positioned ~ ~0.5 ~ run function custom_ai:movements/kill_projectile

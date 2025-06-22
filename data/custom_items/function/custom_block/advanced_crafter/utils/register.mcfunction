@@ -12,7 +12,7 @@ data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [0,
 
 # 明るさの定義
 $execute store result storage rockietools:custom_crafter data."$(UUID)".current_brightness int 1 run function custom_items:custom_block/advanced_crafter/utils/get_brightness
-$execute store result entity @n[type=block_display,distance=..0.5] brightness.block int 1 run data get storage rockietools:custom_crafter data."$(UUID)".current_brightness 1
+$execute as @e[type=block_display,distance=..0.5] store result entity @s brightness.block int 1 run data get storage rockietools:custom_crafter data."$(UUID)".current_brightness 1
 
 execute positioned ~ ~1 ~ if predicate custom_items:can_see_sky run data modify entity @n[type=block_display] brightness.sky set value 14
 execute positioned ~ ~1 ~ unless predicate custom_items:can_see_sky run data modify entity @n[type=block_display] brightness.sky set value 1

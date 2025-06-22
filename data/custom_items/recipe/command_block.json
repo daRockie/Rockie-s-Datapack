@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": [
+      "minecraft:orange_dye"
+    ]
+  },
+  "result": {
+    "id": "minecraft:command_block",
+    "components": {
+      "minecraft:consumable": {
+        "animation": "eat",
+        "sound": "minecraft:entity.zombie.attack_iron_door",
+        "consume_seconds": 2,
+        "has_consume_particles": true,
+        "on_consume_effects": [
+          {"type": "apply_effects", "effects": [{"id": "instant_damage", "duration": 1, "amplifier": 200}]}
+        ]
+      }
+    }
+  }
+}
