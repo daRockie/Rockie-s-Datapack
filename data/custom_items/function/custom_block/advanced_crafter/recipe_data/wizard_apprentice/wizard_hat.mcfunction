@@ -19,4 +19,4 @@ if items block ~ ~ ~ container.21 lapis_lazuli \
 if items block ~ ~ ~ container.22 iron_nugget \
 if items block ~ ~ ~ container.23 lapis_lazuli run return 2
 #say RECIPE IS WRONG! RETURN NEXT RECIPE
-return run function custom_items:custom_block/advanced_crafter/recipe_data/grimoire
+return run function custom_items:custom_block/advanced_crafter/recipe_data/grimoire/grimoire

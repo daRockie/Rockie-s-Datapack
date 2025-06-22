@@ -19,4 +19,4 @@ if items block ~ ~ ~ container.21 amethyst_shard \
 if items block ~ ~ ~ container.22 emerald[custom_data~{CustomItem:"RD.peridot"}] \
 if items block ~ ~ ~ container.23 amethyst_shard run return 3
 #say RECIPE IS WRONG! RETURN NEXT RECIPE
-return run function custom_items:custom_block/advanced_crafter/recipe_data/reverberation
+return run function custom_items:custom_block/advanced_crafter/recipe_data/grimoire/reverberation

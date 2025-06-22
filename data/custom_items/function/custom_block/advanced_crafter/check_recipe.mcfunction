@@ -1,5 +1,5 @@
 # レシピの確認
-execute store result score @s RD.recipe_id run function custom_items:custom_block/advanced_crafter/recipe_data/ruby_chestplate
+execute store result score @s RD.recipe_id run function custom_items:custom_block/advanced_crafter/recipe_data/ruby/ruby_chestplate
 
 #tellraw @a [{"score":{"name":"@s","objective":"RD.recipe_id"}}]
 

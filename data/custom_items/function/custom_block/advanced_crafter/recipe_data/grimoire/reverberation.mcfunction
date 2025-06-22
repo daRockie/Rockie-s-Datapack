@@ -19,4 +19,4 @@ if items block ~ ~ ~ container.21 echo_shard \
 if items block ~ ~ ~ container.22 sculk \
 if items block ~ ~ ~ container.23 echo_shard run return 4
 #say RECIPE IS WRONG! RETURN NEXT RECIPE
-return run function custom_items:custom_block/advanced_crafter/recipe_data/ruby_leggings
+return run function custom_items:custom_block/advanced_crafter/recipe_data/ruby/ruby_leggings

@@ -7,7 +7,7 @@
         }
       },
       "title": "紅の宝石",
-      "description": "魅力的な力を秘めた宝石、ルビーを入手する",
+      "description": "ルビーを入手する",
       "frame": "task",
       "show_toast": true
     },
@@ -21,7 +21,9 @@
               "items": "minecraft:red_dye",
               "count": 1,
               "components": {
-                "custom_data": {"CustomItem":"RD.ruby"}
+                "custom_data": {"CustomItem":"RD.ruby"},
+                "minecraft:custom_model_data":
+                {"strings": ["RD.ruby"]}
               }
             }
           ]

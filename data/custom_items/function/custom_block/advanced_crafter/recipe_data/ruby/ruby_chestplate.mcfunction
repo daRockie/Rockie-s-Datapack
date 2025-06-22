@@ -32,4 +32,4 @@ if items block ~ ~ ~ container.21 red_dye[custom_data~{CustomItem:"RD.ruby"}] \
 if items block ~ ~ ~ container.22 red_dye[custom_data~{CustomItem:"RD.ruby"}] \
 if items block ~ ~ ~ container.23 red_dye[custom_data~{CustomItem:"RD.ruby"}] run return 1
 #say RECIPE IS WRONG! RETURN NEXT RECIPE
-return run function custom_items:custom_block/advanced_crafter/recipe_data/wizard_hat
+return run function custom_items:custom_block/advanced_crafter/recipe_data/wizard_apprentice/wizard_hat

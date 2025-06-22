@@ -64,4 +64,6 @@ execute if score @s RD.block.calculator.temp1 matches 1.. run scoreboard players
 execute if score @s RD.block.calculator.temp1 matches 1.. run execute store result block ~ ~ ~ Items[{Slot:23b}].count int 1 run scoreboard players get @s RD.block.calculator
 execute if score @s RD.block.calculator matches ..0 run item replace block ~ ~ ~ container.23 with air
 
+execute store result score @s RD.recipe_id run function custom_items:custom_block/advanced_crafter/recipe_data/ruby/ruby_chestplate
+
 tag @s remove RD.block.customCrafter.processing

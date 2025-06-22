@@ -5,7 +5,7 @@ execute as @e[type=armor_stand,tag=craft_pos] at @s run function custom_items:cu
 execute as @e[type=item,tag=SampleItem,nbt={NoGravity:1b}] at @s unless entity @e[type=armor_stand,tag=craft_pos,dy=-1] run kill @s
 
 scoreboard players set @a sneakTimer 0
-execute as @a if dimension overworld run scoreboard players set @s deathCount 0
+execute as @a[predicate=custom_items:daytime] if dimension overworld run scoreboard players set @s deathCount 0
 execute as @e[type=player] if score @s deathCount matches 3.. run function custom_items:give_warp_potion
 
 # execute as @a if items entity @s container.* minecraft:player_head[minecraft:custom_name={text:"矢筒",italic:0b},!minecraft:rarity=common] store success score @s willReplaceItem run clear @s player_head[minecraft:custom_name={text:"矢筒",italic:0b},!minecraft:rarity="common"] 1
@@ -27,6 +27,10 @@ execute as @e if entity @s[scores={health=11..},tag=final_surge_3] at @s run fun
 execute as @e[tag=final_surge,tag=final_surge_1] at @s if data entity @s SelectedItem unless items entity @s weapon.mainhand *[minecraft:enchantments~[{enchantments:"custom_items:final_surge",levels:1}]] run function custom_items:enchantment/surge/deactivate_1
 execute as @e[tag=final_surge,tag=final_surge_2] at @s if data entity @s SelectedItem unless items entity @s weapon.mainhand *[minecraft:enchantments~[{enchantments:"custom_items:final_surge",levels:2}]] run function custom_items:enchantment/surge/deactivate_2
 execute as @e[tag=final_surge,tag=final_surge_3] at @s if data entity @s SelectedItem unless items entity @s weapon.mainhand *[minecraft:enchantments~[{enchantments:"custom_items:final_surge",levels:3}]] run function custom_items:enchantment/surge/deactivate_3
+
+execute as @e[type=arrow,tag=RD.shortbow] on passengers run tag @s add RD.arrowAlive 
+
+execute as @e[type=armor_stand,tag=RD.shortbow_dmg] run tag @s remove RD.arrowAlive
 
 # Equipment
 execute as @a run function custom_items:equipments/mining_helmet/main

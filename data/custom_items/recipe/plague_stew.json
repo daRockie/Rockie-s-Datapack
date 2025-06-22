@@ -36,6 +36,9 @@
           "italic": false
         }
       ],
+      "custom_model_data": {
+        "strings": ["RD.plague_stew"]
+      },
       "minecraft:food": {
         "nutrition": 6,
         "saturation": 1

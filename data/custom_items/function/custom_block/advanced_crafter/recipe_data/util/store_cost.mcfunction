@@ -17,7 +17,7 @@ data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [1,
 
 # 残響
 $execute if score @s RD.recipe_id matches 4 run return run \
-data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [1,4,1,4,1,4,1,1,1]
+data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [2,4,2,4,1,4,2,4,2]
 
 # ルビーのレギンス
 $execute if score @s RD.recipe_id matches 5 run return run \
@@ -25,8 +25,12 @@ data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [1,
 
 # ルビーのレギンス
 $execute if score @s RD.recipe_id matches 6 run return run \
-data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [1,1,1,1,0,1,1,0,1]
+data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [0,0,0,1,0,1,1,0,1]
 
 # ブリザード
 $execute if score @s RD.recipe_id matches 7 run return run \
 data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [0,1,0,1,1,1,0,1,0]
+
+# ルビーのヘルメット
+$execute if score @s RD.recipe_id matches 8 run return run \
+data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [1,1,1,1,0,1,0,0,0]

@@ -8,7 +8,6 @@ execute as @e[type=minecraft:spider] at @s if entity @a[distance=..80] run funct
 
 # イカドラウンド
 execute as @e[type=minecraft:drowned,tag=squid_drowned,nbt={HurtTime:10s}] at @s run function custom_ai:movements/splash_ink
-execute as @e[type=drowned,tag=squid_drowned] at @s run function custom_ai:custom_mobs/squid_drowned
 
 # 通常ゾンビ強化
 execute as @e[type=#zombies,tag=!RD.notNormal] unless data entity @s CustomName run data modify entity @s CanBreakDoors set value 1b

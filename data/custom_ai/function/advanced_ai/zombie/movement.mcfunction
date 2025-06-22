@@ -1,6 +1,8 @@
 # ターゲット
 execute on target run tag @s add zombies.target
 
+execute as @e[type=drowned,tag=squid_drowned] at @s run function custom_ai:custom_mobs/squid_drowned
+
 execute if entity @a[distance=0..16] run scoreboard players add @s[tag=!RD.no_chase] ai_timer 1
 
 execute rotated ~ 0 unless block ^ ^ ^1 #custom_ai:no_collision run scoreboard players reset @s[tag=!RD.no_chase] ai_timer
