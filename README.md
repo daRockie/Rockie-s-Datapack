@@ -1,1 +1,1 @@
-poopoo just poopoo
+サバイバルを拡張する、modもどきのデータパックです。
