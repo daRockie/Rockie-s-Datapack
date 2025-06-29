@@ -1,0 +1,3 @@
+execute as @a at @s run playsound ui.toast.challenge_complete master @a ~ ~ ~ 1 1
+tellraw @a [{"text":"-------- CONGRATS! -------",color:"gold",bold:1b},"\n\n",{"text":"序盤の行程を全て終了しました！",color:gray,bold:0b},"\n",{"text":"ゲームの進行度が","color":dark_gray,extra:[{"text":"「ミッドゲーム」",color:yellow,bold:1b},{text:"に変化しました。","color":"dark_gray"}]},"\n\n",{"text":"-------------------------","color":gold,"bold":1b}]
+data modify storage rockietools:game_progression progress set value 1

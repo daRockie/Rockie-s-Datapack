@@ -8,6 +8,12 @@ data modify storage rockietools:custom_crafter data."$(UUID)".slots set value [0
 $execute unless data storage rockietools:custom_crafter data."$(UUID)".cost run \
 data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [0,0,0,0,0,0,0,0,0]
 
+$execute unless data storage rockietools:custom_crafter data."$(UUID)".checking_slot run \
+data modify storage rockietools:custom_crafter data."$(UUID)".checking_slot set value 0
+
+$execute unless data storage rockietools:custom_crafter data."$(UUID)".wrong_item run \
+data modify storage rockietools:custom_crafter data."$(UUID)".wrong_item set value []
+
 #$data modify entity @s CustomName set from storage rockietools:custom_crafter.$(UUID)."current_brightness"
 
 # 明るさの定義

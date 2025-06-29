@@ -1,8 +1,8 @@
 execute if entity @e[tag=RD.archer_zombie.shooting] run attribute @s movement_speed base set 0
 execute unless entity @s[tag=RD.archer_zombie.shooting] run attribute @s movement_speed base set 0.25
 
-execute if entity @e[tag=zombies.target,distance=0..9] run scoreboard players set @s RD.block.calculator 80
-execute if entity @e[tag=zombies.target,distance=0..9] run tag @s add RD.archer_zombie.shooting
+execute if entity @e[tag=zombies.target,distance=0..9] unless block ^ ^ ^1 #custom_ai:no_collision run scoreboard players set @s RD.block.calculator 80
+execute if entity @e[tag=zombies.target,distance=0..9] unless block ^ ^ ^1 #custom_ai:no_collision run tag @s add RD.archer_zombie.shooting
 execute unless entity @e[tag=zombies.target,distance=0..9] if score @s RD.block.calculator matches ..1 run tag @s remove RD.archer_zombie.shooting
 
 execute if score @s RD.block.calculator matches 1.. run scoreboard players remove @s RD.block.calculator 1

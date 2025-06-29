@@ -21,7 +21,7 @@
       "conditions": {
         "entity": {
           "type": "#minecraft:zombies",
-          "nbt": "{Tags:[\"boomer_zombie\",\"spawned\",\"proceed\"]}"
+          "nbt": "{Tags:[\"RD.boomer_zombie\",\"spawned\",\"proceed\"]}"
         }
       }
     }

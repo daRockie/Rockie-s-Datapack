@@ -9,7 +9,7 @@ execute if entity @s[nbt={HurtTime:5s}] run scoreboard players set @s for 8
 
 # AI分岐
 execute if entity @e[tag=witch.target,distance=0..8] if score @s[nbt={OnGround:1b}] ai_timer matches 20 run scoreboard players set @s for 8
-execute if score @s ai_timer matches 30.. run scoreboard players set @s ai_timer 0
+execute if score @s ai_timer matches 30.. run scoreboard players reset @s ai_timer
 
 # remove Target
 tag @n[tag=witch.target] remove witch.target

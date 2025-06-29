@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:equipment",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:golden_leggings"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "iron_leggings"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:leather_leggings"
+            }
+          ],
+          "functions": []
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:blast_protection",
+                "minecraft:fire_protection",
+                "minecraft:vanishing_curse",
+                "minecraft:aqua_affinity",
+                "minecraft:unbreaking"
+              ],
+              "only_compatible": true,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.8
+                }
+              ]
+            },
+    {
+      "function": "set_count",
+      "count": {
+        "min": 0,
+        "max": 1
+      }
+    }
+  ]
+}

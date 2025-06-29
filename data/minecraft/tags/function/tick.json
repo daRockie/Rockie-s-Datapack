@@ -4,6 +4,7 @@
     "custom_ai:main",
     "custom_items:main",
     "useful-functions:main",
-    "system:main"
+    "system:main",
+    "summonmob_main:set_equipment/main"
   ]
 }

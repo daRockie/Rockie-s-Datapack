@@ -3,7 +3,9 @@ tag @s add opening
 function custom_items:custom_block/advanced_crafter/check_recipe
 
 # クリック検知
-execute unless items block ~ ~ ~ container.10 * if items entity @a player.cursor *[custom_data={TempItem:1b}] run function custom_items:custom_block/advanced_crafter/utils/change_mode
+execute unless items block ~ ~ ~ container.10 * if score @s RD.isCrafting matches 1 if items entity @a player.cursor *[custom_data={TempItem:1b}] run function custom_items:custom_block/advanced_crafter/utils/change_mode
+
+execute unless items block ~ ~ ~ container.9 * if score @s RD.isCrafting matches 0 if items entity @a player.cursor *[custom_data={TempItem:1b}] run function custom_items:custom_block/advanced_crafter/utils/change_mode
 
 execute if items entity @a[distance=..80] container.* *[custom_data={TempItem:1b}] run clear @a *[custom_data={TempItem:1b}]
 

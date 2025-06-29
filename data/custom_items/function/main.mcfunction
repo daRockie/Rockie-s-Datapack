@@ -5,7 +5,7 @@ execute as @e[type=armor_stand,tag=craft_pos] at @s run function custom_items:cu
 execute as @e[type=item,tag=SampleItem,nbt={NoGravity:1b}] at @s unless entity @e[type=armor_stand,tag=craft_pos,dy=-1] run kill @s
 
 scoreboard players set @a sneakTimer 0
-execute as @a[predicate=custom_items:daytime] if dimension overworld run scoreboard players set @s deathCount 0
+execute as @a[predicate=custom_items:daytime] if dimension overworld run scoreboard players reset @s deathCount
 execute as @e[type=player] if score @s deathCount matches 3.. run function custom_items:give_warp_potion
 
 # execute as @a if items entity @s container.* minecraft:player_head[minecraft:custom_name={text:"矢筒",italic:0b},!minecraft:rarity=common] store success score @s willReplaceItem run clear @s player_head[minecraft:custom_name={text:"矢筒",italic:0b},!minecraft:rarity="common"] 1

@@ -16,3 +16,7 @@ scoreboard objectives add yDis dummy "y距離"
 scoreboard objectives add zDis dummy "z距離"
 scoreboard objectives add tntFuse dummy "TNT爆発タイマー"
 scoreboard objectives add for dummy "繰り返し関数"
+scoreboard objectives add RD.enemy.equipment dummy "装備乱数"
+scoreboard objectives add RD.mobs.temp dummy "仮数値"
+
+execute unless data storage rockietools:game_progression progress run data modify storage rockietools:game_progression progress set value 0

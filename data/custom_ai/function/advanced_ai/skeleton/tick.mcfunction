@@ -1,1 +1,1 @@
-execute if entity @s[predicate=summonmob_main:in_hostile] run function custom_ai:advanced_ai/skeleton/moveset
+execute if entity @s[predicate=summonmob_main:in_hostile] as @s run function custom_ai:advanced_ai/skeleton/moveset

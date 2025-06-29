@@ -3,8 +3,10 @@ execute as @e[type=creeper,nbt={Tags:["nuka_c","spawned","proceed"],ignited:1b}]
 execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s ignited set value 1b
 execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s NoAI set value 1b
 
+execute as @e[tag=ignited] run function custom_ai:custom_mobs/bz_script
+
 # クモ
-execute as @e[type=minecraft:spider] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/spider/tick
+execute as @e[type=#arthropod] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/spider/tick
 
 # イカドラウンド
 execute as @e[type=minecraft:drowned,tag=squid_drowned,nbt={HurtTime:10s}] at @s run function custom_ai:movements/splash_ink
@@ -13,13 +15,10 @@ execute as @e[type=minecraft:drowned,tag=squid_drowned,nbt={HurtTime:10s}] at @s
 execute as @e[type=#zombies,tag=!RD.notNormal] unless data entity @s CustomName run data modify entity @s CanBreakDoors set value 1b
 execute as @e[type=#zombies,tag=!RD.notNormal] unless data entity @s CustomName run attribute @s movement_speed base set 0.27
 
-execute as @e[type=zombie,nbt={Tags:["proceed","spawned"]}] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/zombie/tick
+execute as @e[type=zombie,tag=proceed,tag=spawned] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/zombie/tick
 
 # ブーマーゾンビ　処理
-execute as @e[type=#minecraft:zombies,tag=boomer_zombie] at @s if entity @e[distance=0..5,type=#custom_ai:inhostile,limit=1,sort=nearest,type=!player] run tag @s add ignited
-execute as @e[type=#zombies,tag=boomer_zombie] on target at @s if entity @s[type=player,gamemode=!creative,gamemode=!spectator,distance=0..5] as @e[type=#minecraft:zombies,tag=boomer_zombie,distance=0..5] run tag @s add ignited
-execute as @e[type=#zombies,tag=boomer_zombie] if entity @e[tag=zombies.target,distance=0..5] run tag @s add ignited
-execute as @e[type=#minecraft:zombies,tag=boomer_zombie,tag=ignited] at @s run function custom_ai:custom_mobs/bz_script
+
 
 # スケルトン
 execute as @e[type=#skeletons] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/skeleton/tick
@@ -59,6 +58,6 @@ execute as @e[type=witch,nbt={Tags:["spawned","proceed"]}] at @s if entity @a[di
 
 execute as @e[type=enderman] at @s if entity @s[predicate=summonmob_main:in_hostile] run function summonmob_main:targets/eman
 
-execute as @e[type=spider] at @s if entity @s[predicate=summonmob_main:in_hostile] run function summonmob_main:targets/spider
+execute as @e[type=#arthropod] at @s if entity @s[predicate=summonmob_main:in_hostile] run function summonmob_main:targets/spider
 
 execute as @e[type=wither_skeleton] at @s if entity @s[predicate=summonmob_main:in_hostile] run function summonmob_main:targets/wither_skeleton
