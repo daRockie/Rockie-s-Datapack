@@ -1,0 +1,22 @@
+{
+  "function": "minecraft:set_lore",
+  "lore": [
+    {
+      "text": "エメラルドの数：",
+      "extra": [
+        {
+          "score": {
+            "objective": "RD.item.emerald",
+            "name": "@s"
+          },
+          "bold": true
+        }
+      ],
+      "color": "white",
+      "italic": false
+    }
+  ],
+  "mode": "replace_section",
+  "offset": 3,
+  "conditions": []
+}

@@ -16,9 +16,10 @@ execute as @e[type=minecraft:husk,tag=!proceed,nbt={IsBaby:1b}] if score @s spaw
 execute as @e[type=minecraft:husk,tag=!proceed] if score @s spawnRandom matches 16..30 run function summonmob_main:summon/summon_mummy
 
 execute as @e[type=minecraft:husk,tag=!proceed] if score @s spawnRandom matches 31..45 run function summonmob_main:summon/archer_husk
+execute as @e[type=minecraft:husk,tag=!proceed] if score @s spawnRandom matches 46..60 run function summonmob_main:summon/tank_husk
 
 # タンクゾンビ　召喚
-execute as @e[type=zombie,tag=!proceed,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 33..40 run function summonmob_main:summon/summon_tank_z
+execute as @e[type=zombie,tag=!proceed,tag=!proceed,nbt={IsBaby:0b}] if score @s spawnRandom matches 33..40 run function summonmob_main:summon/tank_zombie
 
 # スカウトクリーパー
 execute as @e[type=creeper,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summon_scout_c

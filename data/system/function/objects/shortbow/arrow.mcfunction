@@ -14,5 +14,5 @@ particle dust{color:[1,1,1],scale:1} ~ ~ ~ 0 0 0 0.025 1
 
 execute unless block ~ ~0.5 ~ #custom_ai:no_collision run function system:objects/shortbow/poof with entity @s
 
-# 破壊
+# ダメージ
 $execute if score @s ai_timer matches 3.. if entity @e[tag=!RD.shortbow,distance=0.01..2,type=!#minecraft:unliving_objects] run function system:objects/shortbow/damage with storage rockietools:uuid datas."$(UUID)".parent

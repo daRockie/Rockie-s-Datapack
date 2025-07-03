@@ -16,5 +16,7 @@ scoreboard objectives add abilityCooldown.reverberation dummy "「残響」の�
 data merge storage rockietools:uuid {datas:""}
 data modify storage rockietools:uuid datas set value {}
 
+execute if data storage rockietools:player {} run data modify storage rockietools:player data set value {}
+
 execute if data storage rockietools:custom_crafter {} run data modify storage rockietools:custom_crafter data set value {}
 function system:save_progression

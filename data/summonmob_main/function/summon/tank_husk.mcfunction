@@ -1,0 +1,6 @@
+data modify entity @s DeathTime set value 19
+data modify entity @s DeathLootTable set value "minecraft:empty"
+data modify entity @s Silent set value 1b
+execute at @s run summon husk ~ ~ ~ {DeathLootTable:"custom_ai:tank_zombie",CanBreakDoors:1b,CustomName:[{text:"タンクハスク"}],Health:35,Silent:1b,Tags:["RD.notNormal","spawned","proceed","tank"],equipment:{mainhand:{id:golden_axe},offhand:{id:shield,components:{enchantments:{"custom_items:immunity_projectile":1},enchantment_glint_override:0b,base_color:"yellow",banner_patterns:[{color:"white",pattern:"gradient_up"}]}},head:{id:player_head,components:{damage_resistant:{types:"#minecraft:is_projectile"},profile:{properties:[{value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODNmNjllZjI3ZjMxMjBhNTEwNTBlNmJlNjZhMGUzZjhlODlhZjg4OGQ0ODA2NzE2YmY4NmY1OTBkYTYzODMxNyJ9fX0=",name:textures}]},custom_name:[{text:"ヘビーアーマー",italic:false}],tooltip_display:{hidden_components:[attribute_modifiers]}}},chest:{id:golden_chestplate},legs:{id:golden_leggings},feet:{id:golden_boots}},drop_chances:{head:0f},attributes:[{id:armor,base:18f},{id:follow_range,base:32f},{id:step_height,base:1f},{id:safe_fall_distance,base:1024f},{id:knockback_resistance,base:1f},{id:max_health,base:35f}]}
+tp @s ~ ~-200 ~
+kill @s

@@ -42,6 +42,10 @@
             {
               "type": "minecraft:item",
               "name": "minecraft:iron_shovel"
+            },
+            {
+              "type": "item",
+              "name": "fishing_rod"
             }
           ],
           "functions": [],

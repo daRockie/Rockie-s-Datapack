@@ -5,7 +5,7 @@ execute as @s[type=drowned,tag=squid_drowned] at @s run function custom_ai:custo
 
 execute as @s[type=#zombies,tag=RD.archer_zombie] at @s run function custom_ai:custom_mobs/archer_zombie
 
-execute if entity @s[tag=RD.boomer_zombie] at @s run function custom_ai:custom_mobs/boomer_zombie
+execute if entity @s[tag=RD.boomer_zombie,tag=!ignited] at @s run function custom_ai:custom_mobs/boomer_zombie
 
 execute if entity @a[distance=0..16] run scoreboard players add @s[tag=!RD.no_chase] ai_timer 1
 

@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "emerald_detect": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+      }
+    }
+  },
+  "rewards": {
+    "function": "custom_items:talisman/villager_artifact/emerald"
+  }
+}

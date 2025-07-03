@@ -1,3 +1,5 @@
+#say running
+
 # 長押し検知
 tag @s[tag=!add_clicking_tag] remove clicking
 tag @s[tag=add_clicking_tag] add clicking
