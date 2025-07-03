@@ -3,8 +3,6 @@ execute as @e[type=creeper,nbt={Tags:["nuka_c","spawned","proceed"],ignited:1b}]
 execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s ignited set value 1b
 execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s NoAI set value 1b
 
-execute as @e[tag=ignited] run function custom_ai:custom_mobs/bz_script
-
 # クモ
 execute as @e[type=#arthropod] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/spider/tick
 

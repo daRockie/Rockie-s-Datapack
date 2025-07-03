@@ -1,10 +1,10 @@
-execute at @s run teleport @s ~ ~ ~ facing entity @n[tag=skeleton.target]
+execute at @s run teleport @s ~ ~ ~ facing entity @n[tag=zombies.target]
 
 execute at @s store result score @s x run data get entity @s Pos[0] 500
 execute at @s store result score @s z run data get entity @s Pos[2] 500
 
-execute at @s store result score @s xDis run data get entity @n[tag=skeleton.target] Pos[0] 500
-execute at @s store result score @s zDis run data get entity @n[tag=skeleton.target] Pos[2] 500
+execute at @s store result score @s xDis run data get entity @n[tag=zombies.target] Pos[0] 500
+execute at @s store result score @s zDis run data get entity @n[tag=zombies.target] Pos[2] 500
 
 scoreboard players operation @s xDis -= @s x
 scoreboard players operation @s zDis -= @s z
