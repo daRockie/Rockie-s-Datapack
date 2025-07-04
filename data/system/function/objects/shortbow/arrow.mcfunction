@@ -10,7 +10,7 @@ $execute if entity @s[tag=RD.randomAngle] run function custom_items:items/shortb
 # 移動
 scoreboard players add @s ai_timer 1
 tp @s[tag=pos_set] ^ ^ ^1.5
-particle dust{color:[1,1,1],scale:1} ~ ~ ~ 0 0 0 0.025 1
+particle dust{color:[1,1,1],scale:1} ~ ~ ~ 0 0 0 1 1
 
 execute unless block ~ ~0.5 ~ #custom_ai:no_collision run function system:objects/shortbow/poof with entity @s
 

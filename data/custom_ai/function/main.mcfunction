@@ -12,7 +12,6 @@ execute as @e[type=minecraft:drowned,tag=squid_drowned,nbt={HurtTime:10s}] at @s
 # 通常ゾンビ強化
 
 execute as @e[type=#zombies,tag=!RD.notNormal] unless data entity @s CustomName run data modify entity @s CanBreakDoors set value 1b
-execute as @e[type=#zombies,tag=!RD.notNormal] unless data entity @s CustomName run attribute @s movement_speed base set 0.27
 
 execute as @e[type=#zombies,tag=proceed,tag=spawned] at @s if entity @a[distance=..80] as @s run function custom_ai:advanced_ai/zombie/tick
 

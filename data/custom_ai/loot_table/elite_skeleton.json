@@ -99,6 +99,9 @@
                     }
                   ]
                 },
+                "minecraft:custom_data": {
+                  "CantPlace": true
+                },
                 "minecraft:custom_name": {
                   "text": "矢筒",
                   "italic": false
@@ -106,7 +109,8 @@
                 "minecraft:lore": [
                   {
                     "text": "右クリックで矢を9個入手できます。",
-                    "italic": false
+                    "italic": false,
+                    "color": "gray"
                   }
                 ],
                 "minecraft:rarity": "common"
