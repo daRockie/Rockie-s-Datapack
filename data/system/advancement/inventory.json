@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "used": {
+      "trigger": "inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "custom_data": "{\"Used\":1b}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "system:items/weapon/get_used_item"
+  }
+}

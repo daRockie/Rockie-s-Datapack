@@ -1,0 +1,39 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "wooden_sword",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": {"weapon":true}
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "use_cooldown": {
+                  "seconds": 1,
+                  "cooldown_group": "tool"
+                },
+                "consumable": {
+                  "consume_seconds": 0,
+                  "sound": "intentionally_empty",
+                  "has_consume_particles": false
+                },
+                "use_remainder": {
+                  "id": "wooden_sword",
+                  "components": {
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:test\"}"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

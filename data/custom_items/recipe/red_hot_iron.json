@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:smithing_transform",
+  "ingredient": [
+    "minecraft:iron_ingot"
+  ],
+  "base": [
+    "minecraft:iron_ingot"
+  ],
+  "addition": [
+    "minecraft:blaze_rod"
+  ],
+  "template": [
+    "minecraft:netherite_upgrade_smithing_template"
+  ],
+  "result": {
+    "id": "minecraft:iron_ingot",
+    "components": {
+      "item_model": "netherite_ingot",
+      "minecraft:custom_name": {
+        "text": "赤熱鉄",
+        "color": "#ff3300",
+        "bold": true,
+        "italic": false
+      }
+    }
+  }
+}

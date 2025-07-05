@@ -1,0 +1,1 @@
+$bossbar set mana_$(id) visible false

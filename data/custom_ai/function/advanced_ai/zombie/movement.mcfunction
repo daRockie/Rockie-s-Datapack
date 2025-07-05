@@ -1,6 +1,8 @@
 # ターゲット
 execute on target run tag @s add zombies.target
 
+execute if items entity @s[type=#zombies] weapon.mainhand fishing_rod at @s run function custom_ai:advanced_ai/zombie/item/fishing_rod/movement
+
 execute as @s[type=drowned,tag=squid_drowned] at @s run function custom_ai:custom_mobs/squid_drowned
 
 execute as @s[type=#zombies,tag=RD.archer_zombie] at @s run function custom_ai:custom_mobs/archer_zombie

@@ -1,0 +1,21 @@
+{
+    "criteria": {
+        "eat_lapiz_berry":{
+            "trigger": "consume_item",
+            "conditions": 
+            {
+                "item": {
+                    "items": "glow_berries",
+                    "components": {
+                        "custom_data": {
+                            "CustomItem":"RD.lapiz_berry"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "custom_items:items/food/lapiz_berry/eaten"
+    }
+}

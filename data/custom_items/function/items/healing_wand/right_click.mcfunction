@@ -1,2 +1,0 @@
-execute if score @s mana matches 40.. if score @s abilityCooldown.healing_wand matches 0 run function custom_items:items/healing_wand/used
-advancement revoke @s only custom_items:item_used/weapons/healing_wand

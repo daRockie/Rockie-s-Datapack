@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "weapon": {
+      "trigger": "consume_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "custom_data": {"weapon":true}
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "system:items/weapon/use_item"
+  }
+}

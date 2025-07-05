@@ -1,0 +1,47 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "firework_star",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": {"weapon":true}
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "max_stack_size": 1,
+                "item_model":"stick",
+                "minecraft:custom_name": {
+                  "text": "ヒーリングワンド",
+                  "italic": false
+                },
+                "rarity":"uncommon",
+                "minecraft:lore":[{"text":"初心者魔法使い向けの杖。","italic":false,"color": "dark_purple"},"",{"text":"アビリティ：ヒーリング","color": "gold","italic": false, "extra": [{"text":"右クリックで発動","bold": true,"italic": false,"color": "yellow"}]},{"text":"自分自身と","color": "gray", "italic": false, "extra": [{"text":"4マス以内にいる","color": "green","italic": false},{"text":"モブを少量回復させる。","color": "gray", "italic": false}]},"",{"text":"クールダウン：","color": "dark_gray","italic":false,"extra": [{"text":"2秒","color": "green","italic":false}]},{"text":"マナ使用量：","color": "dark_gray","italic":false,"extra": [{"text":"30","color": "dark_aqua","italic":false}]}],                      
+                "use_cooldown": {
+                  "seconds": 2,
+                  "cooldown_group": "healing_wand"
+                },
+                "consumable": {
+                  "consume_seconds": 0,
+                  "sound": "intentionally_empty",
+                  "has_consume_particles": false
+                },
+                "use_remainder": {
+                  "id": "firework_star",
+                  "components": {
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:healing_wand\",function:\"custom_items:items/healing_wand/used\"}"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
