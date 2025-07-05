@@ -1,0 +1,53 @@
+{
+    "parent":"rockie_advancements:install",
+  "display": {
+    "icon": {
+      "id": "minecraft:copper_block",
+      "count": 1
+    },
+    "title": {
+      "text": "お手頃な装備品"
+    },
+    "description": "銅の防具で身を固める"
+  },
+  "criteria": {
+    "helmet": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "custom_items:copper_helmet"
+      }
+    },
+    "chestplate": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "custom_items:copper_chestplate"
+      }
+    },
+    "leginngs": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "custom_items:copper_leggings"
+      }
+    },
+    "boots": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "custom_items:copper_boots"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "boots"
+    ],
+    [
+      "leginngs"
+    ],
+    [
+      "chestplate"
+    ],
+    [
+      "helmet"
+    ]
+  ]
+}

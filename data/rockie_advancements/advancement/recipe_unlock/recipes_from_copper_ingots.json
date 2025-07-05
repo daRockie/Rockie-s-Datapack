@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "plague_stew": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+            {
+                "items": [
+                    "copper_ingot"
+                ]
+            }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "custom_items:copper_helmet",
+      "custom_items:copper_chestplate",
+      "custom_items:copper_leggings",
+      "custom_items:copper_boots"
+    ]
+  }
+}

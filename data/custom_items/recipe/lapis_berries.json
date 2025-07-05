@@ -10,16 +10,28 @@
     ]
   ],
   "result": {
-    "id": "minecraft:glow_berries",
+    "id": "minecraft:firework_star",
     "components": {
+      "item_model":"glow_berries",
+      "consumable":{
+        "animation": "eat",
+        "consume_seconds": 0.7,
+        "has_consume_particles": true
+      },
       "minecraft:custom_name": {
         "text": "ラピスベリー",
         "color": "blue",
         "italic": false
       },
+      "food":{
+        "nutrition": 6,
+        "saturation": 4,
+        "can_always_eat": true
+      },
       "custom_data": {
         "CustomItem":"RD.lapiz_berry"
       },
+      "lore":[{"text":"ラピスラズリとベリーを用いて作れる、魔法の木の実。","color":"gray","italic": false},{"italic": false,"text":"すばやく素早く食べることができ、食べると","color":"gray","extra":[{"text":"マナを🖊30回復させる。","color":"aqua"}]}],
       "minecraft:enchantment_glint_override": true,
       "minecraft:custom_model_data": {
         "strings": [

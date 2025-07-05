@@ -5,7 +5,6 @@
             "conditions": 
             {
                 "item": {
-                    "items": "glow_berries",
                     "components": {
                         "custom_data": {
                             "CustomItem":"RD.lapiz_berry"
