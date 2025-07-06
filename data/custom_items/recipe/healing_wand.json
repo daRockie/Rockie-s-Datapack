@@ -15,29 +15,31 @@
     "C": "minecraft:stick"
   },
   "result": {
-    "id": "minecraft:debug_stick",
+    "id": "minecraft:firework_star",
     "components": {
-      "minecraft:custom_data":
-      {
-        "Weapon_ID": 0
-      },
+      "max_stack_size": 1,
+      "item_model":"stick",
       "minecraft:custom_name": {
         "text": "ヒーリングワンド",
         "italic": false
       },
-      "minecraft:rarity": "uncommon",
-      "minecraft:food": {
-        "nutrition": 0,
-        "saturation": 0,
-        "can_always_eat": true
+      "rarity":"uncommon",
+      "minecraft:lore":[{"text":"初心者魔法使い向けの杖。","italic":false,"color": "dark_purple"},"",{"text":"アビリティ：ヒーリング","color": "gold","italic": false, "extra": [{"text":"右クリックで発動","bold": true,"italic": false,"color": "yellow"}]},{"text":"自分自身と","color": "gray", "italic": false, "extra": [{"text":"4マス以内にいる","color": "green","italic": false},{"text":"モブを少量回復させる。","color": "gray", "italic": false}]},"",{"text":"クールダウン：","color": "dark_gray","italic":false,"extra": [{"text":"2秒","color": "green","italic":false}]},{"text":"マナ使用量：","color": "dark_gray","italic":false,"extra": [{"text":"30","color": "dark_aqua","italic":false}]}],                      
+      "use_cooldown": {
+        "seconds": 2,
+        "cooldown_group": "healing_wand"
       },
-      "enchantment_glint_override":false,
-      "max_stack_size":1,
-      "minecraft:lore":[{"text":"初心者魔法使い向けの杖。","italic":false,"color": "dark_purple"},"",{"text":"アビリティ：ヒーリング","color": "gold","italic": false, "extra": [{"text":"右クリックで発動","bold": true,"italic": false,"color": "yellow"}]},{"text":"自分自身と","color": "gray", "italic": false, "extra": [{"text":"4マス以内にいる","color": "green","italic": false},{"text":"モブを少量回復させる。","color": "gray", "italic": false}]},"",{"text":"クールダウン：","color": "dark_gray","italic":false,"extra": [{"text":"3秒","color": "green","italic":false}]},{"text":"マナ使用量：","color": "dark_gray","italic":false,"extra": [{"text":"40","color": "dark_aqua","italic":false}]}],
-      "minecraft:consumable": {
-        "consume_seconds": 210000,
-        "animation": "block",
+      "consumable": {
+        "consume_seconds": 0,
+        "sound": "intentionally_empty",
         "has_consume_particles": false
+      },
+      "custom_data":{"weapon":true},
+      "use_remainder": {
+        "id": "firework_star",
+        "components": {
+            "custom_data": "{\"Used\":1b,Loottable:\"custom_items:healing_wand\",function:\"custom_items:items/healing_wand/used\"}"
+        }
       }
     }
   }

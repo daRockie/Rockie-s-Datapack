@@ -1,4 +1,4 @@
-$say $(id)
+$tellraw @s $(id)
 $bossbar add mana_$(id) "a"
 $bossbar set mana_$(id) color blue
 $execute store result bossbar mana_$(id) max run scoreboard players get @s mana.max

@@ -3,7 +3,10 @@
       "icon": {
         "id": "minecraft:red_dye",
         "components": {
-          "minecraft:enchantment_glint_override": true
+          "minecraft:enchantment_glint_override": true,
+          "custom_model_data": {
+              "strings": ["RD.ruby"]
+          }          
         }
       },
       "title": "紅の宝石",
@@ -21,9 +24,7 @@
               "items": "minecraft:red_dye",
               "count": 1,
               "components": {
-                "custom_data": {"CustomItem":"RD.ruby"},
-                "minecraft:custom_model_data":
-                {"strings": ["RD.ruby"]}
+                "custom_data": {"CustomItem":"RD.ruby"}
               }
             }
           ]

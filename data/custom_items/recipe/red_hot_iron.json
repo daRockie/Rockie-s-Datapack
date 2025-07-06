@@ -17,10 +17,16 @@
     "components": {
       "item_model": "netherite_ingot",
       "minecraft:custom_name": {
+        "custom_data": {"CustomItem":"RD.redhot_iron"},
         "text": "赤熱鉄",
         "color": "#ff3300",
         "bold": true,
-        "italic": false
+        "italic": false,
+        "minecraft:custom_model_data": {
+        "strings": [
+          "RD.redhot_iron"
+        ]
+       }
       }
     }
   }

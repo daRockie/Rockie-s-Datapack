@@ -1,4 +1,4 @@
-say hi
+#say hi
 scoreboard players operation @s RD.player.ID = #ID RD.player.ID
 
 function system:mana/register with entity @s {}

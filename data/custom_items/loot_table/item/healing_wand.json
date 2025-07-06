@@ -34,7 +34,7 @@
                 "use_remainder": {
                   "id": "firework_star",
                   "components": {
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:healing_wand\",function:\"custom_items:items/healing_wand/used\"}"
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/healing_wand\",function:\"custom_items:items/healing_wand/used\"}"
                   }
                 }
               }

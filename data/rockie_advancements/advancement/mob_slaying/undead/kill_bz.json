@@ -14,7 +14,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "rockie_advancements:install",
+  "parent": "rockie_advancements:mob_slaying/undead/root",
   "criteria": {
     "kill": {
       "trigger": "minecraft:player_killed_entity",

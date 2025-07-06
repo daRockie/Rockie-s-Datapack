@@ -1,5 +1,5 @@
 tag @s add RD.itemUser
-say A
+#say A
 clear @s arrow 1
 summon armor_stand ^ ^1.75 ^ {Tags:["RD.shortbow"],Small:1b,NoBasePlate:1b,Invulnerable:1b,Invisible:1b,NoGravity:1b}
 playsound minecraft:entity.arrow.shoot player @a ~ ~ ~ 0.5 2

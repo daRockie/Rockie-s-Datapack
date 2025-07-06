@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_sword",
+      "count": 1
+    },
+    "title": {
+      "text": "モブスレイヤー"
+    },
+    "description": {
+      "text": "全てを討伐し尽くし、王座に立て"
+    },
+    "background": "block/chiseled_tuff_bricks",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:tick"
+        }
+  }
+}

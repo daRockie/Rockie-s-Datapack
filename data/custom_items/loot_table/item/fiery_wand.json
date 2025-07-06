@@ -1,48 +1,27 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "pattern": [
-    "ACA",
-    " B ",
-    " B "
-  ],
-  "key": {
-    "A": [
-      "minecraft:iron_ingot",
-      "copper_ingot",
-      "gold_ingot"
-    ],
-    "B": "minecraft:stick",
-    "C": [
-      "minecraft:magma_block"
-    ]
-  },
-  "result": {
-    "id": "debug_stick",
-    "components": {
-      "minecraft:custom_data":
-      {
-        "Weapon_ID": 1
-      },
-      "minecraft:item_model": "wooden_hoe",
-      "minecraft:food": {
-        "nutrition": 0,
-        "saturation": 0,
-        "can_always_eat": true
-      },
-      "minecraft:consumable": {
-        "consume_seconds": 10000000,
-        "animation": "bow",
-        "has_consume_particles": false
-      },
-      "enchantment_glint_override":false,
-      "max_stack_size":1,
-      "minecraft:custom_name": {
-        "text": "ファイアリーワンド",
-        "italic": false
-      },
-      "minecraft:rarity": "uncommon",
-      "minecraft:lore": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "firework_star",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": {"weapon":true}
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "max_stack_size": 1,
+                "item_model":"wooden_hoe",
+                "minecraft:custom_name": {
+                  "text": "ファイアリーワンド",
+                  "italic": false
+                },
+                "rarity":"uncommon",
+                "minecraft:lore": [
         {
           "text": "\"ヒャッハー！汚物は消毒だぜ！\"",
           "color": "dark_gray",
@@ -113,8 +92,27 @@
           "color": "dark_gray",
           "italic": false
         }
+      ],
+                "use_cooldown": {
+                  "seconds": 0.3,
+                  "cooldown_group": "fiery_wand"
+                },
+                "consumable": {
+                  "consume_seconds": 2,
+                  "sound": "intentionally_empty",
+                  "has_consume_particles": false
+                },
+                "use_remainder": {
+                  "id": "firework_star",
+                  "components": {
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/fiery_wand\",function:\"custom_items:items/fiery_wand/used\"}"
+                  }
+                }
+              }
+            }
+          ]
+        }
       ]
-    },
-    "count": 1
-  }
+    }
+  ]
 }

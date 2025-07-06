@@ -5,6 +5,8 @@ scoreboard objectives add mana.timer dummy "マナ回復タイマー"
 scoreboard objectives add mana.operation dummy "マナ計算"
 scoreboard objectives add mana.bossbar.fadeout dummy "マナ表示フェードアウト"
 
+scoreboard objectives add tick.timer dummy "ティックタイマー"
+
 scoreboard objectives add RD.player.ID dummy "プレイヤーID表"
 
 scoreboard objectives add ability.right_click dummy "アビリティ：右クリ検知"

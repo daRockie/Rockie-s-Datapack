@@ -6,7 +6,7 @@
         "items": [
           {
             "predicates": {
-              "custom_data": "{\"Used\":1b}"
+              "custom_data": {"Used":true}
             }
           }
         ]

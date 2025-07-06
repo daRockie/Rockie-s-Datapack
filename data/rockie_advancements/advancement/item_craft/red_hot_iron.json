@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_ingot"
+    },
+    "title": "融点の世界",
+    "description": "鍛冶台で赤熱鉄を作成する",
+    "frame": "goal"
+  },
+  "parent": "custom_items:hammer/3",
+  "criteria": {
+    "Craft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ],
+            "components": {
+              "item_model": "netherite_ingot",
+              "minecraft:custom_name": {
+              "custom_data": {"CustomItem":"RD.red_hot_iron"},
+              "text": "赤熱鉄",
+              "color": "#ff3300",
+              "bold": true,
+              "italic": false
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

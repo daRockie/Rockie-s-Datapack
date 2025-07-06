@@ -1,3 +1,5 @@
+advancement grant @s only rockie_advancements:item_used/lapisberry_eat
+
 scoreboard players set #5 mana 5
 
 scoreboard players operation @s mana += #5 mana

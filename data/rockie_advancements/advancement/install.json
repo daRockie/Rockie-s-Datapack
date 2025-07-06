@@ -1,14 +1,14 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:command_block",
+      "id": "minecraft:writable_book",
       "components": {
         "minecraft:enchantment_glint_override": true
       }
     },
-    "title": "シン・Minecraft",
+    "title": "冒険のはじまり",
     "description": "データパックを導入する",
-    "background": "minecraft:block/resin_bricks",
+    "background": "minecraft:block/stone_bricks",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true

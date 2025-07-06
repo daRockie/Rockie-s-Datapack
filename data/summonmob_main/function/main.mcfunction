@@ -1,1 +1,1 @@
-execute as @e at @s if entity @a[distance=..80] as @s run function summonmob_main:randomize
+execute as @e[type=!#minecraft:unliving_objects] at @s if entity @a[distance=..80] as @s run function summonmob_main:randomize

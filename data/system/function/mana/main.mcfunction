@@ -15,6 +15,9 @@ scoreboard players add @s item.shortBow.cooldown 0
 execute if score @s abilityCooldown.reverberation matches 1.. run scoreboard players remove @s abilityCooldown.reverberation 1
 execute if score @s item.shortBow.cooldown matches 1.. run scoreboard players remove @s item.shortBow.cooldown 1
 execute if score @s mana.bossbar.fadeout matches 1.. run scoreboard players remove @s mana.bossbar.fadeout 1
+execute if score @s tick.timer matches 1.. run scoreboard players remove @s tick.timer 1
+
+#execute if entity @s[tag=RD.itemReplacer] if score @s tick.timer matches ..1 run function system:items/weapon/return with entity @s SelectedItem.components.minecraft:custom_data
 
 execute if score @s abilityCooldown.reverberation matches 120 at @s run function custom_items:items/grimoire/reverberation/summon
 
