@@ -1,5 +1,5 @@
 execute as @e[type=armor_stand,tag=fire_shot] at @s run function system:objects/fiery_wand/magic_shot with entity @s
-execute as @e[type=armor_stand,tag=RD.sonicBoom] at @s run function system:objects/reverberation/sonic_boom with entity @s
+execute as @e[type=armor_stand,tag=RD.sonicBoom,tag=!pos_set] at @s run function system:objects/reverberation/sonic_boom with entity @s
 execute as @e[type=armor_stand,tag=RD.shortbow] at @s run function system:objects/shortbow/arrow with entity @s
 execute as @e[type=armor_stand,tag=RD.fishing_bobber] at @s run function system:objects/fishing_bobber/tick with entity @s
 

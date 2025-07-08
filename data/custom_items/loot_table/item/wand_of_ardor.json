@@ -15,6 +15,7 @@
               "function": "set_components",
               "components": {
                 "max_stack_size": 1,
+                "enchantment_glint_override": true,
                 "item_model":"stick",
                 "minecraft:custom_name": {
                   "text": "慈愛の杖",
@@ -34,7 +35,9 @@
                 "use_remainder": {
                   "id": "firework_star",
                   "components": {
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:wand_of_ardor\",function:\"custom_items:items/wand_of_ardor/used\"}"
+                    "item_model": "stick",
+                    "enchantment_glint_override": true,
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/wand_of_ardor\",function:\"custom_items:items/wand_of_ardor/used\"}"
                   }
                 }
               }

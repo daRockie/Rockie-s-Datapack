@@ -15,10 +15,14 @@ scoreboard objectives add item.shortBow.cooldown dummy "ショートボウのク
 
 scoreboard objectives add abilityCooldown.reverberation dummy "「残響」の魔導書のクールダウン"
 
+kill @e[type=tnt]
+
 data merge storage rockietools:uuid {datas:""}
 data modify storage rockietools:uuid datas set value {}
 
 execute if data storage rockietools:player {} run data modify storage rockietools:player data set value {}
+
+execute unless data storage rockietools:id {} run data modify storage rockietools:id data set value {}
 
 execute if data storage rockietools:custom_crafter {} run data modify storage rockietools:custom_crafter data set value {}
 function system:save_progression

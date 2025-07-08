@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "wooden_sword",
+          "name": "iron_sword",
           "functions": [
             {
               "function": "set_custom_data",
@@ -14,9 +14,15 @@
             {
               "function": "set_components",
               "components": {
+                "rarity":"epic",
+                "custom_name":{
+                  "text":"ムラサメ",
+                  "bold": true,
+                  "italic": false
+                },
                 "use_cooldown": {
-                  "seconds": 1,
-                  "cooldown_group": "tool"
+                  "seconds": 0.3,
+                  "cooldown_group": "legendary_sword"
                 },
                 "consumable": {
                   "consume_seconds": 0,
@@ -24,9 +30,14 @@
                   "has_consume_particles": false
                 },
                 "use_remainder": {
-                  "id": "wooden_sword",
+                  "id": "iron_sword",
                   "components": {
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:test\"}"
+                                    "custom_name":{
+                  "text":"ムラサメ",
+                  "bold": true,
+                  "italic": false
+                },
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/test\"}"
                   }
                 }
               }

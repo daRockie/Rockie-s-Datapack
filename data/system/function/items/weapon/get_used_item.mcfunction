@@ -1,2 +1,2 @@
-function system:items/weapon/return with entity @s SelectedItem.components."minecraft:use_remainder".components."minecraft:custom_data"
+function system:items/weapon/return with entity @s SelectedItem.components."minecraft:custom_data"
 advancement revoke @s only system:inventory

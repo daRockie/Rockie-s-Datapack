@@ -34,6 +34,12 @@
                 "use_remainder": {
                   "id": "firework_star",
                   "components": {
+                    "minecraft:custom_name": {
+                  "text": "ヒーリングワンド",
+                  "italic": false
+                },
+                    "rarity":"uncommon",
+                    "item_model": "stick",
                     "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/healing_wand\",function:\"custom_items:items/healing_wand/used\"}"
                   }
                 }

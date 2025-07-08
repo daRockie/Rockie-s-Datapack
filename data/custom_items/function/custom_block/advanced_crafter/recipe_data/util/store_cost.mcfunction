@@ -13,7 +13,7 @@ data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [4,
 
 # グリモア
 $execute if score @s RD.recipe_id matches 3 run return run \
-data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [1,1,1,1,1,1,1,1,1]
+data modify storage rockietools:custom_crafter data."$(UUID)".cost set value [0,1,0,1,1,1,0,1,0]
 
 # 残響
 $execute if score @s RD.recipe_id matches 4 run return run \

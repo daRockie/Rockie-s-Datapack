@@ -22,7 +22,6 @@
           "items": [
             {
               "items": "minecraft:red_dye",
-              "count": 1,
               "components": {
                 "custom_data": {"CustomItem":"RD.ruby"}
               }
