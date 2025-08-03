@@ -22,7 +22,7 @@ execute as @e[type=#zombies,tag=proceed,tag=spawned] at @s if entity @a[distance
 execute as @e[type=#skeletons] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/skeleton/tick
 
 execute as @e[type=creeper] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/creeper/tick
-execute as @e[type=creeper,tag=speed_crp] at @s run loot replace entity @s armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe[enchantments={silk_touch:1},custom_data={"getID":true}]
+execute as @e[type=creeper,tag=RD.scout_creeper] at @s run loot replace entity @s armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe[enchantments={silk_touch:1},custom_data={"getID":true}]
 
 # 使者
 execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者",predicate=summonmob_main:in_hostile] at @s run function custom_ai:custom_mobs/messenger/0

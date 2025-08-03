@@ -9,7 +9,7 @@ execute if entity @s[tag=proceed] run scoreboard players reset @s lifeTime
 execute if entity @s[tag=!proceed,type=#zombies] run function summonmob_main:system/randomizer/zombie
 
 # スカウトクリーパー
-execute if entity @s[type=creeper,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summon_scout_c
+execute if entity @s[type=creeper,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/creeper/scout_creeper
 
 # ドルフィン・ライダー
 execute if entity @s[type=dolphin,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/summon_d_rider
@@ -20,7 +20,7 @@ execute if entity @s[type=squid,tag=!proceed] if score @s spawnRandom matches 0.
 # アーチャーゾンビ
 
 # ヌカクリーパー
-execute if entity @s[type=creeper,tag=!proceed] if score @s spawnRandom matches 30..33 run function summonmob_main:summon/summon_nuka_creeper
+execute if entity @s[type=creeper,tag=!proceed] if score @s spawnRandom matches 30..33 run function summonmob_main:summon/creeper/nuke_creeper
 
 # ベイビーブーマーゾンビ　召喚
 

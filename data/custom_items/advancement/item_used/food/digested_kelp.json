@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "eat_lapiz_berry":{
+            "trigger": "using_item",
+            "conditions": 
+            {
+                "item": {
+                    "components": {
+                        "custom_data": {
+                            "CustomItem":"RD.digested_kelp"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "custom_items:items/food/digested_kelp/eaten"
+    }
+}

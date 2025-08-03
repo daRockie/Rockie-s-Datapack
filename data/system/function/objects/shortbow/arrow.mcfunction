@@ -7,7 +7,7 @@ execute unless block ~ ~0.5 ~ #custom_ai:no_collision run function system:object
 
 execute if score @s ai_timer matches 40.. run function system:objects/shortbow/poof with entity @s
 
-$execute if entity @s[tag=RD.randomAngle] run function custom_items:items/shortbow/recoil with storage rockietools:uuid datas."$(UUID)".parent
+$execute if entity @s[tag=RD.randomAngle] run function custom_items:items/shortbow/recoil with storage rockietools:uuid datas."$(UUID)"
 
 # 移動
 scoreboard players add @s ai_timer 1
@@ -16,4 +16,4 @@ particle dust{color:[1,1,1],scale:1} ~ ~ ~ 0 0 0 1 1
 
 
 # ダメージ
-$execute if score @s ai_timer matches 3.. if entity @e[tag=!RD.shortbow,distance=0.01..2,type=!#minecraft:unliving_objects] run function system:objects/shortbow/damage with storage rockietools:uuid datas."$(UUID)".parent
+$execute if entity @e[tag=!RD.shortbow,distance=0.01..2,type=!#minecraft:unliving_objects] run function system:objects/shortbow/damage with storage rockietools:uuid datas."$(UUID)"

@@ -6,7 +6,7 @@ tag @s add pos_set
 #particle block_marker{block_state:{Name:"barrier"}} ~ ~ ~
 tp @s ^ ^ ^5
 
-execute if score @s ai_timer matches 5.. run function system:objects/reverberation/kill with entity @s
+execute if score @s ai_timer matches 6.. run function system:objects/reverberation/kill with entity @s
 
 
 # 移動
@@ -15,6 +15,6 @@ particle sonic_boom ~ ~ ~ 0 0 0 0.025 1
 playsound entity.generic.explode player @a ~ ~ ~ 0.7 1
 
 # 破壊
-$execute if entity @e[tag=!RD.sonicBoom,distance=0.01..4,type=!#minecraft:unliving_objects] run function system:objects/reverberation/damage with storage rockietools:uuid datas."$(UUID)".parent
+$execute if entity @e[tag=!RD.sonicBoom,distance=0.01..4,type=!#minecraft:unliving_objects] run function system:objects/reverberation/damage with storage rockietools:uuid datas."$(UUID)"
 
 execute at @s run function system:objects/reverberation/sonic_boom with entity @s {}

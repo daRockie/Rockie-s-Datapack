@@ -1,5 +1,3 @@
-#$execute as @e[distance=..1.9,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 6 mob_attack by $(parent)
-#$execute as @e[distance=2..4,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 3 mob_attack by $(parent)
 #say hi
 $execute if entity @n[distance=0.01..2,type=!#unliving_objects,tag=!RD.shortBow,nbt={UUID:$(UUID)}] run return fail
 $execute if entity @n[distance=1..,tag=!RD.shortBow,nbt={UUID:$(UUID)},type=#zombies,sort=furthest] unless entity @n[distance=0.0001..,type=#zombies,predicate=summonmob_main:in_hostile_to_each_other,tag=RD.archer_zombie,nbt={UUID:$(UUID)}] if entity @n[type=#zombies,distance=..2] run return fail

@@ -2,5 +2,7 @@ particle witch ~ ~2 ~ 1 1 1 0.5 5
 particle explosion ~ ~2 ~ 0.05 0.05 0.05 0.25 1
 playsound entity.generic.explode hostile @a ~ ~ ~ 10 2
 playsound entity.enderman.teleport hostile @a ~ ~ ~ 5 2
-execute at @s as @e[type=!enderman,distance=0..8] run damage @s 8 explosion at ~ ~ ~
+tag @s add RD.enderman.exlode
+execute at @s as @e[type=!enderman,distance=0..8] run damage @s 8 explosion by @n[type=enderman,tag=RD.enderman.exlode]
+tag @s remove RD.enderman.exlode
 scoreboard players reset @s ai_timer

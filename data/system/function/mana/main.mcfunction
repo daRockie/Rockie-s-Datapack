@@ -10,10 +10,10 @@ execute store success score @s ability.right_click run tag @s remove add_clickin
 
 # クールダウン処理
 scoreboard players add @s abilityCooldown.reverberation 0
-scoreboard players add @s item.shortBow.cooldown 0
+scoreboard players add @s RD.item.RC 0
 
 execute if score @s abilityCooldown.reverberation matches 1.. run scoreboard players remove @s abilityCooldown.reverberation 1
-execute if score @s item.shortBow.cooldown matches 1.. run scoreboard players remove @s item.shortBow.cooldown 1
+execute if score @s RD.item.RC matches 1.. run scoreboard players remove @s RD.item.RC 1
 execute if score @s mana.bossbar.fadeout matches 1.. run scoreboard players remove @s mana.bossbar.fadeout 1
 execute if score @s tick.timer matches 1.. run scoreboard players remove @s tick.timer 1
 
