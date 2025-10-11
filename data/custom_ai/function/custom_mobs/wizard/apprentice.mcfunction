@@ -1,4 +1,9 @@
-execute as @e[type=minecraft:skeleton,tag=RD.enemy.wizard.1] if score @s mana matches 80.. at @s if entity @e[tag=skeleton.target,distance=0.1..3] at @s anchored feet unless block ^ ^-0.5 ^-4 #air anchored eyes if block ^ ^ ^-4 air if block ^ ^-1 ^-4 air run function custom_ai:movements/wizard/apprentice/wizard_warp
-execute as @e[type=skeleton,tag=RD.enemy.wizard.1] run scoreboard players add @s mana 0
-execute as @e[type=minecraft:skeleton,tag=RD.enemy.wizard.1] if score @s mana matches ..99 run scoreboard players add @s mana 1
-execute as @e[type=skeleton,tag=RD.enemy.wizard.1] run scoreboard players add @s mana 0
+#ウィッチメイン処理
+execute if entity @e[tag=skeleton.target,distance=0..6] run scoreboard players add @s ai_timer 1
+execute if entity @e[tag=skeleton.target,distance=0..6] if score @s for matches 1.. run function custom_ai:advanced_ai/witch/pre_warp
+
+execute if entity @s[nbt={HurtTime:5s}] run scoreboard players set @s for 8
+
+# AI分岐
+execute if entity @e[tag=skeleton.target,distance=0..8] if score @s[nbt={OnGround:1b}] ai_timer matches 20 run scoreboard players set @s for 8
+execute if score @s ai_timer matches 30.. run scoreboard players reset @s ai_timer

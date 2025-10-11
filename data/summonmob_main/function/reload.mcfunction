@@ -18,5 +18,6 @@ scoreboard objectives add tntFuse dummy "TNT爆発タイマー"
 scoreboard objectives add for dummy "繰り返し関数"
 scoreboard objectives add RD.enemy.equipment dummy "装備乱数"
 scoreboard objectives add RD.mobs.temp dummy "仮数値"
+scoreboard objectives add RD.enemy.wizard.char dummy "魔法使い分類"
 
 execute unless data storage rockietools:game_progression progress run data modify storage rockietools:game_progression progress set value 0

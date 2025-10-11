@@ -8,8 +8,11 @@ execute if entity @s[tag=proceed] run scoreboard players reset @s lifeTime
 # ゾンビ処理
 execute if entity @s[tag=!proceed,type=#zombies] run function summonmob_main:system/randomizer/zombie
 
-# スカウトクリーパー
-execute if entity @s[type=creeper,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/creeper/scout_creeper
+# スケルトン族
+execute if entity @s[tag=!proceed,type=#skeletons] run function summonmob_main:system/randomizer/skeleton
+
+# クリーパー族
+execute if entity @s[tag=!proceed,type=creeper] run function summonmob_main:system/randomizer/creeper
 
 # ドルフィン・ライダー
 execute if entity @s[type=dolphin,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/summon_d_rider
@@ -17,24 +20,13 @@ execute if entity @s[type=dolphin,tag=!proceed] if score @s spawnRandom matches 
 # イカドラウンド
 execute if entity @s[type=squid,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summmon_squid
 
-# アーチャーゾンビ
-
-# ヌカクリーパー
-execute if entity @s[type=creeper,tag=!proceed] if score @s spawnRandom matches 30..33 run function summonmob_main:summon/creeper/nuke_creeper
-
 # ベイビーブーマーゾンビ　召喚
 
 # ベイビーブーマーゾンビジョッキー　召喚
-execute if entity @s[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..10 on vehicle if entity @s[type=chicken] run function summonmob_main:summon/summon_bz_jockey
-
-# 見習い魔導士　召喚
-execute if entity @s[type=minecraft:skeleton,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/wizard/apprentice
-
-# エリートスケルトン　召喚
-execute if entity @s[type=minecraft:skeleton,tag=!proceed] if score @s spawnRandom matches 15..30 run function summonmob_main:summon/summon_elite_s
+execute if entity @s[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..10 on vehicle if entity @s[type=chicken] run function summonmob_main:summon/zombie/boomer/chicken_jockey
 
 # エリートウィザースケルトン　召喚
-execute if entity @s[type=minecraft:wither_skeleton,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/summon_elite_wither_skeleton
+execute if entity @s[type=minecraft:wither_skeleton,tag=!proceed] if score @s spawnRandom matches 0..15 run function summonmob_main:summon/skeleton/elite_wither_skeleton
 
 # クモの親子　召喚
 execute if entity @s[type=minecraft:spider,tag=!proceed] if score @s spawnRandom matches 0..20 run function summonmob_main:summon/summon_spiderfamily

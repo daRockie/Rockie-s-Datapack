@@ -27,4 +27,7 @@ execute if data storage rockietools:player {} run data modify storage rockietool
 execute unless data storage rockietools:id {} run data modify storage rockietools:id data set value {}
 
 execute if data storage rockietools:custom_crafter {} run data modify storage rockietools:custom_crafter data set value {}
+
+execute unless data storage rockietools:custom_recipe {} run data modify storage rockietools:custom_recipe list set value {}
+
 function system:save_progression

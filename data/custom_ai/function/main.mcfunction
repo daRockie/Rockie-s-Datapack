@@ -17,15 +17,19 @@ execute as @e[type=#zombies,tag=proceed,tag=spawned] at @s if entity @a[distance
 
 # ブーマーゾンビ　処理
 
-
 # スケルトン
 execute as @e[type=#skeletons] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/skeleton/tick
 
+# クリーパー
 execute as @e[type=creeper] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/creeper/tick
+
+# スカウトのアイテム設定
 execute as @e[type=creeper,tag=RD.scout_creeper] at @s run loot replace entity @s armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe[enchantments={silk_touch:1},custom_data={"getID":true}]
 
 # 使者
 execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者",predicate=summonmob_main:in_hostile] at @s run function custom_ai:custom_mobs/messenger/0
+
+execute as @e[type=enderman,tag=elite_eman] at @s run function custom_ai:custom_mobs/messenger/0_particle
 
 # ジャンプマーカー自動処理
 execute as @e[type=marker,tag=jump_marker,tag=proceed] run kill @s
@@ -44,6 +48,8 @@ execute as @e[type=husk,tag=mummy] if score @s ai_timer matches 300.. run kill @
 
 # タンクゾンビの被弾音
 execute as @e[type=#zombies,tag=tank,nbt={HurtTime:9s}] at @s run playsound minecraft:entity.zombie.attack_iron_door hostile @a ~ ~ ~ 1 0.5
+
+execute as @e[tag=RD.damage_player_sound,nbt={HurtTime:9s}] at @s run playsound entity.player.death hostile @a ~ ~ ~ 1 1
 
 # 飛び道具はじくマン
 execute as @e[tag=tank] at @s positioned ~ ~0.5 ~ run function custom_ai:movements/kill_projectile
