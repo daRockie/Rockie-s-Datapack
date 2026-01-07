@@ -1,0 +1,75 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "firework_star",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": {"weapon":true}
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "max_stack_size": 1,
+                "item_model":"bow",
+                "minecraft:custom_name": {
+                  "text": "ゾンビショートボウ",
+                  "italic": false
+                },
+                "minecraft:lore": [
+        {"text": "ダメージ：","italic": false, "color": "gray", "extra": [{"text": "3", "color": "red"}]},
+        "",
+        {"text":"連射に特化した弓。ゾンビアーチャーからドロップする。","color": "gray","italic": false},
+        "",
+        {"text":"アビリティ：速射","italic": false, "color": "gold","extra":[{"text":"右クリックで発動","bold": true,"italic": false,"color": "yellow"}]},
+        {
+          "text": "まっすぐ重力を無視して飛んでいく矢を発射する。ヒットした矢は無敵時間を貫通する。",
+          "color": "gray",
+          "italic": false
+        },
+        "",
+        {
+          "text": "クールダウン：",
+          "extra": [
+            {
+              "text": "0.7秒",
+              "color": "green",
+              "italic": false
+            }
+          ],
+          "color": "dark_gray",
+          "italic": false
+        }
+      ],
+                "use_cooldown": {
+                  "seconds": 0.7,
+                  "cooldown_group": "shortbow"
+                },
+                "consumable": {
+                  "consume_seconds": 0,
+                  "sound": "intentionally_empty",
+                  "has_consume_particles": false
+                },
+                "use_remainder": {
+                  "id": "firework_star",                  
+                  "components": {
+                    "minecraft:custom_name": {
+                  "text": "ゾンビショートボウ",
+                  "italic": false
+                },
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/zombie_shortbow\",function:\"custom_items:items/shortbow/right_click\"}",
+                    "item_model": "bow"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -19,6 +19,10 @@ item replace block ~ ~ ~ container.20 with air
 item replace block ~ ~ ~ container.24 with air
 item replace block ~ ~ ~ container.25 with air
 item replace block ~ ~ ~ container.26 with black_stained_glass_pane[tooltip_display={hide_tooltip:true},custom_data={TempItem:1b}]
-#say Turned into recipe mode
 
+function custom_items:custom_block/advanced_crafter/utils/storage/recipes/fill/init
+function custom_items:custom_block/advanced_crafter/utils/storage/recipes/fill/give_tempitem with storage rockietools:custom_recipe temp_crafter.meta
+scoreboard players add #_SLOTCOUNTER RD.block.calculator.temp3 0
+
+#say Turned into recipe mode
 scoreboard players set @s RD.isCrafting 0

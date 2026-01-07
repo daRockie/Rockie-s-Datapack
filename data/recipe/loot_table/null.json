@@ -1,0 +1,39 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:barrier",
+          "conditions": [],
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": {
+                  "text": "クラフト素材をグリッドに並べてください！",
+                  "type": "text",
+                  "color": "red",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "text": "ここにクラフト結果が表示されます。",
+                    "type": "text",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "minecraft:custom_data": {
+                  "TempItem": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

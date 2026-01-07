@@ -1,4 +1,4 @@
-execute if entity @s[predicate=summonmob_main:in_hostile,tag=!RD.notNormal] as @s run function custom_ai:advanced_ai/zombie/movement
+execute if entity @s[predicate=asset_mobs:in_hostile,tag=!RD.notNormal] as @s run function custom_ai:advanced_ai/zombie/movement
 
 execute as @s[tag=RD.boomer_zombie,tag=ignited] if entity @s[nbt=!{IsBaby:1b}] run function custom_ai:custom_mobs/boomer_zombie/ignited
 

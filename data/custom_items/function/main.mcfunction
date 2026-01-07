@@ -30,3 +30,5 @@ execute as @e[tag=final_surge,tag=final_surge_3] at @s if data entity @s Selecte
 
 # Equipment
 execute as @a run function custom_items:equipments/mining_helmet/main
+
+execute as @a if items entity @s weapon.* shield[custom_data~{CustomItem:"RD.anti_exp_shield"}] at @s if entity @e[tag=explosive_mobs,distance=0..8] run function custom_items:items/item.shield/0/

@@ -1,0 +1,26 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:light_gray_stained_glass_pane",
+          "conditions": [],
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:tooltip_display": {
+                  "hide_tooltip": true
+                },
+                "custom_data": {"TempItem":true}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

@@ -1,6 +1,8 @@
 {
-    "pack": {
-      "pack_format": 71,
-      "description": "クソみたいなモブを追加するデータパック"
-    }
+  "pack": {
+      "pack_format": 94,
+      "description": "終わりの先を求めて。",
+      "min_format": 92,
+      "max_format": 94
+  }
 }

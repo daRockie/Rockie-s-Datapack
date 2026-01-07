@@ -27,7 +27,7 @@ execute as @e[type=creeper] at @s if entity @a[distance=..80] run function custo
 execute as @e[type=creeper,tag=RD.scout_creeper] at @s run loot replace entity @s armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe[enchantments={silk_touch:1},custom_data={"getID":true}]
 
 # 使者
-execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者",predicate=summonmob_main:in_hostile] at @s run function custom_ai:custom_mobs/messenger/0
+execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者",predicate=asset_mobs:in_hostile] at @s run function custom_ai:custom_mobs/messenger/0
 
 execute as @e[type=enderman,tag=elite_eman] at @s run function custom_ai:custom_mobs/messenger/0_particle
 
@@ -60,8 +60,8 @@ execute as @e[type=armor_stand,tag=mummy_reviving] at @s run function custom_ai:
 # 強化ウィッチ
 execute as @e[type=witch,nbt={Tags:["spawned","proceed"]}] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/witch/tick
 
-execute as @e[type=enderman] at @s if entity @s[predicate=summonmob_main:in_hostile] run function summonmob_main:targets/eman
+execute as @e[type=enderman] at @s if entity @s[predicate=asset_mobs:in_hostile] run function asset_mobs:targets/eman
 
-execute as @e[type=#arthropod] at @s if entity @s[predicate=summonmob_main:in_hostile] run function summonmob_main:targets/spider
+execute as @e[type=#arthropod] at @s if entity @s[predicate=asset_mobs:in_hostile] run function asset_mobs:targets/spider
 
-execute as @e[type=wither_skeleton] at @s if entity @s[predicate=summonmob_main:in_hostile] run function summonmob_main:targets/wither_skeleton
+execute as @e[type=wither_skeleton] at @s if entity @s[predicate=asset_mobs:in_hostile] run function asset_mobs:targets/wither_skeleton

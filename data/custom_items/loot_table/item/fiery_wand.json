@@ -9,90 +9,104 @@
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": {"weapon":true}
+              "tag": {
+                "weapon": true
+              }
             },
             {
               "function": "set_components",
               "components": {
                 "max_stack_size": 1,
-                "item_model":"wooden_hoe",
+                "item_model": "wooden_hoe",
                 "minecraft:custom_name": {
                   "text": "ファイアリーワンド",
                   "italic": false
                 },
-                "rarity":"uncommon",
+                "rarity": "uncommon",
                 "minecraft:lore": [
-        {
-          "text": "\"ヒャッハー！汚物は消毒だぜ！\"",
-          "color": "dark_gray",
-          "italic": true
-        },
-        "",
-        {"text":"アビリティ：イグニッション","color": "gold","italic": false, "extra": [{"text":"右クリックで発動","bold": true,"italic": false,"color": "yellow"}]},
-        {
-          "text": "ヒットした敵に",
-          "extra": [
-            {
-              "text": "6ダメージ",
-              "color": "red",
-              "italic": false
-            },
-            {
-              "text": "を与え、",
-              "color": "gray"
-            },
-            {
-              "text": "炎上させる。",
-              "color": "red"
-            }
-          ],
-          "color": "gray",
-          "italic": false
-        },
-        {
-          "text": "炎上中の爆破系モブ",
-          "extra": [
-            {
-              "text": "にヒットすると、",
-              "color": "gray"
-            },
-            {
-              "text": "即座に着火し"
-            },
-            {
-              "text": "起爆させる。",
-              "bold": true
-            }
-          ],
-          "color": "red",
-          "italic": false
-        },
-        "",
-        {
-          "text": "クールダウン：",
-          "extra": [
-            {
-              "text": "0.3秒",
-              "color": "green",
-              "italic": false
-            }
-          ],
-          "color": "dark_gray",
-          "italic": false
-        },
-        {
-          "text": "マナ使用量：",
-          "extra": [
-            {
-              "text": "15",
-              "color": "dark_aqua",
-              "italic": false
-            }
-          ],
-          "color": "dark_gray",
-          "italic": false
-        }
-      ],
+                  {
+                    "text": "\"ヒャッハー！汚物は消毒だぜ！\"",
+                    "color": "dark_gray",
+                    "italic": true
+                  },
+                  "",
+                  {
+                    "text": "アビリティ：イグニッション",
+                    "color": "gold",
+                    "italic": false,
+                    "extra": [
+                      {
+                        "text": "右クリックで発動",
+                        "bold": true,
+                        "italic": false,
+                        "color": "yellow"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "ヒットした敵に",
+                    "extra": [
+                      {
+                        "text": "6ダメージ",
+                        "color": "red",
+                        "italic": false
+                      },
+                      {
+                        "text": "を与え、",
+                        "color": "gray"
+                      },
+                      {
+                        "text": "炎上させる。",
+                        "color": "red"
+                      }
+                    ],
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "炎上中の爆破系モブ",
+                    "extra": [
+                      {
+                        "text": "にヒットすると、",
+                        "color": "gray"
+                      },
+                      {
+                        "text": "即座に着火し"
+                      },
+                      {
+                        "text": "起爆させる。",
+                        "bold": true
+                      }
+                    ],
+                    "color": "red",
+                    "italic": false
+                  },
+                  "",
+                  {
+                    "text": "クールダウン：",
+                    "extra": [
+                      {
+                        "text": "0.3秒",
+                        "color": "green",
+                        "italic": false
+                      }
+                    ],
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "マナ使用量：",
+                    "extra": [
+                      {
+                        "text": "15",
+                        "color": "dark_aqua",
+                        "italic": false
+                      }
+                    ],
+                    "color": "dark_gray",
+                    "italic": false
+                  }
+                ],
                 "use_cooldown": {
                   "seconds": 0.3,
                   "cooldown_group": "fiery_wand"
@@ -103,13 +117,13 @@
                   "has_consume_particles": false
                 },
                 "use_remainder": {
-                  "id": "firework_star",                  
+                  "id": "firework_star",
                   "components": {
                     "minecraft:custom_name": {
-                  "text": "ファイアリーワンド",
-                  "italic": false
-                },
-                "rarity":"uncommon",
+                      "text": "ファイアリーワンド",
+                      "italic": false
+                    },
+                    "rarity": "uncommon",
                     "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/fiery_wand\",function:\"custom_items:items/fiery_wand/used\"}",
                     "item_model": "wooden_hoe"
                   }

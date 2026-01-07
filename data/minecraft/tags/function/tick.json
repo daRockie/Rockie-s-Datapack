@@ -1,10 +1,9 @@
 {
   "values": [
-    "summonmob_main:main",
+    "asset_mobs:main",
     "custom_ai:main",
     "custom_items:main",
-    "useful-functions:main",
     "system:main",
-    "summonmob_main:set_equipment/main"
+    "asset_mobs:set_equipment/main"
   ]
 }

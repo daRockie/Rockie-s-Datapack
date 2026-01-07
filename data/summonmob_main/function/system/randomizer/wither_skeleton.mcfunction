@@ -1,1 +1,0 @@
-execute if score @s spawnRandom matches 0..20 run function summonmob_main:summon/skeleton/elite_wither_skeleton

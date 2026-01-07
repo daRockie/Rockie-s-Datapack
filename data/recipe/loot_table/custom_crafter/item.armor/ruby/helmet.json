@@ -1,0 +1,67 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "leather_helmet",
+          "functions": [
+            {
+              "function": "set_custom_data",
+              "tag": {
+                "CustomItem": "RD.ruby_helmet"
+              }
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "trim":{
+                    "pattern":"silence",
+                    "material":"redstone"
+                },
+                "dyed_color":11546150,
+                "attribute_modifiers":[
+                    {
+                        "id": "minecraft:ruby_chest_health",
+                        "type":"max_health",
+                        "amount": 3,
+                        "operation": "add_value",
+                        "slot": "head"
+                    },
+                    {
+                        "id": "minecraft:ruby_chest_armor",
+                        "type": "armor",
+                        "operation": "add_value",
+                        "amount": 3.5,
+                        "slot": "head"
+                    },
+                    {
+                        "id": "minecraft:ruby_chest_toughness",
+                        "type": "armor",
+                        "operation": "add_value",
+                        "amount": 1.5,
+                        "slot": "head"
+                    }
+                ],
+                "tooltip_display": {
+                    "hidden_components": [
+                        "trim","dyed_color"
+                    ]
+                },
+                "minecraft:custom_name": {
+                  "text": "ルビーのチェストプレート",
+                  "italic": false
+                },
+                "rarity":"uncommon",
+                "minecraft:lore": [[{"text":"最大体力: ","italic":false,"color":"dark_gray","extra":[{"text":"♥1.5+","color":"red"}]}],"",[{"text":"煌めく","italic":false,"color":"gray"},{"text":"真紅の宝石","italic":false,"color":"red"},{"text":"を基に制作された防具。","italic":false,"color":"gray"}],[{"text":"ダイヤより耐久性に劣るものの、体力を上昇させる効果がある。","color":"gray","italic": false}]],
+                "max_damage": 625,
+                "!repairable": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

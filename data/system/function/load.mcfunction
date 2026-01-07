@@ -16,6 +16,7 @@ scoreboard objectives add item.shortBow.cooldown dummy "ショートボウのク
 scoreboard objectives add RD.item.RC dummy "右クリックの検知"
 
 scoreboard objectives add abilityCooldown.reverberation dummy "「残響」の魔導書のクールダウン"
+scoreboard objectives add RD.custom_block.tempItemChecker dummy "仮置きアイテムチェッカー"
 
 kill @e[type=tnt]
 
@@ -28,6 +29,9 @@ execute unless data storage rockietools:id {} run data modify storage rockietool
 
 execute if data storage rockietools:custom_crafter {} run data modify storage rockietools:custom_crafter data set value {}
 
-execute unless data storage rockietools:custom_recipe {} run data modify storage rockietools:custom_recipe list set value {}
+execute if data storage rockietools:custom_recipe {} run data modify storage rockietools:custom_recipe list set value {}
+
+function custom_items:custom_block/advanced_crafter/utils/storage/recipes/json
+# function custom_items:custom_block/advanced_crafter/utils/storage/recipes/loop_backward_init
 
 function system:save_progression

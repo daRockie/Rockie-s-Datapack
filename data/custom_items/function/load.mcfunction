@@ -9,6 +9,7 @@ scoreboard objectives add RD.recipe_id dummy "レシピID"
 scoreboard objectives add RD.flame dummy "燃焼時間"
 scoreboard objectives add RD.temp0 dummy "仮置きスコアボード"
 
+
 scoreboard objectives add RD.item.emerald_calculator dummy "エメラルド計算"
 scoreboard objectives add RD.item.emerald dummy "エメラルド数"
 
@@ -17,6 +18,6 @@ scoreboard objectives add RD.isCrafting dummy "モード識別"
 scoreboard objectives add RD.block.calculator dummy "計算機"
 scoreboard objectives add RD.block.calculator.temp1 dummy "仮置き空間1"
 scoreboard objectives add RD.block.calculator.temp2 dummy "仮置き空間2"
-scoreboard objectives add RD.block.wrong_slot dummy "違うアイテム入りスロット"
+scoreboard objectives add RD.block.calculator.temp3 dummy "仮置き空間3"
 
 #summon villager ~ ~ ~ {Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}

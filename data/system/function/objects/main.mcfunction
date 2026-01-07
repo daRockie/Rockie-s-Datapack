@@ -10,3 +10,5 @@ execute as @e[type=vindicator,tag=fire] if score @s ai_timer matches 8.. run kil
 execute as @e[type=vindicator,tag=knockback] run scoreboard players add @s ai_timer 1
 execute as @e[type=vindicator,tag=knockback] if score @s ai_timer matches 12.. run tp @s ~ ~-200 ~
 execute as @e[type=vindicator,tag=knockback] if score @s ai_timer matches 12.. run kill @s
+
+execute as @e[type=#arrows,tag=RD.shortbow_arrow] at @s run function system:objects/arrow/
