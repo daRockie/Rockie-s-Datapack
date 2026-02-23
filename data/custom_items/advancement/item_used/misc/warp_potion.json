@@ -4,10 +4,9 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "items": "minecraft:player_head",
+          "items": "minecraft:potion",
           "components": {
-            "minecraft:rarity": "epic",
-            "minecraft:custom_name": {"text":"転移のポーション","italic":false}
+            "minecraft:custom_data": {"CustomItem": "RD.warp_potion"}
           }
         }
       }

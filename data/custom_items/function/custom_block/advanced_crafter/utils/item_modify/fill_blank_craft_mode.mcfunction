@@ -31,4 +31,6 @@ item replace block ~ ~ ~ container.23 with air
 
 #say Turned into craft mode
 
+function custom_items:custom_block/advanced_crafter/utils/storage/recipes/refer/init
+
 scoreboard players set @s RD.isCrafting 1

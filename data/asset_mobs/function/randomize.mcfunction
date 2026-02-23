@@ -14,6 +14,11 @@ execute if entity @s[tag=!proceed,type=#skeletons] run function asset_mobs:syste
 # クリーパー族
 execute if entity @s[tag=!proceed,type=creeper] run function asset_mobs:system/randomizer/creeper
 
+# クモの親子　召喚
+execute if entity @s[type=minecraft:spider,tag=!proceed] run function asset_mobs:system/randomizer/spider
+
+# ---------------------------------------------------------------------------------------------------------------
+
 # ドルフィン・ライダー
 execute if entity @s[type=dolphin,tag=!proceed] if score @s spawnRandom matches 0..15 run function asset_mobs:summon/summon_d_rider
 
@@ -27,9 +32,6 @@ execute if entity @s[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if scor
 
 # エリートウィザースケルトン　召喚
 execute if entity @s[type=minecraft:wither_skeleton,tag=!proceed] if score @s spawnRandom matches 0..15 run function asset_mobs:summon/skeleton/elite_wither_skeleton
-
-# クモの親子　召喚
-execute if entity @s[type=minecraft:spider,tag=!proceed] run function asset_mobs:system/randomizer/spider
 
 # オブジェクトホーミング（強）
 execute if entity @s[tag=!proceed,tag=hap_strong] at @s run function custom_ai:move_obj_strong

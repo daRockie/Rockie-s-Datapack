@@ -16,8 +16,9 @@
     "D": "diamond"
   },
   "result": {
-    "id": "minecraft:debug_stick",
+    "id": "minecraft:shield",
         "components": {
+          "!blocks_attacks":{},
           "max_stack_size": 1,
             "enchantment_glint_override": true,
             "item_model":"stick",
@@ -37,11 +38,11 @@
                 "has_consume_particles": false
             },
               "use_remainder": {
-                "id": "firework_star",
+                "id": "shield",
                 "components": {
                   "item_model": "stick",
                   "enchantment_glint_override": true,
-              "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/wand_of_ardor\",function:\"custom_items:items/wand_of_ardor/used\"}"
+              "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/wand_of_ardor\",function:\"custom_items:items/wand_of_ardor/used\",damage_per_use:0,max_damage:157}"
         }
       }
     }      

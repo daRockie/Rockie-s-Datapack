@@ -19,5 +19,6 @@ scoreboard objectives add RD.block.calculator dummy "計算機"
 scoreboard objectives add RD.block.calculator.temp1 dummy "仮置き空間1"
 scoreboard objectives add RD.block.calculator.temp2 dummy "仮置き空間2"
 scoreboard objectives add RD.block.calculator.temp3 dummy "仮置き空間3"
+scoreboard objectives add RD.block.slot dummy "スロット管理"
 
 #summon villager ~ ~ ~ {Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,Passengers:[{id:villager,}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}

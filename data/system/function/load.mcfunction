@@ -14,11 +14,15 @@ scoreboard objectives add ability.right_click dummy "アビリティ：右クリ
 
 scoreboard objectives add item.shortBow.cooldown dummy "ショートボウのクールダウン"
 scoreboard objectives add RD.item.RC dummy "右クリックの検知"
+scoreboard objectives add RD.item.durabity dummy "耐久値"
 
 scoreboard objectives add abilityCooldown.reverberation dummy "「残響」の魔導書のクールダウン"
-scoreboard objectives add RD.custom_block.tempItemChecker dummy "仮置きアイテムチェッカー"
+scoreboard objectives add RD.custom_block.tmp0 dummy "仮置き"
+scoreboard objectives add RD._BOOLEAN dummy "ブーリアン0"
 
-kill @e[type=tnt]
+# スコアボード多すぎひん？
+scoreboard objectives add RD.custom_block.CALC_0 dummy "演算[0]"
+
 
 data merge storage rockietools:uuid {datas:""}
 data modify storage rockietools:uuid datas set value {}

@@ -9,6 +9,7 @@ execute if data storage rockietools:custom_recipe temp_crafter.meta.crafter.allo
 
 # エントリーを設定
 $data modify storage rockietools:custom_recipe temp_crafter.meta.entry set value $(entry)
+# $say $(entry)
 
 # スコアボードを利用して参照するレシピ番号を取得
 scoreboard players add @s RD.block.calculator.temp3 1

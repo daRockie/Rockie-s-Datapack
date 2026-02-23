@@ -1,0 +1,56 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "conditions": [],
+          "functions": [
+            {
+                "function": "set_count",
+                "count": 4
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:lore": [
+                  {
+                    "text": "使用することで、周囲なプレイヤーにテレポートします。",
+                    "type": "text",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "醸造もしくは夜間に3回死亡することで入手できます。",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "custom_data": {"CustomItem":"RD.warp_potion"},
+                "minecraft:potion_contents": {
+                  "custom_color": 10958323,
+                  "custom_name": "転移"
+                },
+                "consumable":{
+                    "animation": "drink",
+                    "consume_seconds": 3,
+                    "has_consume_particles": false,
+                    "sound": "entity.witch.drink"
+                },
+                "minecraft:custom_name": {
+                  "text": "転移のポーション",
+                  "italic": false
+                },
+                "minecraft:rarity": "epic",
+                "max_stack_size": 16
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

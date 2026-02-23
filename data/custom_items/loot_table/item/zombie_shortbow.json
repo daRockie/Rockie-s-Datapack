@@ -5,15 +5,16 @@
       "entries": [
         {
           "type": "item",
-          "name": "firework_star",
+          "name": "shield",
           "functions": [
             {
               "function": "set_custom_data",
-              "tag": {"weapon":true}
+              "tag": {"weapon":true,"damage_per_use":0,"max_damage":157}
             },
             {
               "function": "set_components",
               "components": {
+                "!blocks_attacks":{},
                 "max_stack_size": 1,
                 "item_model":"bow",
                 "minecraft:custom_name": {
@@ -55,13 +56,14 @@
                   "has_consume_particles": false
                 },
                 "use_remainder": {
-                  "id": "firework_star",                  
+                  "id": "shield",                  
                   "components": {
+                   "!blocks_attacks":{},
                     "minecraft:custom_name": {
                   "text": "ゾンビショートボウ",
                   "italic": false
                 },
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/zombie_shortbow\",function:\"custom_items:items/shortbow/right_click\"}",
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/zombie_shortbow\",function:\"custom_items:items/shortbow/right_click\",damage_per_use:0,max_damage:157}",
                     "item_model": "bow"
                   }
                 }
