@@ -52,9 +52,6 @@ execute as @e[type=#zombies,tag=tank,nbt={HurtTime:9s}] at @s run playsound mine
 
 execute as @e[tag=RD.damage_player_sound,nbt={HurtTime:9s}] at @s run playsound entity.player.death hostile @a ~ ~ ~ 1 1
 
-# 飛び道具はじくマン
-execute as @e[tag=tank] at @s positioned ~ ~0.5 ~ run function custom_ai:movements/kill_projectile
-
 # 蘇生中ミイラ
 execute as @e[type=armor_stand,tag=mummy_reviving] at @s run function custom_ai:movements/mummy/mummy_revive_obj
 

@@ -1,0 +1,57 @@
+summon armor_stand ~ ~ ~ \
+{\
+    Passengers:\
+    [\
+        {\
+            id:"item_display",\
+            item:\
+            {\
+                id:"green_banner",\
+                components:\
+                {\
+                    banner_patterns:\
+                    [\
+                        {pattern:stripe_downright,color:lime},\
+                        {pattern:small_stripes,color:gray},\
+                        {pattern:curly_border,color:black},\
+                        {pattern:bricks,color:light_gray},\
+                        {pattern:rhombus,color:black},\
+                        {pattern:circle,color:gray},\
+                        {pattern:skull,color:white}\
+                    ]\
+                }\
+            },\
+            transformation:\
+            {\
+                translation:[0f,0.7f,0f],\
+                scale:[1f,1f,1f],\
+                left_rotation:{\
+                    angle:0f,\
+                    axis:[0f,0f,0f]\
+                },\
+                right_rotation:{\
+                    angle:0f,\
+                    axis:[0f,0f,0f]\
+                }\
+            },\
+            Tags:[\
+                "RD.object",\
+                "RD.zombie_flag_pre"\
+            ]\
+        }\
+    ],\
+    attributes:[\
+        {\
+            id:"scale",\
+            base:0\
+        }\
+    ],\
+    Invisible:1b,\
+    Tags:[\
+        "RD.object",\
+        "RD.on_land",\
+        "RD.zombie_flag_pre2"\
+    ]\
+}
+
+execute as @n[type=armor_stand,tag=RD.zombie_flag_pre2] at @s run function custom_ai:object/flags/zombie_flag/init

@@ -1,0 +1,1 @@
+execute if entity @s[tag=RD.object] run function custom_ai:object/flags/zombie_flag/summon
