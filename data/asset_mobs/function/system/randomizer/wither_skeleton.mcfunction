@@ -1,1 +1,0 @@
-execute if score @s spawnRandom matches 0..20 run function asset_mobs:summon/skeleton/elite_wither_skeleton

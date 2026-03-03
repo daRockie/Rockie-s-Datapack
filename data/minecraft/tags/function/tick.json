@@ -1,9 +1,9 @@
 {
   "values": [
-    "asset_mobs:main",
+    "rd_asset_mobs:main",
     "custom_ai:main",
     "custom_items:main",
     "system:main",
-    "asset_mobs:set_equipment/main"
+    "rd_asset_mobs:set_equipment/main"
   ]
 }

@@ -10,7 +10,7 @@ execute unless entity @e[tag=spider.target,distance=0..9] if score @s RD.block.c
 execute if score @s RD.block.calculator matches 1.. run scoreboard players remove @s RD.block.calculator 1
 
 execute if entity @s[tag=RD.stiger.shooting] run scoreboard players add @s ai_timer 1
-execute if score @s[predicate=asset_mobs:in_hostile] ai_timer matches 60.. run function custom_ai:movements/stinger/shoot_fiber
+execute if score @s[predicate=rd_asset_mobs:in_hostile] ai_timer matches 60.. run function custom_ai:movements/stinger/shoot_fiber
 
 execute if entity @s[tag=RD.stiger.shooting] run scoreboard players add @s ai_timer_tmp 1
 execute if score @s ai_timer_tmp matches 40.. run scoreboard players reset @s ai_timer_tmp

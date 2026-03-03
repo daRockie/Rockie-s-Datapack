@@ -1,5 +1,6 @@
 #say hi
 scoreboard players operation @s RD.player.ID = #ID RD.player.ID
+team join RD.plaer @s
 
 function system:mana/register with entity @s {}
 

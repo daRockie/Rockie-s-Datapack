@@ -24,8 +24,8 @@
         "italic": false
       },
       "food":{
-        "nutrition": 6,
-        "saturation": 4,
+        "nutrition": 1,
+        "saturation": 0.25,
         "can_always_eat": true
       },
       "custom_data": {

@@ -10,7 +10,8 @@
             {
               "function": "set_custom_data",
               "tag": {
-                "CustomItem": "RD.ruby_helmet"
+                "CustomItem": "RD.ruby_helmet",
+                "RD.recipeResult": true
               }
             },
             {
@@ -23,22 +24,22 @@
                 "dyed_color":11546150,
                 "attribute_modifiers":[
                     {
-                        "id": "minecraft:ruby_chest_health",
+                        "id": "rd:ruby_helmet_health",
                         "type":"max_health",
                         "amount": 3,
                         "operation": "add_value",
                         "slot": "head"
                     },
                     {
-                        "id": "minecraft:ruby_chest_armor",
+                        "id": "rd:ruby_helmet_armor",
                         "type": "armor",
                         "operation": "add_value",
                         "amount": 3.5,
                         "slot": "head"
                     },
                     {
-                        "id": "minecraft:ruby_chest_toughness",
-                        "type": "armor",
+                        "id": "rd:ruby_helmet_armortoughness",
+                        "type": "armor_toughness",
                         "operation": "add_value",
                         "amount": 1.5,
                         "slot": "head"

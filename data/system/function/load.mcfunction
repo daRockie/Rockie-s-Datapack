@@ -1,11 +1,11 @@
-scoreboard objectives add mana dummy "マナ"
-scoreboard objectives add mana.max dummy "最大マナ"
-scoreboard objectives add mana.regen dummy "マナ回復速度"
-scoreboard objectives add mana.timer dummy "マナ回復タイマー"
-scoreboard objectives add mana.operation dummy "マナ計算"
-scoreboard objectives add mana.bossbar.fadeout dummy "マナ表示フェードアウト"
+scoreboard objectives add RD.mana dummy "マナ"
+scoreboard objectives add RD.mana.max dummy "最大マナ"
+scoreboard objectives add RD.mana.regen dummy "マナ回復速度"
+scoreboard objectives add RD.mana.timer dummy "マナ回復タイマー"
+scoreboard objectives add RD.mana.operation dummy "マナ計算"
+scoreboard objectives add RD.mana.bossbar.fadeout dummy "マナ表示フェードアウト"
 
-scoreboard objectives add tick.timer dummy "ティックタイマー"
+scoreboard objectives add RD.tick.timer dummy "ティックタイマー"
 
 scoreboard objectives add RD.player.ID dummy "プレイヤーID表"
 scoreboard objectives add RD.returnFunction dummy "再帰関数"
@@ -22,7 +22,10 @@ scoreboard objectives add RD._BOOLEAN dummy "ブーリアン0"
 
 # スコアボード多すぎひん？
 scoreboard objectives add RD.custom_block.CALC_0 dummy "演算[0]"
+execute unless data storage rockietools:game_progression progress run data modify storage rockietools:game_progression progress set value 0
+function system:define_teams
 
+tellraw @a [{"text": "THE ECLIPSE",bold:true},{"text":"\nDatapack made by Crazy Boomers Crew"}]
 
 data merge storage rockietools:uuid {datas:""}
 data modify storage rockietools:uuid datas set value {}

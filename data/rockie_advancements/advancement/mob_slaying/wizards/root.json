@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:globe_banner_pattern",
+      "count": 1
+    },
+    "title": {
+      "text": "知との対峙"
+    },
+    "description": {
+      "text": "魔法系エンティティを討伐する"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "rockie_advancements:mob_slaying/root",
+  "criteria": {
+    "kill": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "team":"RD.type.sorcery"
+        }
+      }
+    }
+  }
+}

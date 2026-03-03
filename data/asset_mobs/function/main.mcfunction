@@ -1,1 +1,0 @@
-execute as @e[type=!#minecraft:unliving_objects] at @s if entity @a[distance=..80] as @s run function asset_mobs:randomize

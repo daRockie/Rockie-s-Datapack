@@ -10,7 +10,8 @@
             {
               "function": "set_custom_data",
               "tag": {
-                "CustomItem": "RD.ruby_chestplate"
+                "CustomItem": "RD.ruby_chestplate",
+                "RD.recipeResult": true
               }
             },
             {
@@ -23,22 +24,22 @@
                 "dyed_color":11546150,
                 "attribute_modifiers":[
                     {
-                        "id": "minecraft:ruby_chest_health",
+                        "id": "rd:ruby_chest_health",
                         "type":"max_health",
                         "amount": 8,
                         "operation": "add_value",
                         "slot": "chest"
                     },
                     {
-                        "id": "minecraft:ruby_chest_armor",
+                        "id": "rd:ruby_chest_armor",
                         "type": "armor",
                         "operation": "add_value",
                         "amount": 7,
                         "slot": "chest"
                     },
                     {
-                        "id": "minecraft:ruby_chest_toughness",
-                        "type": "armor",
+                        "id": "rd:ruby_chest_toughness",
+                        "type": "armor_toughness",
                         "operation": "add_value",
                         "amount": 1.5,
                         "slot": "chest"

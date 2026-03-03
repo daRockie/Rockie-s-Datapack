@@ -5,10 +5,10 @@
       "count": 1
     },
     "title": {
-      "text": "モブスレイヤー"
+      "text": "冒険の記録 - 討伐"
     },
     "description": {
-      "text": "全てを討伐し尽くし、王座に立て"
+      "text": "道を拓きましょう"
     },
     "background": "block/chiseled_tuff_bricks",
     "show_toast": false,

@@ -1,0 +1,35 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_sword",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:rarity": "uncommon",
+                "minecraft:custom_name": {
+                  "text": "ルビーの剣",
+                  "italic": false
+                },
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "minecraft:max_health",
+                    "id": "rockietools:ruby_tools",
+                    "amount": 3,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  }
+                ],
+                "max_damage": 893
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

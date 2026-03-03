@@ -23,11 +23,13 @@ execute as @e[type=#skeletons] at @s if entity @a[distance=..80] run function cu
 # クリーパー
 execute as @e[type=creeper] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/creeper/tick
 
+execute as @e[tag=RD.object] at @s as @s run function custom_ai:object/
+
 # スカウトのアイテム設定
 execute as @e[type=creeper,tag=RD.scout_creeper] at @s run loot replace entity @s armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe[enchantments={silk_touch:1},custom_data={"getID":true}]
 
 # 使者
-execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者",predicate=asset_mobs:in_hostile] at @s run function custom_ai:custom_mobs/messenger/0
+execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者",predicate=rd_asset_mobs:in_hostile] at @s run function custom_ai:custom_mobs/messenger/0
 
 execute as @e[type=enderman,tag=elite_eman] at @s run function custom_ai:custom_mobs/messenger/0_particle
 
@@ -39,8 +41,7 @@ execute as @e[type=armor_stand,tag=spread] run scoreboard players add @s ai_time
 execute as @e[type=armor_stand,tag=spread] if score @s ai_timer matches 40.. run kill @s
 
 # ミイラ蘇生
-execute as @e[type=minecraft:armor_stand,tag=death_finder] on vehicle if entity @s[nbt={DeathTime:19s}] as @e[type=armor_stand,tag=death_finder,tag=!vehicleiskilled] run tag @s add vehicleiskilled
-execute as @e[type=armor_stand,tag=death_finder,tag=vehicleiskilled,nbt={OnGround:1b}] at @s run function custom_ai:movements/mummy/mummy_revive
+# execute as @e[type=minecraft:armor_stand,tag=death_finder] on vehicle if entity @s[nbt={DeathTime:19s}] as @e[type=armor_stand,tag=death_finder,tag=!vehicleiskilled] run tag @s add vehicleiskilled
 
 # 長時間友好モブが近くにいなかった場合、勝手に潜伏
 execute as @e[type=husk,tag=mummy] at @s unless entity @e[type=#custom_ai:inhostile,distance=0..32] run scoreboard players add @s ai_timer 1
@@ -60,8 +61,8 @@ execute as @e[type=armor_stand,tag=mummy_reviving] at @s run function custom_ai:
 # 強化ウィッチ
 execute as @e[type=witch,nbt={Tags:["spawned","proceed"]}] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/witch/tick
 
-execute as @e[type=enderman] at @s if entity @s[predicate=asset_mobs:in_hostile] run function asset_mobs:targets/eman
+execute as @e[type=enderman] at @s if entity @s[predicate=rd_asset_mobs:in_hostile] run function rd_asset_mobs:targets/eman
 
-execute as @e[type=#arthropod] at @s if entity @s[predicate=asset_mobs:in_hostile] run function asset_mobs:targets/spider
+execute as @e[type=#arthropod] at @s if entity @s[predicate=rd_asset_mobs:in_hostile] run function rd_asset_mobs:targets/spider
 
-execute as @e[type=wither_skeleton] at @s if entity @s[predicate=asset_mobs:in_hostile] run function asset_mobs:targets/wither_skeleton
+execute as @e[type=wither_skeleton] at @s if entity @s[predicate=rd_asset_mobs:in_hostile] run function rd_asset_mobs:targets/wither_skeleton

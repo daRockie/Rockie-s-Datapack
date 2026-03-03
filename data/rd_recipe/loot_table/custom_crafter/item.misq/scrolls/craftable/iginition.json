@@ -1,0 +1,57 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:totem_of_undying",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": {
+                  "text": "スクロール",
+                  "type": "text",
+                  "italic": false
+                },
+                "minecraft:rarity": "rare",
+                "minecraft:item_model": "minecraft:flower_banner_pattern",
+                "minecraft:lore": [
+                  {
+                    "text": "魔法が込められた紙切れ",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "内包された魔法: ",
+                    "extra": [
+                      {
+                        "text": "イグニッション",
+                        "color": "blue"
+                      }
+                    ],
+                    "color": "white",
+                    "italic": false
+                  }
+                ],
+                "!minecraft:death_protection": {}
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": {
+                "CustomItem": "RD.scroll",
+                "RD.spells": [
+                  {
+                    "spell": "RD.ignition"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

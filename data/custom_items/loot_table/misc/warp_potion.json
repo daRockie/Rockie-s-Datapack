@@ -17,7 +17,7 @@
               "components": {
                 "minecraft:lore": [
                   {
-                    "text": "使用することで、周囲なプレイヤーにテレポートします。",
+                    "text": "使用することで、周囲のランダムなプレイヤーにテレポートします。",
                     "type": "text",
                     "color": "gray",
                     "italic": false

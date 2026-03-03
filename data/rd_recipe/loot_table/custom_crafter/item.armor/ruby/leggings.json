@@ -10,7 +10,8 @@
             {
               "function": "set_custom_data",
               "tag": {
-                "CustomItem": "RD.ruby_leggings"
+                "CustomItem": "RD.ruby_leggings",
+                "RD.recipeResult": true
               }
             },
             {
@@ -23,21 +24,21 @@
                 "dyed_color":11546150,
                 "attribute_modifiers":[
                     {
-                        "id": "minecraft:ruby_chest_health",
+                        "id": "rd:ruby_leggings_health",
                         "type":"max_health",
                         "amount": 4,
                         "operation": "add_value",
                         "slot": "legs"
                     },
                     {
-                        "id": "minecraft:ruby_chest_armor",
+                        "id": "rd:ruby_leggings_armor",
                         "type": "armor",
                         "operation": "add_value",
                         "amount": 5,
                         "slot": "legs"
                     },
                     {
-                        "id": "minecraft:ruby_chest_toughness",
+                        "id": "rd:ruby_leggings_toughness",
                         "type": "armor",
                         "operation": "add_value",
                         "amount": 1.5,
