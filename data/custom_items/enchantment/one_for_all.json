@@ -8,7 +8,7 @@
   "exclusive_set": "#custom_items:ultimate_enchant",
   "supported_items": "#minecraft:enchantable/sharp_weapon",
   "weight": 1,
-  "max_level": 1,
+  "max_level": 5,
   "min_cost": {
     "base": 5,
     "per_level_above_first": 1
@@ -97,8 +97,14 @@
         "effect": {
           "type": "minecraft:damage_entity",
           "damage_type": "minecraft:generic_kill",
-          "min_damage": 15,
-          "max_damage": 35
+          "min_damage": 20,
+          "max_damage": {
+            "type": "linear",
+            "base": 40,
+            "per_level_above_first": 10
+
+          }
+
         }
       },
       {

@@ -1,6 +1,6 @@
 {
     "values": [
-        "system:bypassing_arrow",
-        "system:no_bypass_magic"
+        "rd_system:bypassing_arrow",
+        "rd_system:no_bypass_magic"
     ]
 }

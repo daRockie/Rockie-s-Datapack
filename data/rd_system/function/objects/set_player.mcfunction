@@ -1,0 +1,1 @@
+$function rd_system:objects/ignition with storage rockietools:uuid datas."$(UUID)".parent

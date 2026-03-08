@@ -40,6 +40,6 @@
       }
     },
     "rewards": {
-      "function": "system:progress/starter"
+      "function": "rd_system:progress/starter"
     }
   }

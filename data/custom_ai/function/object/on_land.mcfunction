@@ -1,1 +1,1 @@
-execute if entity @s[tag=RD.object] run function custom_ai:object/flags/zombie_flag/summon
+execute if entity @s[tag=RD.object] align xyz positioned ~0.5 ~ ~0.5 run function custom_ai:object/flags/zombie_flag/summon

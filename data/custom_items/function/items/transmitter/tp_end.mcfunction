@@ -4,7 +4,7 @@ execute unless block ~ ~ ~ #custom_ai:no_collision run return run execute positi
 effect give @s invisibility 1
 #playsound entity.generic.explode master @a ~ ~ ~ 1 1
 playsound block.respawn_anchor.charge master @a ~ ~ ~ 5 2
-#execute as @e[distance=0.001..4] run damage @s 4 system:no_bypass_magic
+#execute as @e[distance=0.001..4] run damage @s 4 rd_system:no_bypass_magic
 
 tp @s ~ ~ ~
 playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 1

@@ -5,5 +5,5 @@ tag @s add RD.noEquipment
 execute on vehicle unless entity @s[type=area_effect_cloud] positioned ~ ~1 ~ run tag @s[distance=..0.5] add HasVehicle
 
 execute at @s run summon area_effect_cloud ~ ~ ~ {Tags:["RD.idChecker"],Duration:1,Radius:0}
-execute at @s run function system:get_id
+execute at @s run function rd_system:get_id
 function rd_asset_mobs:set_equipment/equip with storage rockietools:get_id

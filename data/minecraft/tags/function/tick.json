@@ -3,7 +3,7 @@
     "rd_asset_mobs:main",
     "custom_ai:main",
     "custom_items:main",
-    "system:main",
+    "rd_system:main",
     "rd_asset_mobs:set_equipment/main"
   ]
 }

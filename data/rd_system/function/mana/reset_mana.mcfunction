@@ -1,0 +1,2 @@
+execute store result score @s RD.mana store result score @s RD.mana run scoreboard players get @s RD.mana.max
+$execute if entity @s[type=player] run function rd_system:mana/bossbar/modify with storage rockietools:id data."$(UUID)"

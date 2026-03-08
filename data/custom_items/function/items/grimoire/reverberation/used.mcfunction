@@ -8,4 +8,4 @@ attribute @s minecraft:jump_strength base set 0
 effect give @s slowness 3 100
 effect give @s blindness 1 100
 scoreboard players add @s abilityCooldown.reverberation 160
-function system:mana/use_mana {"mana":80}
+function rd_system:mana/use_mana {"mana":80}

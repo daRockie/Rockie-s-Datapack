@@ -1,0 +1,26 @@
+execute unless score @s ai_timer matches -2147483648..2147483647 run scoreboard players set @s ai_timer 0
+execute at @p run tp @s[tag=!pos_set] ~ ~1 ~
+data modify entity @s[tag=!pos_set] Pose.Head[0] set from entity @p Rotation[1]
+data modify entity @s[tag=!pos_set] Rotation[0] set from entity @p Rotation[0]
+data modify entity @s[tag=!pos_set] Rotation[1] set from entity @p Rotation[1]
+execute if entity @s[tag=!pos_set] run function rd_system:register with entity @s {}
+#execute if entity @s[tag=!pos_set] run function rd_system:getparent with entity @s {}
+
+execute if score @s[tag=!pos_set] ai_timer matches 1.. run tag @s add pos_set
+
+execute if score @s ai_timer matches 80.. run function rd_system:objects/fiery_wand/extinguish with entity @s
+
+# 移動
+execute if score @s ai_timer matches ..80 run scoreboard players add @s ai_timer 1
+tp @s[tag=pos_set] ^ ^ ^0.8
+particle flame ~ ~0.7 ~ 0.05 0.05 0.05 0.025 1
+particle smoke ~ ~0.7 ~ 0.05 0.05 0.05 0.05 3
+
+# 消滅
+execute if block ~ ~ ~ water run playsound entity.generic.extinguish_fire player @a ~ ~ ~ 1 1
+execute if block ~ ~ ~ water run particle large_smoke ~ ~ ~ 0.5 0 0.5 0.05 15
+execute if block ~ ~ ~ water run kill @s
+
+# 着火、起爆
+$execute if entity @e[tag=!fire_shot,distance=0.01..1.5,type=!#minecraft:unliving_objects] run function rd_system:objects/fiery_wand/ignition with storage rockietools:uuid datas."$(UUID)"
+$execute at @s unless block ~ ~0.5 ~ #custom_ai:no_collision unless block ~ ~0.5 ~ light unless block ~ ~ ~ water run function rd_system:objects/fiery_wand/ignition with storage rockietools:uuid datas."$(UUID)"

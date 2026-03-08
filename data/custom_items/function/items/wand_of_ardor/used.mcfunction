@@ -9,4 +9,4 @@ particle entity_effect{color:[1, 1, 1, 1]} ~ ~1 ~ 0.5 0.5 0.5 0 25
 particle instant_effect ~ ~ ~ 3 0 3 0 25
 effect give @e[distance=0..6,type=!#illager,type=!#illager_friends,type=!#minecraft:arthropod,type=!#undead] instant_health 1 1 false
 effect give @e[distance=0..6,type=!#illager,type=!#illager_friends,type=!#minecraft:arthropod,type=!#undead] absorption 10 1 false
-function system:mana/use_mana {"mana":50}
+function rd_system:mana/use_mana {"mana":50}

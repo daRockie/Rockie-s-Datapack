@@ -1,0 +1,1 @@
+$function rd_system:mana/bossbar/visibility with storage rockietools:id data."$(UUID)"

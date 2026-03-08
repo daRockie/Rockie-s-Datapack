@@ -117,7 +117,7 @@
                   "has_consume_particles": false
                 },
                 "use_remainder": {
-                  "id": "wooden_hoe",
+                  "id": "shield",
                   "components": {
                     "minecraft:custom_name": {
                       "text": "ファイアリーワンド",
@@ -125,7 +125,9 @@
                     },
                     "rarity": "uncommon",
                     "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/fiery_wand\",function:\"custom_items:items/fiery_wand/used\",damage_per_use:1,max_damage:157}",
-                    "item_model": "wooden_hoe"
+                    "item_model": "wooden_hoe",
+                    "!blocks_attacks": {},
+                    "max_damage": 157
                   }
                 },
                 "!blocks_attacks":{},
