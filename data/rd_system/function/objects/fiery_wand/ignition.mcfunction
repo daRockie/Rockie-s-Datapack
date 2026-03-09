@@ -1,5 +1,5 @@
 
-$execute if entity @n[distance=0.01..2,type=!#unliving_objects,tag=!RD.shortBow,nbt={UUID:$(parent)}] run return fail
+$execute if entity @n[dx=0.5,dy=0.5,dz=0.5,type=!#unliving_objects,tag=!RD.shortBow,nbt={UUID:$(parent)}] run return fail
 $execute as @e[distance=..1.9,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 6 rd_system:no_bypass_magic by @p[nbt={UUID:$(parent)}]
 $execute as @e[distance=2..4,tag=!fire_shot,type=!#unliving_objects] at @s run damage @s 3 rd_system:no_bypass_magic by @p[nbt={UUID:$(parent)}]
 

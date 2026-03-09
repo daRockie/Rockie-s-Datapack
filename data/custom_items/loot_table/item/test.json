@@ -25,10 +25,11 @@
                   "cooldown_group": "legendary_sword"
                 },
                 "consumable": {
-                  "consume_seconds": 0,
+                  "consume_seconds": 0.05,
                   "sound": "intentionally_empty",
                   "has_consume_particles": false
                 },
+                "max_damage":72,
                 "use_remainder": {
                   "id": "iron_sword",
                   "components": {
@@ -37,7 +38,8 @@
                   "bold": true,
                   "italic": false
                 },
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/test\"}"
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/test\",function:\"custom_items:items/fiery_wand/used\",damage_per_use:1,max_damage:72}",
+                    "max_damage": 72
                   }
                 }
               }

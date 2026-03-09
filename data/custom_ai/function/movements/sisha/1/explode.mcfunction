@@ -5,4 +5,5 @@ playsound entity.enderman.teleport hostile @a ~ ~ ~ 5 2
 tag @s add RD.enderman.exlode
 execute at @s as @e[type=!enderman,distance=0..8] run damage @s 8 explosion by @n[type=enderman,tag=RD.enderman.exlode]
 tag @s remove RD.enderman.exlode
+tag @s remove RD.pre_explode
 scoreboard players reset @s ai_timer

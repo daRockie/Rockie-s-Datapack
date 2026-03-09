@@ -4,7 +4,7 @@
     "type": "minecraft:score",
     "target": {
       "type": "minecraft:fixed",
-      "name": "#.max_damage"
+      "name": "$.max_damage"
     },
     "score": "RD.item.durabity",
     "scale": 0.0001

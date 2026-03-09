@@ -20,6 +20,7 @@
         "components": {
           "!blocks_attacks":{},
           "max_stack_size": 1,
+          "max_damage":62,
             "enchantment_glint_override": true,
             "item_model":"stick",
             "minecraft:custom_name": {
@@ -42,7 +43,7 @@
                 "components": {
                   "item_model": "stick",
                   "enchantment_glint_override": true,
-              "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/wand_of_ardor\",function:\"custom_items:items/wand_of_ardor/used\",damage_per_use:0,max_damage:157}"
+              "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/wand_of_ardor\",function:\"custom_items:items/wand_of_ardor/used\",damage_per_use:1,max_damage:62}"
         }
       }
     }      

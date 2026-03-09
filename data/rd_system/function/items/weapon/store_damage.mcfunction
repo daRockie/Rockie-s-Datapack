@@ -1,11 +1,22 @@
 
 ### Initialize
 
+# ダメージのコンポーネントデータがあった時、ダメージデータを取得してストレージに代入
+execute if data entity @s SelectedItem.components."minecraft:damage" store result storage rockietools:item_modifier temp.current_damage int 1 run data get entity @s SelectedItem.components."minecraft:damage"
+
+# ダメージデータが存在しなかったとき、現在のダメージ値を0に設定
+execute unless data entity @s SelectedItem.components."minecraft:damage" run data modify storage rockietools:item_modifier temp.current_damage set value 0
+
+
 # 耐久値消費量を取得
 $data modify storage rockietools:item_modifier temp.damage_per_use set value $(damage_per_use)
 
 # 最大耐久値を取得
 data modify storage rockietools:item_modifier temp.max_damage set from entity @s SelectedItem.components."minecraft:max_damage"
+
+
+# 耐久値が0を下回った時アイテムを消去
+execute unless score $.max_damage RD.item.durabity matches 0.. run return run function rd_system:items/weapon/break with entity @s SelectedItem
 
 # スコアに取得したデータを代入
 execute store result score $.max_damage RD.item.durabity run data get storage rockietools:item_modifier temp.max_damage 10000
@@ -15,8 +26,8 @@ execute store result score $.damage RD.item.durabity run data get storage rockie
 
 execute store result score $.damage_per_use RD.item.durabity run data get storage rockietools:item_modifier temp.damage_per_use 10000
 
-tellraw @a [{"text":"Max Damage: ",italic:false},{"score":{name:"$.max_damage",objective:"RD.item.durabity"}}]
-tellraw @a [{"text":"Damage: ",italic:false},{"score":{name:"$.damage",objective:"RD.item.durabity"}}]
+# tellraw @a [{"text":"Max Damage: ",italic:false},{"score":{name:"$.max_damage",objective:"RD.item.durabity"}}]
+# tellraw @a [{"text":"Damage: ",italic:false},{"score":{name:"$.damage",objective:"RD.item.durabity"}}]
 
 # ダメージ計算
 scoreboard players operation $.max_damage RD.item.durabity -= $.damage RD.item.durabity
@@ -25,4 +36,4 @@ scoreboard players operation $.max_damage RD.item.durabity -= $.damage RD.item.d
 # 現在ダメージ値を最大ダメージ値に再代入
 execute store result storage rockietools:item_modifier temp.current_damage int 1 run scoreboard players get $.max_damage RD.item.durabity
 
-tellraw @a [{"text":"Max Damage: ",italic:false},{"score":{name:"$.max_damage",objective:"RD.item.durabity"}}]
+# tellraw @a [{"text":"Max Damage: ",italic:false},{"score":{name:"$.max_damage",objective:"RD.item.durabity"}}]

@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "firework_star",
+          "name": "shield",
           "functions": [
             {
               "function": "set_custom_data",
@@ -14,6 +14,7 @@
             {
               "function": "set_components",
               "components": {
+                "!blocks_attacks":{},
                 "max_stack_size": 1,
                 "item_model":"stick",
                 "minecraft:custom_name": {
@@ -27,7 +28,7 @@
                   "cooldown_group": "healing_wand"
                 },
                 "consumable": {
-                  "consume_seconds": 0,
+                  "consume_seconds": 0.05,
                   "sound": "intentionally_empty",
                   "has_consume_particles": false
                 },
@@ -40,9 +41,11 @@
                 },
                     "rarity":"uncommon",
                     "item_model": "stick",
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/healing_wand\",function:\"custom_items:items/healing_wand/used\",damage_per_use:0,max_damage:157,\"weapon\":1b}"
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/healing_wand\",function:\"custom_items:items/healing_wand/used\",damage_per_use:1,max_damage:32,\"weapon\":1b}",
+                    "max_damage": 32
                   }
-                }
+                },
+                "max_damage": 32
               }
             }
           ]
