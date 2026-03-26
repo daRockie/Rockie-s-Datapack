@@ -11,7 +11,10 @@ execute if score $.mana_reduce RD.item.durabity matches 0 run scoreboard players
 
 # ダメージデータが存在しなかったとき、現在のダメージ値を0に設定
 execute unless data entity @s SelectedItem.components."minecraft:damage" run data modify storage rockietools:item_modifier temp.current_damage set value 0
-execute unless data entity @s SelectedItem.components."minecraft:enchantments" run data modify storage rockietools:item_modifier temp.enchantments set value []
+execute unless data entity @s SelectedItem.components."minecraft:enchantments" run data modify storage rockietools:item_modifier temp.enchantments set value {}
+
+execute if data entity @s SelectedItem.components."minecraft:enchantments"."minecraft:unbreaking" store result storage rockietools:item_modifier temp.unbreaking int 1 run data get entity @s SelectedItem.components."minecraft:enchantments"."minecraft:unbreaking" 1
+execute unless data entity @s SelectedItem.components."minecraft:enchantments"."minecraft:unbreaking" run data modify storage rockietools:item_modifier temp.unbreaking set value 1
 
 # もしマナ消費が存在すれば、それを記録
 execute if data entity @s SelectedItem.components."minecraft:use_remainder".components."minecraft:custom_data"."mana_use" store result storage rockietools:item_modifier temp.mana_use int 1 run data get entity @s SelectedItem.components."minecraft:use_remainder".components."minecraft:custom_data"."mana_use"

@@ -4,7 +4,7 @@ $loot replace entity @s weapon.mainhand loot $(Loottable)
 # tellraw @a [{"text":"Max Damage: ",italic:false},{"score":{name:"#.max_damage",objective:"RD.item.durabity"}}]
 
 # 現在ダメージ値から一回の使用ごとに減るダメージを計算
-scoreboard players operation $.max_damage RD.item.durabity -= $.damage_per_use RD.item.durabity
+function rd_system:items/weapon/rng with storage rockietools:item_modifier temp
 # tellraw @a [{"score":{name:"$.max_damage",objective:"RD.item.durabity"}}]
 
 # 耐久最大値から現在のダメージ値を減算
