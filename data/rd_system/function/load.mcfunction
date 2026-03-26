@@ -47,5 +47,8 @@ scoreboard players set $.max_damage RD.item.durabity 0
 scoreboard players set $.damage RD.item.durabity 0
 scoreboard players set $.damage_per_use RD.item.durabity 0
 scoreboard players set $.max_damage_tmp RD.item.durabity 0
+scoreboard players set $.mana_reduce RD.item.durabity 0
+scoreboard players set $.mana_use RD.item.durabity 0
 
 data remove storage rockietools:item_modifier temp
+data modify storage rockietools:item_modifier temp set value {}

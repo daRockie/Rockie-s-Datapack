@@ -1,0 +1,56 @@
+{
+  "function": "minecraft:set_enchantments",
+  "enchantments": {
+    "custom_items:absorption": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"custom_items:absorption\""
+    },
+    "custom_items:armor_channeling": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"custom_items:armor_channeling\""
+    },
+    "custom_items:blacksmith": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"custom_items:blacksmith\""
+    },
+    "custom_items:final_surge": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"custom_items:final_surge\""
+    },
+    "custom_items:guard_smash": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"custom_items:guard_smash\""
+    },
+    "custom_items:immunity_projectile": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"custom_items:immunity_projectile\""
+    },
+    "custom_items:mana_reduce": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"custom_items:mana_reduce\""
+    },
+    "custom_items:one_for_all": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"custom_items:one_for_all\""
+    },
+    "custom_items:speedstar": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"custom_items:speedstar\""
+    },
+    "custom_items:voidpiercer": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"custom_items:voidpiercer\""
+    }
+  },
+  "conditions": []
+}

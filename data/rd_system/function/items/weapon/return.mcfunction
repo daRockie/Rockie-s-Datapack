@@ -17,5 +17,9 @@ scoreboard players operation $.max_damage RD.item.durabity /= $.max_damage_tmp R
 # 耐久値を設定
 item modify entity @s weapon.mainhand custom_items:set_durability
 
+# エンチャントを追加
+item modify entity @s weapon.mainhand custom_items:set_enchantments
+item modify entity @s weapon.mainhand custom_items:set_custom_enchantments
+
 # tempデータを削除
 data remove storage rockietools:item_modifier temp.durabity

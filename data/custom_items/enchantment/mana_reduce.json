@@ -1,0 +1,26 @@
+{
+  "description": {
+    "text": "魔導の叡智",
+    "type": "text",
+    "color": "light_purple",
+    "bold": true,
+    "italic": false
+  },
+  "exclusive_set": "#custom_items:ultimate_enchant",
+  "supported_items": "#enchantable/durability",
+  "weight": 1,
+  "max_level": 3,
+  "min_cost": {
+    "base": 8,
+    "per_level_above_first": 11
+  },
+  "max_cost": {
+    "base": 28,
+    "per_level_above_first": 11
+  },
+  "anvil_cost": 2,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {}
+}

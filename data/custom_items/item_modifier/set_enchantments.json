@@ -1,0 +1,221 @@
+{
+  "function": "minecraft:set_enchantments",
+  "enchantments": {
+    "minecraft:aqua_affinity": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:aqua_affinity\""
+    },
+    "minecraft:bane_of_arthropods": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:bane_of_arthropods\""
+    },
+    "minecraft:binding_curse": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:binding_curse\""
+    },
+    "minecraft:blast_protection": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:blast_protection\""
+    },
+    "minecraft:breach": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:breach\""
+    },
+    "minecraft:channeling": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:channeling\""
+    },
+    "minecraft:density": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:density\""
+    },
+    "minecraft:depth_strider": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:depth_strider\""
+    },
+    "minecraft:efficiency": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:efficiency\""
+    },
+    "minecraft:feather_falling": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:feather_falling\""
+    },
+    "minecraft:fire_aspect": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:fire_aspect\""
+    },
+    "minecraft:fire_protection": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:fire_protection\""
+    },
+    "minecraft:flame": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:flame\""
+    },
+    "minecraft:fortune": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:fortune\""
+    },
+    "minecraft:frost_walker": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:frost_walker\""
+    },
+    "minecraft:impaling": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:impaling\""
+    },
+    "minecraft:infinity": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:infinity\""
+    },
+    "minecraft:knockback": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:knockback\""
+    },
+    "minecraft:looting": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:looting\""
+    },
+    "minecraft:loyalty": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:loyalty\""
+    },
+    "minecraft:luck_of_the_sea": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:luck_of_the_sea\""
+    },
+    "minecraft:lunge": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:lunge\""
+    },
+    "minecraft:lure": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:lure\""
+    },
+    "minecraft:mending": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:mending\""
+    },
+    "minecraft:multishot": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:multishot\""
+    },
+    "minecraft:piercing": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:piercing\""
+    },
+    "minecraft:power": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:power\""
+    },
+    "minecraft:projectile_protection": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:projectile_protection\""
+    },
+    "minecraft:protection": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:protection\""
+    },
+    "minecraft:punch": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:punch\""
+    },
+    "minecraft:quick_charge": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:quick_charge\""
+    },
+    "minecraft:respiration": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:respiration\""
+    },
+    "minecraft:riptide": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:riptide\""
+    },
+    "minecraft:sharpness": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:sharpness\""
+    },
+    "minecraft:silk_touch": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:silk_touch\""
+    },
+    "minecraft:smite": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:smite\""
+    },
+    "minecraft:soul_speed": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:soul_speed\""
+    },
+    "minecraft:sweeping_edge": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:sweeping_edge\""
+    },
+    "minecraft:swift_sneak": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:swift_sneak\""
+    },
+    "minecraft:thorns": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:thorns\""
+    },
+    "minecraft:unbreaking": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:unbreaking\""
+    },
+    "minecraft:vanishing_curse": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:vanishing_curse\""
+    },
+    "minecraft:wind_burst": {
+      "type": "minecraft:storage",
+      "storage": "rockietools:item_modifier",
+      "path": "temp.enchantments.\"minecraft:wind_burst\""
+    }
+  },
+  "conditions": []
+}
