@@ -6,7 +6,7 @@
         "minecraft:enchantment_glint_override": true
       }
     },
-    "title": "冒険のはじまり",
+    "title": "新たなる冒険のはじまり",
     "description": "データパックを導入する",
     "background": "minecraft:block/stone_bricks",
     "frame": "task",
@@ -23,7 +23,7 @@
     "custom_items:quiver",
     "custom_items:advanced_crafting_table_recipe",
     "custom_items:golden_hammer",
-    "custom_items:fiery_wand"
+    "custom_items:right_click/fiery_wand"
     ]
   }
 }

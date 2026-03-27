@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "iron_sword",
+          "name": "shield",
           "functions": [
             {
               "function": "set_custom_data",
@@ -14,10 +14,10 @@
             {
               "function": "set_components",
               "components": {
-                "rarity":"epic",
+                "item_model":"green_banner",
+                "rarity":"rare",
                 "custom_name":{
-                  "text":"ムラサメ",
-                  "bold": true,
+                  "text":"演武の御旗",
                   "italic": false
                 },
                 "use_cooldown": {
@@ -29,17 +29,16 @@
                   "sound": "intentionally_empty",
                   "has_consume_particles": false
                 },
-                "max_damage":72,
+                "max_damage":2,
                 "use_remainder": {
-                  "id": "iron_sword",
+                  "id": "green_banner",
                   "components": {
-                                    "custom_name":{
-                  "text":"ムラサメ",
-                  "bold": true,
+                  "custom_name":{
+                  "text":"演武の御旗",
                   "italic": false
                 },
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/test\",function:\"custom_items:items/fiery_wand/used\",damage_per_use:1,max_damage:72}",
-                    "max_damage": 72
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/test\",function:\"custom_ai:object/flags/zombie_flag/throw\",damage_per_use:1,max_damage:2,mana_use:80,skill_name:\"投擲\"}",
+                    "max_damage": 2
                   }
                 }
               }

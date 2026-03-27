@@ -47,9 +47,6 @@ execute store result score $.damage_per_use RD.item.durabity run data get storag
 scoreboard players operation $.max_damage RD.item.durabity -= $.damage RD.item.durabity
 # tellraw @a [{"text":"Max Damage: ",italic:false},{"score":{name:"$.max_damage",objective:"RD.item.durabity"}}]
 
-# 耐久値が0を下回った時アイテムを消去
-execute unless score $.max_damage RD.item.durabity matches 1.. run return run function rd_system:items/weapon/break with entity @s SelectedItem
-
 # 現在ダメージ値を最大ダメージ値に再代入
 execute store result storage rockietools:item_modifier temp.current_damage int 1 run scoreboard players get $.max_damage RD.item.durabity
 

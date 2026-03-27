@@ -48,7 +48,7 @@ execute as @e[type=husk,tag=mummy] at @s unless entity @e[type=#custom_ai:inhost
 execute as @e[type=husk,tag=mummy] if score @s ai_timer matches 300.. run kill @s
 
 # タンクゾンビの被弾音
-execute as @e[type=#zombies,tag=tank,nbt={HurtTime:9s}] at @s run playsound minecraft:entity.zombie.attack_iron_door hostile @a ~ ~ ~ 1 0.5
+execute as @e[type=#zombies,tag=RD.tank,nbt={HurtTime:9s}] at @s run playsound minecraft:entity.zombie.attack_iron_door hostile @a ~ ~ ~ 1 0.5
 
 execute as @e[tag=RD.damage_player_sound,nbt={HurtTime:9s}] at @s run playsound entity.player.death hostile @a ~ ~ ~ 1 1
 
