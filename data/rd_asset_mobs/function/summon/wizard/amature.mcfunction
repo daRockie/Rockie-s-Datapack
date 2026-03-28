@@ -1,7 +1,7 @@
 data modify entity @s DeathTime set value 19
 data modify entity @s Silent set value 1b
 summon area_effect_cloud ~ ~ ~ {Particle:{type:witch},Radius:0,Duration:4,Tags:["kill_item"]}
-summon skeleton ~ ~ ~ {CustomName:[{text:"魔法使い"}],Health:24,Silent:1b,Tags:["spawned","proceed","RD.enemy.wizard.0","RD.damage_player_sound"],drop_chances:{head:0f,body:0.01f,legs:0.02f,feet:0.05f},\
+summon skeleton ~ ~ ~ {CustomName:[{text:"魔法使い"}],Health:24,Silent:1b,Tags:["RD.spawned","RD.initialized","RD.enemy.wizard.0","RD.damage_player_sound"],drop_chances:{head:0f,body:0.01f,legs:0.02f,feet:0.05f},\
 equipment:{\
 head:{id:player_head,components:{profile:{properties:[{value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTcwMTBkNzQ2ODBjMWJlMGExZDQ1NDBlM2E4ZDk1N2VmMmZhOWI2MTM2MDIzOWQwNjA0NDcxY2E5NTUzZDgyNyJ9fX0=",name:"textures"}]}}},\
 chest:{id:leather_chestplate,components:{trim:{pattern:flow,material:gold,show_in_tooltip:false},dyed_color:8991416,custom_name:[{"text":"魔法使いのローブ","italic":false}],lore:[[{"text":"上品な布","italic":false,"color":"yellow",extra:[{"text":"と","color":gray}]},{"text":"ペリドット","color":"dark_green",bold:1b},{"text":"を使用してクラフトできる、下級魔導士が装備することを許された防具。","italic":false,"color":"gray"}],"",[{"text":"マナの最大量","italic":false,"color":"dark_aqua"},{"text":"を","italic":false,"color":"dark_gray"},{"text":"🖊35増加させる。","italic":false,"color":"aqua"}],"",[{"text":"a","italic":false,"obfuscated":true},{"italic":false,"text":"強化可能","underlined":true,"bold":true,"color":"light_purple","obfuscated":false},{"italic":false,"text":"a","obfuscated":true}]],rarity:rare,tooltip_display:{hidden_components:[dyed_color,trim]},custom_data:{RD.recipeResult:1b,CustomItem:"RD.equipment.wizards_robe"}}},\

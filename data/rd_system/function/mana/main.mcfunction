@@ -20,6 +20,10 @@ execute if score @s abilityCooldown.reverberation matches 120 at @s run function
 scoreboard players add @s RD.mana.timer 1
 
 # マナ関連の処理
+execute if entity @s[team=devs] run scoreboard players set @s RD.mana.max 10000
+execute if entity @s[team=devs] run scoreboard players set @s RD.mana 10000
+
+
 execute store result score @s RD.mana.operation run scoreboard players operation @s RD.mana.timer %= @s RD.mana.regen
 
 execute if score @s RD.mana.max matches 0 run scoreboard players set @s RD.mana.max 100

@@ -24,7 +24,7 @@
       "conditions": {
         "entity": {
           "type": "#minecraft:zombies",
-          "nbt": "{Tags:[\"RD.notNormal\",\"spawned\",\"proceed\",\"RD.tank\"]}"
+          "nbt": "{Tags:[\"RD.notNormal\",\"RD.spawned\",\"RD.initialized\",\"RD.tank\"]}"
         }
       }
     }

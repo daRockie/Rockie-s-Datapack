@@ -118,23 +118,26 @@
                 "consumable": {
                   "consume_seconds": 0.05,
                   "sound": "intentionally_empty",
+                  "animation": "none",
                   "has_consume_particles": false
                 },
+                "custom_data":{"weapon":true},
                 "use_remainder": {
                   "id": "shield",
                   "components": {
-                    "!blocks_attacks":{},
                     "minecraft:custom_name": {
                       "text": "ファイアリーワンド",
                       "italic": false
                     },
                     "rarity": "uncommon",
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/fiery_wand\",function:\"custom_items:items/fiery_wand/used\",damage_per_use:1,max_damage:74,\"weapon\":1b}",
-                    "item_model": "wooden_hoe"
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/fiery_wand\",function:\"custom_items:items/fiery_wand/used\",damage_per_use:1,max_damage:72,skill_name:\"イグニッション\",mana_use:15}",
+                    "item_model": "wooden_hoe",
+                    "!blocks_attacks": {},
+                    "max_damage": 72
                   }
                 },
                 "!blocks_attacks":{},
-                "max_damage": 74,
+                "max_damage": 72,
                 "repairable": {
                   "items": ["magma_block"]
                 }

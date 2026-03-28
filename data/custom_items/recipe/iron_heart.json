@@ -17,8 +17,9 @@
     ]
   },
   "result": {
-    "id": "minecraft:player_head",
+    "id": "minecraft:music_disc_creator",
     "components": {
+      "!jukebox_playable":{},
       "minecraft:profile": {
         "properties": {
           "value": [

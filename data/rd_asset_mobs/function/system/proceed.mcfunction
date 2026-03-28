@@ -8,4 +8,4 @@ scoreboard players add @s RD.mana.regen 0
 scoreboard players operation @s RD.mana = @s RD.mana.max
 scoreboard players add @s RD.mana.bossbar.fadeout 0
 
-execute if score @s lifeTime matches 10.. run tag @s add proceed
+execute if score @s lifeTime matches 10.. run tag @s add RD.initialized

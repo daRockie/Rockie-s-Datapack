@@ -2,48 +2,48 @@
 execute if entity @s[type=minecraft:area_effect_cloud,tag=kill_item] at @s run kill @e[type=item,distance=0..2]
 
 # スポーン後処理
-execute if entity @s[tag=!proceed] run function rd_asset_mobs:system/proceed
-execute if entity @s[tag=proceed] run scoreboard players reset @s lifeTime
+execute if entity @s[tag=!RD.initialized] run function rd_asset_mobs:system/proceed
+execute if entity @s[tag=RD.initialized] run scoreboard players reset @s lifeTime
 
 # ゾンビ処理
-execute if entity @s[tag=!proceed,type=#zombies] run function rd_asset_mobs:system/randomizer/zombie
+execute if entity @s[tag=!RD.initialized,type=#zombies] run function rd_asset_mobs:system/randomizer/zombie
 
 # スケルトン族
-execute if entity @s[tag=!proceed,type=#skeletons] run function rd_asset_mobs:system/randomizer/skeleton
+execute if entity @s[tag=!RD.initialized,type=#skeletons] run function rd_asset_mobs:system/randomizer/skeleton
 
 # クリーパー族
-execute if entity @s[tag=!proceed,type=creeper] run function rd_asset_mobs:system/randomizer/creeper
+execute if entity @s[tag=!RD.initialized,type=creeper] run function rd_asset_mobs:system/randomizer/creeper
 
 # クモの親子　召喚
-execute if entity @s[type=minecraft:spider,tag=!proceed] run function rd_asset_mobs:system/randomizer/spider
+execute if entity @s[type=minecraft:spider,tag=!RD.initialized] run function rd_asset_mobs:system/randomizer/spider
 
 # ---------------------------------------------------------------------------------------------------------------
 
 # ドルフィン・ライダー
-execute if entity @s[type=dolphin,tag=!proceed] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/summon_d_rider
+execute if entity @s[type=dolphin,tag=!RD.initialized] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/summon_d_rider
 
 # イカドラウンド
-execute if entity @s[type=squid,tag=!proceed] if score @s spawnRandom matches 0..20 run function rd_asset_mobs:summon/summmon_squid
+execute if entity @s[type=squid,tag=!RD.initialized] if score @s spawnRandom matches 0..20 run function rd_asset_mobs:summon/summmon_squid
 
 # ベイビーブーマーゾンビ　召喚
 
 # ベイビーブーマーゾンビジョッキー　召喚
-execute if entity @s[type=minecraft:zombie,tag=!proceed,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..10 on vehicle if entity @s[type=chicken] run function rd_asset_mobs:summon/zombie/boomer/chicken_jockey
+execute if entity @s[type=minecraft:zombie,tag=!RD.initialized,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..10 on vehicle if entity @s[type=chicken] run function rd_asset_mobs:summon/zombie/boomer/chicken_jockey
 
 # エリートウィザースケルトン　召喚
-execute if entity @s[type=minecraft:wither_skeleton,tag=!proceed] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/skeleton/elite_wither_skeleton
+execute if entity @s[type=minecraft:wither_skeleton,tag=!RD.initialized] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/skeleton/elite_wither_skeleton
 
 # オブジェクトホーミング（強）
-execute if entity @s[tag=!proceed,tag=hap_strong] at @s run function custom_ai:move_obj_strong
+execute if entity @s[tag=!RD.initialized,tag=hap_strong] at @s run function custom_ai:move_obj_strong
 
 # オブジェクトホーミング（弱）
-execute if entity @s[tag=!proceed,tag=homing_at_players] at @s run function custom_ai:move_object
+execute if entity @s[tag=!RD.initialized,tag=homing_at_players] at @s run function custom_ai:move_object
 
 # 骸骨騎馬戦士　召喚
-execute if entity @s[type=minecraft:horse,tag=!proceed] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/summon_s_rider
+execute if entity @s[type=minecraft:horse,tag=!RD.initialized] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/summon_s_rider
 
 # 最果てのシ者　召喚
-execute if entity @s[type=minecraft:enderman,tag=!proceed] if score @s spawnRandom matches 0..10 run function rd_asset_mobs:summon/sisha/1
+execute if entity @s[type=minecraft:enderman,tag=!RD.initialized] if score @s spawnRandom matches 0..10 run function rd_asset_mobs:summon/sisha/1
 
 # ガチギレエンダーマン
 # execute as @e[type=enderman,tag=!elite_eman] at @s run data modify entity @s AngryAt set from entity @e[tag=eman_target,distance=0..16,limit=1] UUID
@@ -52,10 +52,10 @@ execute if entity @s[type=minecraft:enderman,tag=!proceed] if score @s spawnRand
 execute if entity @s[type=enderman,tag=elite_eman,predicate=!rd_asset_mobs:in_hostile] at @s run data modify entity @s angry_at set from entity @e[type=#custom_ai:inhostile,distance=0..10,limit=1] UUID
 
 # 潜水ガキ
-execute if entity @s[type=minecraft:drowned,tag=!proceed] if score @s spawnRandom matches 0..10 run function rd_asset_mobs:summon/summon_divingkid
+execute if entity @s[type=minecraft:drowned,tag=!RD.initialized] if score @s spawnRandom matches 0..10 run function rd_asset_mobs:summon/summon_divingkid
 
 # スポーン乱数
-execute if entity @s[tag=!spawned] run function rd_asset_mobs:system/mobspawning
+execute if entity @s[tag=!RD.spawned] run function rd_asset_mobs:system/mobspawning
 
 # 見習い魔導士の処理実行
 

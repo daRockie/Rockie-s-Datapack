@@ -5,3 +5,6 @@ team modify RD.type.sorcery prefix [{"text":"🧪【ソーサリー】",color:"g
 
 team add RD.type.plaer [{"text":"プレイヤー"}]
 team modify RD.type.plaer seeFriendlyInvisibles true
+
+team add devs [{"text":"Developer Mode"}]
+team modify devs prefix [{"text":"[ Developer Mode ]"}]

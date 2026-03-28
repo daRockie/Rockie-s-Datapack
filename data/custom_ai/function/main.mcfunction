@@ -1,7 +1,7 @@
 # ヌカクリーパー
-execute as @e[type=creeper,nbt={Tags:["nuka_c","spawned","proceed"],ignited:1b}] run function custom_ai:custom_mobs/nuka_creeper
-execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s ignited set value 1b
-execute as @e[type=creeper,nbt={Tags:["proceed","spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s NoAI set value 1b
+execute as @e[type=creeper,nbt={Tags:["nuka_c","RD.spawned","RD.initialized"],ignited:1b}] run function custom_ai:custom_mobs/nuka_creeper
+execute as @e[type=creeper,nbt={Tags:["RD.initialized","RD.spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s ignited set value 1b
+execute as @e[type=creeper,nbt={Tags:["RD.initialized","RD.spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s NoAI set value 1b
 
 # クモ
 execute as @e[type=#arthropod] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/spider/tick
@@ -13,7 +13,7 @@ execute as @e[type=minecraft:drowned,tag=squid_drowned,nbt={HurtTime:10s}] at @s
 
 execute as @e[type=#zombies,tag=!RD.notNormal] unless data entity @s CustomName run data modify entity @s CanBreakDoors set value 1b
 
-execute as @e[type=#zombies,tag=proceed,tag=spawned] at @s if entity @a[distance=..80] as @s run function custom_ai:advanced_ai/zombie/tick
+execute as @e[type=#zombies,tag=RD.initialized,tag=RD.spawned] at @s if entity @a[distance=..80] as @s run function custom_ai:advanced_ai/zombie/tick
 
 # ブーマーゾンビ　処理
 
@@ -34,7 +34,7 @@ execute as @e[type=enderman,tag=elite_eman,name="最果ての地からのシ者"
 execute as @e[type=enderman,tag=elite_eman] at @s run function custom_ai:custom_mobs/messenger/0_particle
 
 # ジャンプマーカー自動処理
-execute as @e[type=marker,tag=jump_marker,tag=proceed] run kill @s
+execute as @e[type=marker,tag=jump_marker,tag=RD.initialized] run kill @s
 
 # ワープポイント処理
 execute as @e[type=armor_stand,tag=spread] run scoreboard players add @s ai_timer 1
@@ -56,7 +56,7 @@ execute as @e[tag=RD.damage_player_sound,nbt={HurtTime:9s}] at @s run playsound 
 execute as @e[type=armor_stand,tag=mummy_reviving] at @s run function custom_ai:movements/mummy/mummy_revive_obj
 
 # 強化ウィッチ
-execute as @e[type=witch,nbt={Tags:["spawned","proceed"]}] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/witch/tick
+execute as @e[type=witch,nbt={Tags:["RD.spawned","RD.initialized"]}] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/witch/tick
 
 execute as @e[type=enderman] at @s if entity @s[predicate=rd_asset_mobs:in_hostile] run function rd_asset_mobs:targets/eman
 

@@ -41,7 +41,7 @@
         "id": "shield",
         "components": {
             "!blocks_attacks":{},
-            "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/healing_wand\",function:\"custom_items:items/healing_wand/used\",damage_per_use:1,max_damage:32,\"weapon\":1b}",
+            "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/healing_wand\",function:\"custom_items:items/healing_wand/used\",damage_per_use:1,max_damage:32,\"weapon\":1b,mana_use:15}",
             "item_model": "stick"
         }
       }
