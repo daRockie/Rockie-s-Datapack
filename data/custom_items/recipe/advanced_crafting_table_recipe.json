@@ -36,7 +36,8 @@
           },
           "CustomNameVisible": false,
           "Tags": [
-            "craft_pos"
+            "RD.block.interactive.advanced_crafter",
+            "RD.type.block"
           ],
           "Invisible": true,
           "Marker": true,

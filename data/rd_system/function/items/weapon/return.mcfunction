@@ -13,7 +13,7 @@ scoreboard players operation $.max_damage RD.item.durabity /= $.max_damage_tmp R
 # tellraw @a [{"text":"除算: ",italic:false},{"score":{name:"$.max_damage",objective:"RD.item.durabity"}}]
 
 # 耐久値が0を下回った時アイテムを消去
-execute unless score $.max_damage RD.item.durabity matches 1.. run return run function rd_system:items/weapon/break with entity @s SelectedItem
+execute unless score $.max_damage RD.item.durabity matches 1.. run return run function rd_system:items/weapon/break with storage rockietools:item_modifier temp
 
 # 耐久値を設定
 item modify entity @s weapon.mainhand custom_items:set_durability

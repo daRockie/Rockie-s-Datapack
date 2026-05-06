@@ -23,6 +23,8 @@ execute unless data entity @s SelectedItem.components."minecraft:use_remainder".
 # 耐久値消費量を取得
 $data modify storage rockietools:item_modifier temp.damage_per_use set value $(damage_per_use)
 $data modify storage rockietools:item_modifier temp.skill_name set value "$(skill_name)"
+data modify storage rockietools:item_modifier temp.id set from entity @s SelectedItem.id
+$data modify storage rockietools:item_modifier temp.break_sound set value "$(break_sound)"
 
 # 最大耐久値を取得
 data modify storage rockietools:item_modifier temp.max_damage set from entity @s SelectedItem.components."minecraft:max_damage"

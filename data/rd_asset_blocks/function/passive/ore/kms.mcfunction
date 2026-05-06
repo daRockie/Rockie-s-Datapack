@@ -1,0 +1,1 @@
+function custom_ai:object/looper_item_display

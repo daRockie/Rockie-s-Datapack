@@ -1,7 +1,7 @@
 {
   "description": {
-    "text": "魔導の叡智",
-    "type": "text",
+    "translate":"rd.enchantment.mana_reduce",
+    "fallback": "Ultimate Wise",
     "color": "light_purple",
     "bold": true,
     "italic": false

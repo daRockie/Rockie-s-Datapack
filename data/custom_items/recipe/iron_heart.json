@@ -17,9 +17,9 @@
     ]
   },
   "result": {
-    "id": "minecraft:music_disc_creator",
+    "id": "minecraft:totem_of_undying",
     "components": {
-      "!jukebox_playable":{},
+      "!death_protection":{},
       "minecraft:profile": {
         "properties": {
           "value": [

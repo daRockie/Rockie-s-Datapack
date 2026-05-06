@@ -1,0 +1,5 @@
+function rd_asset_mobs:system/run_command with entity @s equipment.head.components."minecraft:custom_data".data[-1]
+execute if data entity @s equipment.head.components."minecraft:custom_data".data[-1] run data remove entity @s equipment.head.components."minecraft:custom_data".data[-1]
+execute if data entity @s equipment.head.components."minecraft:custom_data".data[-1] run function custom_ai:object/looper
+
+# summon minecraft:armor_stand ~ ~0.5 ~ {Tags:["RD.cmd"],equipment:{head:{id:command_block,components:{"minecraft:custom_data":{data:[{key:"say loop end"},{key:"execute unless block ~ -64 ~ barrier run setblock ~ ~ ~ barrier replace"},{key:"execute unless block ~ -64 ~ barrier run say there is no barrier!"},{key:"execute if block ~ -64 ~ barrier run say barrier block is already placed"},{key:"execute as @s positioned ~29999992 ~ ~29999992 positioned ~108086391056891904 ~ ~108086391056891904 positioned ~-108086391056891904 ~ ~108086391056891904 positioned ~-30000000 ~ ~-30000000 run tp @s ~1 ~ ~1"}]}}}}}

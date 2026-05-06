@@ -4,7 +4,6 @@
     "custom_ai:load",
     "custom_items:load",
     "rd_system:load",
-    "find_looking:internal/load",
-    "p_motion:system/load"
+    "find_looking:internal/load"
     ]
 }

@@ -1,6 +1,9 @@
 {
   "anvil_cost": 1,
-  "description": "体力増強",
+  "description": {
+    "translate": "rd.enchantment.absorption",
+    "fallback": "Absorption"
+  },
   "effects": {
     "minecraft:attributes": [
       {

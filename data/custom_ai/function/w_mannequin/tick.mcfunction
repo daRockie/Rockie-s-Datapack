@@ -1,0 +1,1 @@
+execute if entity @s[tag=RD.pirate] run function custom_ai:w_mannequin/pirate/tick

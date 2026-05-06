@@ -1,8 +1,5 @@
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{TempItem:1b}}}}]
 
-execute as @e[type=armor_stand,tag=craft_pos] at @s run function rd_asset_blocks:interactive/advanced_crafter/main
-
-execute as @e[type=item,tag=SampleItem,nbt={NoGravity:1b}] at @s unless entity @e[type=armor_stand,tag=craft_pos,dy=-1] run kill @s
 
 scoreboard players set @a sneakTimer 0
 execute as @a[predicate=custom_items:daytime] if dimension overworld run scoreboard players reset @s deathCount

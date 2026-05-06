@@ -4,6 +4,7 @@
     "custom_ai:main",
     "custom_items:main",
     "rd_system:main",
-    "rd_asset_mobs:set_equipment/main"
+    "rd_asset_mobs:set_equipment/main",
+    "rd_asset_blocks:"
   ]
 }

@@ -15,7 +15,25 @@
                   "text": "ルビーの剣",
                   "italic": false
                 },
+                "minimum_attack_charge": 1,
+                "weapon": {
+                  "item_damage_per_attack": 7
+                },
                 "minecraft:attribute_modifiers": [
+                  {
+                    "type": "attack_damage",
+                    "id": "dmg_mainhand",
+                    "amount": 6,
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  },
+                  {
+                    "type": "attack_speed",
+                    "amount": -1.6,
+                    "id": "atk_spd_mainhand",
+                    "operation": "add_value",
+                    "slot": "mainhand"
+                  },
                   {
                     "type": "minecraft:max_health",
                     "id": "rockietools:ruby_tools",

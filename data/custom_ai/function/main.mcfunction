@@ -3,6 +3,10 @@ execute as @e[type=creeper,nbt={Tags:["nuka_c","RD.spawned","RD.initialized"],ig
 execute as @e[type=creeper,nbt={Tags:["RD.initialized","RD.spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s ignited set value 1b
 execute as @e[type=creeper,nbt={Tags:["RD.initialized","RD.spawned","nuka_c"]}] at @s if entity @a[distance=0..4,gamemode=!spectator,gamemode=!creative] run data modify entity @s NoAI set value 1b
 
+
+# 追走ボート
+execute as @e[type=#boat] on controller if entity @s[tag=RD.can_controll_boat] on vehicle at @s unless block ~ ~ ~ #air if block ~ ~ ~ water anchored eyes facing entity @p eyes positioned ^ ^ ^0.1 rotated as @s positioned ^ ^ ^0.9 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ^ ^ ^0.2 ~ ~
+
 # クモ
 execute as @e[type=#arthropod] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/spider/tick
 
@@ -23,7 +27,10 @@ execute as @e[type=#skeletons] at @s if entity @a[distance=..80] run function cu
 # クリーパー
 execute as @e[type=creeper] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/creeper/tick
 
+# オブジェクト
 execute as @e[tag=RD.object] at @s as @s run function custom_ai:object/
+
+execute as @e[tag=RD.with_mannequin] at @s if entity @a[distance=..80] as @s run function custom_ai:w_mannequin/tick
 
 # スカウトのアイテム設定
 execute as @e[type=creeper,tag=RD.scout_creeper] at @s run loot replace entity @s armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe[enchantments={silk_touch:1},custom_data={"getID":true}]
@@ -48,9 +55,7 @@ execute as @e[type=husk,tag=mummy] at @s unless entity @e[type=#custom_ai:inhost
 execute as @e[type=husk,tag=mummy] if score @s ai_timer matches 300.. run kill @s
 
 # タンクゾンビの被弾音
-execute as @e[type=#zombies,tag=RD.tank,nbt={HurtTime:9s}] at @s run playsound minecraft:entity.zombie.attack_iron_door hostile @a ~ ~ ~ 1 0.5
-
-execute as @e[tag=RD.damage_player_sound,nbt={HurtTime:9s}] at @s run playsound entity.player.death hostile @a ~ ~ ~ 1 1
+execute as @e[tag=RD.on_hurt,nbt={HurtTime:9s}] at @s run function custom_ai:on_hurt/
 
 # 蘇生中ミイラ
 execute as @e[type=armor_stand,tag=mummy_reviving] at @s run function custom_ai:movements/mummy/mummy_revive_obj
