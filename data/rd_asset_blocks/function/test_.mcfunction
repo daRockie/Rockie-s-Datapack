@@ -1,2 +1,13 @@
-summon minecraft:item_display ~ ~1.02 ~ {transformation:{left_rotation:[0,0,0,1],right_rotation:[0,0,0,1],translation:[0,0.5,0],scale:[2.005,2.06,2.005]},item:{id:"minecraft:player_head",components:{profile:{properties:[{value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDFmY2QwNWUyZWRmMDQ2NDBmZTIxZDU1ZDEyZGQ5ZGIyMTUwNGJlYjRhMTE2NGNkMDIwZjc5NDM0MTliNGU2NCJ9fX0=",name:"textures"}]},"minecraft:custom_data":{data:[{key:"kill @s"},{key:"loot spawn ~ ~ ~ loot rd_asset_blocks:block/ruby_ore"},{key:"kill @e[type=item,distance=0..1,tag=!RD.initialized]"}]}}},brightness:{block:15,sky:1},width:1,height:1,Tags:["RD.type.block","RD.block.passive","RD.ore_ruby"]}
-setblock ~ ~1 ~ redstone_ore
+summon minecraft:armor_stand ~ ~1 ~ {Invisible:1b,Small:1b,Tags:["RD.cmd","RD.object"],equipment:{head:{id:"minecraft:command_block",components:{"minecraft:custom_data":{\
+data:[\
+{key:"tellraw @a [{text:'no code below!',color:'gray'}]"},\
+{key:"kill @s"},\
+{key:"execute at @s unless block ~ -64 ~ barrier run setblock ~ -64 ~ barrier replace"},\
+{key:"execute at @s unless block ~ -64 ~ barrier run summon marker ~ ~ ~ {Tags:['RD.marker.ore_generation','RD.object']}"},\
+{key:"execute at @s unless block ~ -64 ~ barrier run tellraw @a [{text:'No Barrier found',color:'green'}]"},\
+{key:"execute at @s if block ~ -64 ~ barrier run kill @s"},\
+{key:"execute at @s if block ~ -64 ~ barrier run tellraw @a [{text:'Barrier found',color:'red'}]"},\
+{key:"execute at @s as @s at @s positioned ~29999992 ~ ~29999992 positioned ~108086391056891904 ~ ~108086391056891904 positioned ~-108086391056891904 ~ ~-108086391056891904 positioned ~-30000000 ~ ~-30000000 run tp @s ~ 80 ~"},\
+{key:"tellraw @a [{text:'Scanning Chunk...',color:'gray',italic:1b}]"},\
+{key:"data modify entity @s NoGravity set value 1b"}\
+]}}}}}

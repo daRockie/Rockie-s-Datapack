@@ -1,3 +1,4 @@
+
 execute as @e[type=armor_stand,tag=fire_shot] at @s run function rd_system:objects/fiery_wand/magic_shot with entity @s
 execute as @e[type=armor_stand,tag=RD.sonicBoom,tag=!pos_set] at @s run function rd_system:objects/reverberation/sonic_boom with entity @s
 execute as @e[type=armor_stand,tag=RD.shortbow] at @s run function rd_system:objects/shortbow/arrow with entity @s

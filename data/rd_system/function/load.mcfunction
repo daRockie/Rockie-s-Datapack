@@ -22,6 +22,7 @@ scoreboard objectives add RD._BOOLEAN dummy "ブーリアン0"
 
 # スコアボード多すぎひん？
 scoreboard objectives add RD.custom_block.CALC_0 dummy "演算[0]"
+execute unless data storage rockietools:game_progression progress run function rd_asset_blocks:test_
 execute unless data storage rockietools:game_progression progress run data modify storage rockietools:game_progression progress set value 0
 function rd_system:define_teams
 

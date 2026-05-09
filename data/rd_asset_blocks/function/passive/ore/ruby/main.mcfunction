@@ -8,3 +8,6 @@ execute store result entity @s brightness.sky int 1 run function rd_asset_blocks
 # レッドストーン鉱石が自分の位置にないかつレッドストーンがドロップしている場合、自身をキル
 execute if entity @s[tag=!RD.type.block.deepslate] if entity @n[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..1] unless block ~ ~ ~ redstone_ore run function rd_asset_blocks:passive/ore/kms
 execute if entity @s[tag=!RD.type.block.deepslate] unless entity @n[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..1] unless block ~ ~ ~ redstone_ore run kill @s
+
+execute unless entity @s[tag=!RD.type.block.deepslate] if entity @n[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..1] unless block ~ ~ ~ deepslate_redstone_ore run function rd_asset_blocks:passive/ore/kms
+execute unless entity @s[tag=!RD.type.block.deepslate] unless entity @n[type=item,nbt={Item:{id:"minecraft:redstone"}},distance=..1] unless block ~ ~ ~ deepslate_redstone_ore run kill @s

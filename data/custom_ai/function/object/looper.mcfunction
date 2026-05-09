@@ -1,3 +1,4 @@
+tag @s add RD.initialized
 function rd_asset_mobs:system/run_command with entity @s equipment.head.components."minecraft:custom_data".data[-1]
 execute if data entity @s equipment.head.components."minecraft:custom_data".data[-1] run data remove entity @s equipment.head.components."minecraft:custom_data".data[-1]
 execute if data entity @s equipment.head.components."minecraft:custom_data".data[-1] run function custom_ai:object/looper

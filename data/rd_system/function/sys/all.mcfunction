@@ -1,0 +1,9 @@
+execute positioned ~16 ~ ~ run function rd_asset_blocks:test_
+execute positioned ~-16 ~ ~ run function rd_asset_blocks:test_
+execute positioned ~ ~ ~16 run function rd_asset_blocks:test_
+execute positioned ~ ~ ~-16 run function rd_asset_blocks:test_
+execute positioned ~16 ~ ~16 run function rd_asset_blocks:test_
+execute positioned ~-16 ~ ~16 run function rd_asset_blocks:test_
+execute positioned ~16 ~ ~-16 run function rd_asset_blocks:test_
+execute positioned ~-16 ~ ~-16 run function rd_asset_blocks:test_
+execute positioned ~ ~ ~ run function rd_asset_blocks:test_

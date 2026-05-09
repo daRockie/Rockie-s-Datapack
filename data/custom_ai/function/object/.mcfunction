@@ -1,3 +1,5 @@
+# execute as @a[tag=!RD.scanned_chunk] if dimension minecraft:overworld run function rd_asset_blocks:test_
+
 execute if entity @s[tag=RD.zombie_flag] run function custom_ai:object/flags/zombie_flag/tick
 execute if entity @s[tag=RD.zombie_flag_pre] run function custom_ai:object/flags/zombie_flag/thrown_tick
 
@@ -7,4 +9,6 @@ execute if entity @s[tag=RD.on_land,nbt={OnGround:1b}] run function custom_ai:ob
 
 execute if entity @s[type=mannequin] run function custom_ai:object/mannequin/
 
-execute if entity @s[tag=RD.cmd] run function custom_ai:object/looper
+execute if entity @s[tag=RD.cmd,tag=!RD.initialized] run function custom_ai:object/looper
+
+execute if entity @s[tag=RD.marker.ore_generation] run function custom_ai:object/marker/ore_generator/
