@@ -53,3 +53,5 @@ scoreboard players set $.mana_use RD.item.durabity 0
 
 data remove storage rockietools:item_modifier temp
 data modify storage rockietools:item_modifier temp set value {}
+
+stopwatch create rd._global.ore_generation

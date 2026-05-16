@@ -11,4 +11,4 @@ execute if entity @s[type=mannequin] run function custom_ai:object/mannequin/
 
 execute if entity @s[tag=RD.cmd,tag=!RD.initialized] run function custom_ai:object/looper
 
-execute if entity @s[tag=RD.marker.ore_generation] run function custom_ai:object/marker/ore_generator/
+execute if entity @s[tag=RD.marker.ore_generation,tag=!RD.initialized] run function custom_ai:object/marker/ore_generator/

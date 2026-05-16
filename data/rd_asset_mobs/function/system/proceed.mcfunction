@@ -1,4 +1,5 @@
 execute if entity @s[tag=RD.cmd] run return fail
+execute if entity @s[tag=RD.no_auto_initialize] run return fail
 
 execute if score @s lifeTime matches ..10 run scoreboard players add @s lifeTime 1
 execute if score @s lifeTime matches ..10 run scoreboard players set @s RD.mana.max 100

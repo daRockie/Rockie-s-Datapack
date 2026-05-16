@@ -1,5 +1,23 @@
-execute if entity @a[distance=..100] positioned ~ 256 ~ run tag @a[dx=14.6,dy=-400,dz=14.6] add RD.scanned_chunk
+tag @s add RD.initialized
 
-execute if entity @a[distance=..100,tag=!RD.scanned_chunk] as @p[tag=!RD.scanned_chunk,dx=14.6,dy=-400,dz=14.6] at @s run function rd_asset_blocks:test_
+data modify entity @s data.x set from entity @s Pos[0]
+data modify entity @s data.y set from entity @s Pos[1]
+data modify entity @s data.z set from entity @s Pos[2]
 
-tag @a[tag=RD.scanned_chunk] remove RD.scanned_chunk
+# data modify entity @s data.ore set value []
+
+# 鉱石のオフセット
+execute store result entity @s[predicate=custom_ai:percent/20] data.ore[{type:"ruby"}].offset int 1 run random value -48..13
+
+execute store result entity @s[predicate=custom_ai:percent/40] data.ore[{type:"peridot"}].offset int 1 run random value -20..30
+
+
+# 生成を実行
+execute store result entity @s data.rng_x int 1 run random value 0..15
+execute store result entity @s data.rng_y int 1 run random value 0..15
+execute store result entity @s data.rng_z int 1 run random value 0..15
+
+execute unless data entity @s data.ore[] run tellraw @a [{"entity":"@s","nbt":"data"}]
+execute unless data entity @s data.ore[] run return run kill @s
+execute if data entity @s data.ore[] run tellraw @a [{"entity":"@s","nbt":"data","bold":1b}]
+execute if data entity @s data.ore[] run function custom_ai:object/marker/ore_generator/generate/ with entity @s data
