@@ -12,7 +12,7 @@ data:[\
 {key:"data modify entity @s NoGravity set value 1b"}\
 ]}}}}}
 
-summon minecraft:armor_stand ~ ~1 ~ {Invisible:1b,Small:1b,Tags:["RD.cmd","RD.object"],equipment:{head:{id:"minecraft:command_block",components:{"minecraft:custom_data":{\
+summon minecraft:armor_stand ~ ~1 ~ {Invisible:1b,Small:1b,Tags:["RD.cmd","RD.object"],equipment:{head:{id:"minecraft:command_block",components:{"item_model":"air","minecraft:custom_data":{\
 data:[\
 {key:"kill @s"},\
 {key:"execute at @s unless block ~ -64 ~ barrier run setblock ~ -64 ~ barrier replace"},\

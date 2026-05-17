@@ -1,0 +1,48 @@
+{
+  "anvil_cost": 2,
+  "description": {
+    "text": "虚偽の術式",
+    "type": "text",
+    "color": "dark_gray",
+    "hover_event": {
+      "action": "show_text",
+      "value": {
+        "text": "付与不能"
+      }
+    }
+  },
+  "effects": {
+    "minecraft:tick": [
+      {
+        "effect": {
+          "type": "minecraft:apply_impulse",
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "coordinate_scale": [
+            1,
+            0,
+            1
+          ],
+          "magnitude": 0.5
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 55,
+    "per_level_above_first": 8
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 8
+  },
+  "slots": [
+    "any"
+  ],
+  "supported_items": "#minecraft:enchantable/durability",
+  "weight": 5
+}

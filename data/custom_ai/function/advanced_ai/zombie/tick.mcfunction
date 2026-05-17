@@ -8,3 +8,5 @@ execute if entity @s[tag=!RD.archer_zombie] if items entity @s weapon firework_r
 
 execute if entity @s[tag=RD.boomer_zombie,tag=!RD.no_chase] run tag @s add RD.no_chase
 execute if entity @s[tag=RD.boomer_zombie] run function custom_ai:custom_mobs/auto_detonate
+
+execute if entity @s[tag=RD.magma_infection] run function custom_ai:custom_mobs/magma_infection/tick

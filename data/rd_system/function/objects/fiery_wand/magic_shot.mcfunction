@@ -22,5 +22,5 @@ execute if block ~ ~ ~ water run particle large_smoke ~ ~ ~ 0.5 0 0.5 0.05 15
 execute if block ~ ~ ~ water run kill @s
 
 # 着火、起爆
-$execute positioned ~-0.25 ~-0.25 ~-0.25 if entity @e[tag=!fire_shot,type=!#minecraft:unliving_objects,dx=0.5,dy=0.5,dz=0.5] run function rd_system:objects/fiery_wand/ignition with storage rockietools:uuid datas."$(UUID)"
-$execute at @s unless block ~ ~0.5 ~ #custom_ai:no_collision unless block ~ ~0.5 ~ light unless block ~ ~ ~ water run function rd_system:objects/fiery_wand/ignition with storage rockietools:uuid datas."$(UUID)"
+execute positioned ~-0.25 ~-0.25 ~-0.25 if entity @e[tag=!fire_shot,type=!#minecraft:unliving_objects,dx=0.5,dy=0.5,dz=0.5] run function rd_system:objects/fiery_wand/ignition with entity @s equipment.head.components."minecraft:custom_data".data
+execute at @s unless block ~ ~0.5 ~ #custom_ai:no_collision unless block ~ ~0.5 ~ light unless block ~ ~ ~ water run function rd_system:objects/fiery_wand/ignition with entity @s equipment.head.components."minecraft:custom_data".data

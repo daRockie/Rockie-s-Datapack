@@ -9,6 +9,9 @@ execute at @s store result score @s zDis run data get entity @n[tag=zombies.targ
 scoreboard players operation @s xDis -= @s x
 scoreboard players operation @s zDis -= @s z
 
+execute if score @s xDis matches 1000.. run scoreboard players set @s xDis 500
+execute if score @s zDis matches 1000.. run scoreboard players set @s xDis 500
+
 # tellraw @a [{"score":{"objective":"xDis","name":"@s"}},", ",{"score":{"objective":"yDis","name":"@s"}},", ",{"score":{"objective":"zDis","name":"@s"}}]
 
 execute store result entity @s Motion[0] double 0.0005 run scoreboard players get @s xDis

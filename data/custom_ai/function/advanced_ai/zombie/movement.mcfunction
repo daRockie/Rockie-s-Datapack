@@ -19,5 +19,7 @@ execute if entity @e[distance=2..4.5,tag=zombies.target] if score @s[tag=!RD.no_
 
 execute if score @s[tag=!RD.no_chase] ai_timer matches 80.. run scoreboard players reset @s ai_timer
 
+execute if entity @s[tag=RD.magma_infection] run function custom_ai:custom_mobs/magma_infection/movement
+
 # タゲ外し
 tag @n[tag=zombies.target] remove zombies.target

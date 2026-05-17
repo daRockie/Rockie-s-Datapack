@@ -19,8 +19,6 @@ execute as @e[type=#zombies,tag=!RD.notNormal] unless data entity @s CustomName 
 
 execute as @e[type=#zombies,tag=RD.initialized,tag=RD.spawned] at @s if entity @a[distance=..80] as @s run function custom_ai:advanced_ai/zombie/tick
 
-# ブーマーゾンビ　処理
-
 # スケルトン
 execute as @e[type=#skeletons] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/skeleton/tick
 
