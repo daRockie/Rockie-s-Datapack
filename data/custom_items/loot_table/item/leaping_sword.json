@@ -1,0 +1,95 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "iron_spear",
+					"functions": [
+						{
+							"function": "set_custom_data",
+							"tag": {
+								"weapon": true
+							}
+						},
+						{
+							"function": "set_components",
+							"components": {
+								"piercing_weapon": {
+									"deals_knockback": true,
+									"hit_sound": "item.spear.hit"
+								},
+								"weapon": {
+									"disable_blocking_for_seconds": 0,
+									"item_damage_per_attack": 1
+								},
+								"attack_range": {
+									"max_reach": 2.5
+								},
+								"minecraft:attribute_modifiers": [
+									{
+										"type": "minecraft:attack_damage",
+										"amount": 3,
+										"id": "minecraft:base_attack_damage",
+										"operation": "add_value",
+										"slot": "mainhand"
+									},
+									{
+										"type": "minecraft:attack_speed",
+										"amount": -1.05,
+										"id": "minecraft:base_attack_speed",
+										"operation": "add_value",
+										"slot": "mainhand"
+									}
+								],
+								"custom_name": {
+									"text": "アラクネの短剣",
+									"italic": false
+								},
+								"rarity": "rare",
+								"consumable": {
+									"consume_seconds": 0.05,
+									"sound": "intentionally_empty",
+									"has_consume_particles": false,
+									"animation": "none"
+								},
+								"use_cooldown": {
+									"seconds": 2,
+									"cooldown_group": "transportation"
+								},
+								"item_model": "iron_sword",
+								"max_damage": 128,
+								"custom_model_data": {
+									"strings": [
+										"iron_knife"
+									]
+								},
+								"repairable":{
+									"items":["breeze_rod"]
+								},
+								"use_remainder": {
+									"id": "iron_spear",
+									"components": {
+										"item_model": "iron_sword",
+										"custom_model_data": {
+											"strings": [
+												"iron_knife"
+											]
+										},
+										"custom_name": {
+											"text": "アラクネの剣",
+											"italic": false
+										},
+										"custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/leaping_sword\",function:\"custom_items:items/leaping_sword/used\",damage_per_use:3,max_damage:128,mana_use:0,skill_name:\"跳躍\",break_sound:\"entity.item.break\"}",
+										"max_damage": 128
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -2,6 +2,8 @@
 # レシピの確認
 execute unless items block ~ ~ ~ container.16 *[custom_data~{RD.recipeResult:1b}] unless items block ~ ~ ~ container.16 barrier[custom_data={TempItem:1b}] if entity @s[tag=RD.block.customCrafter.processing] if score @s RD._BOOLEAN matches 1 run function rd_asset_blocks:interactive/advanced_crafter/utils/storage/recipes/meth/init
 
+execute if entity @e[type=item,distance=..10] run function rd_asset_blocks:interactive/advanced_crafter/utils/recipe_mode/reset_screen
+
 execute if score @s RD.isCrafting matches 1 run function rd_asset_blocks:interactive/advanced_crafter/utils/storage/recipes/refer/init
 
 execute if score @s RD._BOOLEAN matches 1 run tag @s add RD.block.customCrafter.processing

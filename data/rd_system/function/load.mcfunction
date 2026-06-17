@@ -55,3 +55,5 @@ data remove storage rockietools:item_modifier temp
 data modify storage rockietools:item_modifier temp set value {}
 
 stopwatch create rd._global.ore_generation
+
+stopwatch create rd._damage_reset

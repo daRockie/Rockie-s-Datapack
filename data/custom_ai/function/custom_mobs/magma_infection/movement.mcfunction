@@ -1,4 +1,5 @@
 execute on target run tag @s add zombies.target
+# particle flame ~ ~1 ~ 0.5 0.5 0.5 0 1
 
 scoreboard players add @s ai_timer 1
 

@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "switch_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "slots": {
+            "armor.*": {}
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "custom_items:equipments/util/load"
+  }
+}

@@ -4,6 +4,8 @@
     "custom_ai:load",
     "custom_items:load",
     "rd_system:load",
-    "find_looking:internal/load"
+    "find_looking:internal/load",
+    "player_motion:internal/technical/load",
+    "score_to_health:load"
     ]
 }

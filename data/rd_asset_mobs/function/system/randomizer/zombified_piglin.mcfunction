@@ -1,0 +1,1 @@
+execute if predicate custom_ai:percent/5 run function rd_asset_mobs:summon/zombie_piglin/magma_infection/adult

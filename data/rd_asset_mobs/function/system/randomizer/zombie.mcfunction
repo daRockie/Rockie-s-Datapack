@@ -1,6 +1,6 @@
 execute if entity @s[type=drowned] run return fail
 execute if entity @s[type=husk] run return run function rd_asset_mobs:system/randomizer/husk
-execute if entity @s[type=zombified_piglin] run return run function rd_asset_mobs:system/randomizer/zombie_piglin
+execute if entity @s[type=zombified_piglin] run return run function rd_asset_mobs:system/randomizer/zombified_piglin
 
 execute if entity @s[nbt={IsBaby:0b}] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/zombie/boomer/zombie
 execute if entity @s[tag=!RD.initialized,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/zombie/baby/boomer/zombie

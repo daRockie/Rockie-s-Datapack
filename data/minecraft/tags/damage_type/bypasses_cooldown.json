@@ -1,6 +1,7 @@
 {
     "values": [
         "rd_system:bypassing_arrow",
-        "rd_system:no_bypass_magic"
+        "rd_system:no_bypass_magic",
+        "rd_system:bypass_mob_attack"
     ]
 }

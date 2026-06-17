@@ -1,0 +1,9 @@
+{
+    "values": [
+        "minecart",
+        "tnt_minecart",
+        "hopper_minecart",
+        "command_block_minecart",
+        "furnace_minecart"
+    ]
+}

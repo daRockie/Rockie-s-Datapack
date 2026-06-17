@@ -26,8 +26,8 @@
         "requirements": {
           "condition": "minecraft:damage_source_properties",
           "predicate": {
-            "direct_entity": {
-              "type": "#minecraft:arrows"
+            "source_entity": {
+              "entity_type": "#minecraft:arrows"
             }
           }
         }

@@ -15,6 +15,8 @@ scoreboard players operation @s yDis -= @s y
 scoreboard players operation @s zDis -= @s z
 
 execute if score @s yDis matches ..800 run scoreboard players set @s yDis 1000
+execute if score @s xDis matches 2000.. run scoreboard players set @s xDis 1000
+execute if score @s zDis matches 2000.. run scoreboard players set @s zDis 1000
 
 execute store result entity @s Motion[0] double 0.0005 run scoreboard players get @s xDis
 execute store result entity @s Motion[1] double 0.0005 run scoreboard players get @s yDis

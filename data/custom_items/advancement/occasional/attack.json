@@ -1,0 +1,11 @@
+{
+  "criteria": {
+    "player_damage":{
+      "trigger": "player_hurt_entity"
+    }
+
+  },
+  "rewards": {
+    "function": "custom_items:equipments/util/on_attack"
+  }
+}

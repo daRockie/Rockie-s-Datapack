@@ -3,6 +3,7 @@
         "custom_items:speedstar",
         "custom_items:absorption",
         "custom_items:final_surge",
-        "custom_items:one_for_all"
+        "custom_items:one_for_all",
+        "custom_items:crit"
     ]
 }

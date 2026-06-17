@@ -26,6 +26,7 @@
     "minecraft:splash_potion",
     "minecraft:area_effect_cloud",
     "minecraft:lingering_potion",
-    "minecraft:experience_bottle"
+    "minecraft:experience_bottle",
+    "wither_skull"
   ]
 }

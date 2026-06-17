@@ -1,0 +1,53 @@
+{
+  "description": {
+    "translate": "rd.enchantment.crit",
+    "italic":false,
+    "fallback": "Critical"
+  },
+  "supported_items": "#minecraft:enchantable/sharp_weapon",
+  "primary_items": "#minecraft:enchantable/sharp_weapon",
+  "weight": 8,
+  "max_level": 10,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 16
+  },
+  "max_cost": {
+    "base": 9,
+    "per_level_above_first": 25
+  },
+  "anvil_cost": 3,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "effect": {
+            "type": "run_function",
+            "function": "custom_items:enchantment/crit/"
+        },
+        "enchanted":"attacker",
+        "affected": "attacker",
+        "requirements": [{
+          "condition": "random_chance_with_enchanted_bonus",
+          "enchanted_chance": {
+            "type": "linear",
+            "base": 0.05,
+            "per_level_above_first": 0.08
+          },
+          "enchantment": "custom_items:crit",
+          "unenchanted_chance": 0
+        }]
+      },
+      {
+        "effect": {
+          "type": "run_function",
+          "function": "custom_items:equipments/util/damage_reset"
+        },
+        "enchanted":"attacker",
+        "affected": "attacker"
+      }
+    ]
+  }
+}

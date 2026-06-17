@@ -1,0 +1,1 @@
+execute if items entity @s inventory.* *[custom_data~{"RD.item":"green_furnace"}] if score @s RD.damage_taken matches 3000.. run function custom_items:equipments/accesories/green_furnace/

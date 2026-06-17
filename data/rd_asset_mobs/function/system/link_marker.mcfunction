@@ -1,0 +1,1 @@
+$data modify entity @n[tag=RD.data_holder] data.players append value {"$(UUID)":[{"active_effects":{}}]}

@@ -10,6 +10,7 @@ execute as @e[type=#boat] on controller if entity @s[tag=RD.can_controll_boat] o
 # クモ
 execute as @e[type=#arthropod] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/spider/tick
 
+
 # イカドラウンド
 execute as @e[type=minecraft:drowned,tag=squid_drowned,nbt={HurtTime:10s}] at @s run function custom_ai:movements/splash_ink
 
@@ -24,6 +25,10 @@ execute as @e[type=#skeletons] at @s if entity @a[distance=..80] run function cu
 
 # クリーパー
 execute as @e[type=creeper] at @s if entity @a[distance=..80] run function custom_ai:advanced_ai/creeper/tick
+
+# エンダーマン
+execute as @e[type=enderman] at @s if entity @a[distance=..80] as @s run function custom_ai:advanced_ai/enderman/tick
+
 
 # オブジェクト
 execute as @e[tag=RD.object] at @s as @s run function custom_ai:object/

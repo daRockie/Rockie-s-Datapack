@@ -13,6 +13,7 @@
     "minecraft:moss_carpet",
     "minecraft:pale_moss_carpet",
     "#minecraft:saplings",
-    "#minecraft:flowers"
+    "#minecraft:flowers",
+    "#minecraft:nether_plants"
   ]
 }

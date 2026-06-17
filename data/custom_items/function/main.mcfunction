@@ -1,5 +1,6 @@
-kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{TempItem:1b}}}}]
+# kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{TempItem:1b}}}}]
 
+execute as @a[tag=RD.combo_user] if score @s RD.damage_dealt matches 1.. run function custom_items:enchantment/reset_damage_dealt
 
 scoreboard players set @a sneakTimer 0
 execute as @a[predicate=custom_items:daytime] if dimension overworld run scoreboard players reset @s deathCount
@@ -27,5 +28,7 @@ execute as @e[tag=final_surge,tag=final_surge_3] at @s if data entity @s Selecte
 
 # Equipment
 execute as @a run function custom_items:equipments/mining_helmet/main
+
+execute as @e[type=player] if entity @s[scores={RD.respawned=1..}] as @s at @s run function custom_items:on_respawn
 
 execute as @a if items entity @s weapon.* shield[custom_data~{CustomItem:"RD.anti_exp_shield"}] at @s if entity @e[tag=explosive_mobs,distance=0..8] run function custom_items:items/item.shield/0/

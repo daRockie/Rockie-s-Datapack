@@ -8,13 +8,6 @@
           "name": "minecraft:emerald",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 0,
-                "max": 5
-              }
-            },
-            {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": {

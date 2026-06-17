@@ -9,6 +9,8 @@ execute if entity @s[tag=RD.on_land,nbt={OnGround:1b}] run function custom_ai:ob
 
 execute if entity @s[type=mannequin] run function custom_ai:object/mannequin/
 
+# execute if entity @s[tag=RD.head] run function custom_ai:object/trace_head_moving
+
 execute if entity @s[tag=RD.cmd,tag=!RD.initialized] run function custom_ai:object/looper
 
 execute if entity @s[tag=RD.marker.ore_generation,tag=!RD.initialized] run function custom_ai:object/marker/ore_generator/

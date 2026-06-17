@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "firework_star",
+          "name": "shield",
           "functions": [
             {
               "function": "set_custom_data",
@@ -15,6 +15,7 @@
               "function": "set_components",
               "components": {
                 "max_stack_size": 1,
+                "max_damage":102,
                 "item_model":"bow",
                 "minecraft:custom_name": {
                   "text": "短弓",
@@ -44,18 +45,18 @@
                   "cooldown_group": "shortbow"
                 },
                 "consumable": {
-                  "consume_seconds": 0,
+                  "consume_seconds": 0.01,
                   "sound": "intentionally_empty",
                   "has_consume_particles": false
                 },
                 "use_remainder": {
-                  "id": "firework_star",                  
+                  "id": "shield",                  
                   "components": {
                     "minecraft:custom_name": {
                   "text": "短弓",
                   "italic": false
                 },
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/shortbow\",function:\"custom_items:items/tankyuu/right_click\"}",
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/shortbow\",function:\"custom_items:items/shortbow/right_click\",damage_per_use:1,max_damage:102,skill_name:\"弓心\",mana_use:0,break_sound:\"entity.item.break\"}",
                     "item_model": "bow"
                   }
                 }

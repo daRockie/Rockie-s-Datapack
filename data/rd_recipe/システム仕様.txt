@@ -1,0 +1,5 @@
+◆素材として使われるアイテム
+minecraft:music_disc_blocks
+
+◆タリスマン
+minecraft:music_disc_11
