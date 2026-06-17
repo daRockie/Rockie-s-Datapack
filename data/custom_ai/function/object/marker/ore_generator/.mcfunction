@@ -17,7 +17,7 @@ execute store result entity @s data.rng_x int 1 run random value 0..15
 execute store result entity @s data.rng_y int 1 run random value 0..15
 execute store result entity @s data.rng_z int 1 run random value 0..15
 
-execute unless data entity @s data.ore[] run tellraw @a [{"entity":"@s","nbt":"data"}]
+# execute unless data entity @s data.ore[] run tellraw @a [{"entity":"@s","nbt":"data"}]
 execute unless data entity @s data.ore[] run return run kill @s
-execute if data entity @s data.ore[] run tellraw @a [{"entity":"@s","nbt":"data","bold":1b}]
+# execute if data entity @s data.ore[] run tellraw @a [{"entity":"@s","nbt":"data","bold":1b}]
 execute if data entity @s data.ore[] run function custom_ai:object/marker/ore_generator/generate/ with entity @s data

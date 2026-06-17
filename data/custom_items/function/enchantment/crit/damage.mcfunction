@@ -16,9 +16,9 @@ playsound minecraft:entity.player.attack.crit player @a ~ ~ ~ 1 0.5
 
 # $damage @s $(damage) rd_system:bypass_mob_attack by @n[nbt={UUID:$(owner)}]
 
-$damage @s $(damage) rd_system:no_bypass_magic
+$damage @s 8 rd_system:no_bypass_magic by @n[nbt={UUID:$(UUID)}]
 
-$scoreboard players set @n[nbt={UUID:$(owner)}] RD.damage_dealt 0
+$scoreboard players set @n[nbt={UUID:$(UUID)}] RD.damage_dealt 0
 
 # scoreboard players reset $.one_tick_timer ai_timer
 

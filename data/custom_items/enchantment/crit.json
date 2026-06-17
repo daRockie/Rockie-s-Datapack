@@ -25,7 +25,7 @@
       {
         "effect": {
             "type": "run_function",
-            "function": "custom_items:enchantment/crit/"
+            "function": "custom_items:enchantment/crit/init"
         },
         "enchanted":"attacker",
         "affected": "attacker",
