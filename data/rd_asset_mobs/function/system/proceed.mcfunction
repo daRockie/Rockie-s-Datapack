@@ -9,3 +9,7 @@ execute if entity @s[tag=RD.has_mana] run function rd_asset_mobs:system/mana_ini
 execute if entity @s[type=player] run function rd_asset_mobs:system/link_marker with entity @s {}.UUID
 
 tag @s add RD.initialized
+
+execute store result score @s spawnRandom run random value 0..100
+
+function rd_asset_mobs:randomize

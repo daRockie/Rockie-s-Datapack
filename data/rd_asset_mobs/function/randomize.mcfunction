@@ -1,9 +1,6 @@
 # エリアエフェクトクラウドの処理
 execute if entity @s[type=minecraft:area_effect_cloud,tag=kill_item] at @s run kill @e[type=item,distance=0..2]
 
-# スポーン後処理
-execute if entity @s[tag=!RD.initialized] run function rd_asset_mobs:system/proceed
-
 # ゾンビ処理
 execute if entity @s[type=#zombies] run function rd_asset_mobs:system/randomizer/zombie
 
@@ -37,6 +34,3 @@ execute if entity @s[type=minecraft:enderman] if score @s spawnRandom matches 0.
 
 # ガチギレエンダーマン　改
 execute if entity @s[type=enderman,tag=elite_eman,predicate=!rd_asset_mobs:in_hostile] at @s run data modify entity @s angry_at set from entity @e[type=#custom_ai:inhostile,distance=0..10,limit=1] UUID
-
-# スポーン乱数
-execute if entity @s[tag=!RD.spawned] run function rd_asset_mobs:system/mobspawning
