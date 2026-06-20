@@ -19,10 +19,6 @@ execute store result score $.RD.internal.max_health RD.health run attribute @s m
 # tellraw @a [{"text":"最大体力: "},{"score":{"name":"$.RD.internal.max_health","objective":"health"}}]
 
 
-scoreboard players set #const.10 RD.health 10
-
-scoreboard players set #const.100 RD.health 100
-
 # 計算
 
 scoreboard players operation $.RD.internal.max_health RD.health *= #const.10 RD.health

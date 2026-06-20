@@ -16,13 +16,18 @@
               "components": {
                 "!blocks_attacks":{},
                 "max_stack_size": 1,
-                "item_model":"relicraft:weapon/healing_wand",
+                "custom_model_data":{
+                  "strings": [
+                    "RD.healing_wand"
+                  ]
+                },
+                "item_model":"stick",
                 "minecraft:custom_name": {
                   "text": "ヒーリングワンド",
                   "italic": false
                 },
                 "rarity":"uncommon",
-                "minecraft:lore":[{"text":"初心者魔法使い向けの杖。","italic":false,"color": "dark_purple"},"",{"text":"アビリティ：ヒーリング","color": "gold","italic": false, "extra": [{"text":"右クリックで発動","bold": true,"italic": false,"color": "yellow"}]},{"text":"自分自身と","color": "gray", "italic": false, "extra": [{"text":"4マス以内にいる","color": "green","italic": false},{"text":"モブを少量回復させる。","color": "gray", "italic": false}]},"",{"text":"クールダウン：","color": "dark_gray","italic":false,"extra": [{"text":"2秒","color": "green","italic":false}]},{"text":"マナ使用量：","color": "dark_gray","italic":false,"extra": [{"text":"30","color": "dark_aqua","italic":false}]}],                      
+                "minecraft:lore":[{"text":"\"初心者魔法使い向けの杖。\"","italic":true,"color":"#a0522a"},"",{"text":"アビリティ：ヒーリング","color": "gold","italic": false, "extra": [{"text":"右クリックで発動","bold": true,"italic": false,"color": "yellow"}]},{"text":"自分自身を","color": "gray", "italic": false, "extra": [{"text": "❤6","italic": false,"color": "red"},{"text": "回復し、","color": "gray"},{"text":"4マス以内にいる","color": "green","italic": false},{"text":"モブを","color": "gray", "italic": false,"extra": [{"text": "❤3","color": "red"},{"text": "回復する。"}]}]},"",{"text":"クールダウン：","color": "dark_gray","italic":false,"extra": [{"text":"2秒","color": "green","italic":false}]},{"text":"マナ使用量：","color": "dark_gray","italic":false,"extra": [{"text":"30","color": "dark_aqua","italic":false}]}],                      
                 "use_cooldown": {
                   "seconds": 2,
                   "cooldown_group": "healing_wand"
@@ -42,11 +47,11 @@
                 },
                     "rarity":"uncommon",
                     "item_model":"relicraft:weapon/healing_wand",
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/healing_wand\",function:\"custom_items:items/healing_wand/used\",damage_per_use:1,max_damage:72,skill_name:\"虚偽の術式\",mana_use:30,break_sound:\"entity.item.break\"}",
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/healing_wand\",function:\"custom_items:items/healing_wand/used\",damage_per_use:1,max_damage:72,skill_name:\"ヒーリング\",mana_use:30,break_sound:\"entity.item.break\"}",
                     "max_damage": 32
                   }
                 },
-                "max_damage": 32
+                "max_damage": 45
               }
             }
           ]

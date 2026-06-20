@@ -5,17 +5,18 @@
       "components": {
         "profile": {
           "properties": [
-            {"name": "textures","value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjJlMTdhODA4MTlkMDExM2JmMTgxMDUwODc5MWI0NTc3YzkyNjY3MTM5NTBlMjJjNmY5NGVjOThlZWE1ZTYxZiJ9fX0="}
+            {"name": "textures",
+          "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTEzMjg3ZDdlNzVlNzYzZTk1ZTRmNWNiYTAxYmY2OWJhODdlMGFmNzY3OTFjYTEzM2Y0NTNjMGEzMWQ1ZWUyZSJ9fX0="}
           ]
         }
       },
       "count": 1
     },
     "title": {
-      "text": "レジデント・イービル"
+      "text": "忍び寄りしものたち"
     },
     "description": {
-      "text": "アンデッドを討伐する"
+      "text": "クリーパーもしくは虫を討伐する"
     },
     "show_toast": true,
     "announce_to_chat": true,
@@ -27,7 +28,7 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "entity_type": "#minecraft:undead"
+          "entity_type": "#arthropod"
         }
       }
     }

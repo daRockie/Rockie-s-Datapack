@@ -3,6 +3,7 @@
     "icon": {
       "id": "minecraft:debug_stick",
       "components": {
+        "item_model":"relicraft:weapon/healing_wand",
         "minecraft:enchantment_glint_override": true
       }
     },
@@ -24,11 +25,11 @@
     "craft": {
       "trigger": "minecraft:recipe_crafted",
       "conditions": {
-        "recipe_id": "custom_items:healing_wand"
+        "recipe_id": "custom_items:right_click/healing_wand"
       }
     }
   },
   "rewards": {
-    "recipes": ["custom_items:wand_of_ardor"]
+    "recipes": ["custom_items:right_click/wand_of_ardor"]
   }
 }

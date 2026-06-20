@@ -13,6 +13,8 @@ execute if entity @s[type=mannequin] run function custom_ai:object/mannequin/
 
 execute if entity @s[tag=RD.cmd,tag=!RD.initialized] run function custom_ai:object/looper
 
+execute if entity @s[tag=RD.head_entity] unless entity @n[distance=..2,tag=RD.has_head_entity] run kill @s
+
 execute if entity @s[tag=RD.marker.ore_generation,tag=!RD.initialized] run function custom_ai:object/marker/ore_generator/
 
 execute if entity @s[type=armor_stand,tag=mummy_reviving] at @s run function custom_ai:movements/mummy/mummy_revive_obj

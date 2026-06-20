@@ -1,6 +1,6 @@
 data modify entity @s DeathTime set value 19
 data modify entity @s Silent set value 1b
 data modify entity @s DeathLootTable set value "minecraft:empty"
-execute at @s run summon creeper ~ ~30 ~ {Health:10,fall_distance:10,CustomName:{"text":"パラシュートクリーパー"},FallFlying:1b,Tags:["RD.spawned","RD.initialized","RD.parachute_creeper"],attributes:[{id:follow_range,base:853f},{id:"knockback_resistance",base:-2f}],equipment:{chest:{id:"minecraft:elytra"}},Fuse:40,Passengers:[{id:"chicken",DeathLootTable:"minecraft:empty"}],ExplosionRadius:3,drop_chances:{chest:0f}}
+execute at @s run summon creeper ~ ~30 ~ {Health:10,fall_distance:10,CustomName:{"text":"パラシュートクリーパー"},FallFlying:1b,Tags:["RD.has_head_entity","RD.spawned","RD.initialized","RD.parachute_creeper"],attributes:[{id:follow_range,base:853f},{id:"knockback_resistance",base:-2f}],equipment:{chest:{id:"minecraft:elytra"}},Passengers:[{id:"item_display",Tags:["RD.object","RD.head_entity"],item:{id:"player_head",components:{"profile":{properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGFjNTA2ZjEzMGI3ZmZmYTY3MmM4ODhlYWYxNjNkOTI2MmQ3NDI0MGYyY2NjMWE5MjllOGVlNzhjM2IyNzM5In19fQ=="}]}}},transformation:{left_rotation:[0,200,0,1],right_rotation:[0,0,0,1],translation:[0,0.1,0],scale:[1.4,1.4,1.4]}},{id:"chicken",DeathLootTable:"minecraft:empty"}],ExplosionRadius:3,drop_chances:{chest:0f},Fuse:30}
 tp @s ~ ~-200 ~
 kill @s

@@ -23,7 +23,7 @@
     "craft": {
       "trigger": "minecraft:recipe_crafted",
       "conditions": {
-        "recipe_id": "custom_items:wand_of_ardor"
+        "recipe_id": "custom_items:right_click/wand_of_ardor"
       }
     }
   },

@@ -1,27 +1,17 @@
-execute store result score $.RD.internal.health RD.health run data get entity @s Health 1
+execute store result score $.RD.internal.health RD.health run data get entity @s Health 100
 
-execute store result score $.RD.internal.max_health RD.health run attribute @s max_health get 1
+execute store result score $.RD.internal.max_health RD.health run attribute @s max_health get 100
 
+$scoreboard players set $.RD.internal.heal_amount RD.health $(heal)
 
-$scoreboard players add $.RD.internal.health RD.health $(heal)
+scoreboard players operation $.RD.internal.heal_amount RD.health *= #const.100 RD.health
 
-execute if score $.RD.internal.max_health RD.health > $.RD.internal.health RD.health run scoreboard players operation $.RD.internal.health RD.health = $.RD.internal.max_health RD.health
+scoreboard players operation $.RD.internal.health RD.health += $.RD.internal.heal_amount RD.health
 
-scoreboard players operation $.RD.internal.health RD.health += $.RD.internal.max_health RD.health
+execute if score $.RD.internal.max_health RD.health < $.RD.internal.health RD.health run scoreboard players operation $.RD.internal.health RD.health = $.RD.internal.max_health RD.health
+
+# tellraw @a [{"score":{"name":"$.RD.internal.health","objective":"RD.health"}}]
 
 # tellraw @a [{"score":{"name":"$.RD.internal.health","objective":"health"}}]
 
 scoreboard players operation @s ScoreToHealth = $.RD.internal.health RD.health
-
-# tellraw @a [{"score":{"name":"@s","objective":"ScoreToHealth"}}]
-
-tellraw @s [{"text":"40",color:"aqua"},{"text":" Mana(","color":"aqua"},{"text":"息吹の香炉","color":"gold"},{"text":")","color":"aqua"}]
-
-# effect give @s regeneration 2 2
-
-effect give @s resistance 3 1
-
-effect give @s absorption 2 0
-
-
-function rd_system:mana/use_mana_macro {"mana":40}
