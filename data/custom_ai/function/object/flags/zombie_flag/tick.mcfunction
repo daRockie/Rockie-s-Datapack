@@ -1,6 +1,6 @@
 # 120tick毎にバフ付与、4回付与後に自害
-scoreboard players add @s ai_timer 1
-execute if score @s ai_timer matches 120.. run function custom_ai:object/flags/zombie_flag/buff
+scoreboard players add @s RD.ai_timer 1
+execute if score @s RD.ai_timer matches 120.. run function custom_ai:object/flags/zombie_flag/buff
 execute if score @s RD.for matches 4.. run function custom_ai:object/flags/zombie_flag/kms
 particle ash ~ ~2 ~ 0.5 0.5 0.5 0.05 2
 

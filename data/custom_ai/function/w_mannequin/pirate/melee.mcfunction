@@ -1,4 +1,4 @@
-scoreboard players reset @s ai_timer
+scoreboard players reset @s RD.ai_timer
 
 execute unless entity @n[distance=..2.5,tag=RD.pirate.target,type=!#minecraft:unliving_objects] run return fail
 

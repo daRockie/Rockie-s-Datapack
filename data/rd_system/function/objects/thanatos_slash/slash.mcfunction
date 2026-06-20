@@ -19,9 +19,9 @@ fill ~3 ~3 ~3 ~-3 ~-3 ~-3 air replace #minecraft:grasses destroy
 
 tp @s ^ ^ ^1.5
 
-scoreboard players add @s ai_timer 1
+scoreboard players add @s RD.ai_timer 1
 
-# execute if score @s ai_timer matches 10.. run scoreboard players remove @s ai_timer 1
+# execute if score @s RD.ai_timer matches 10.. run scoreboard players remove @s RD.ai_timer 1
 
 particle sweep_attack ~ ~ ~ 0 0 0 2 15
 particle explosion ~ ~ ~ 0 0 0 2 1
@@ -29,4 +29,4 @@ particle explosion ~ ~ ~ 0 0 0 2 1
 
 # give @s iron_helmet[equippable={slot:head,asset_id:"template_skull"}] 1
 
-execute if score @s ai_timer matches 20.. run return run function rd_system:objects/thanatos_slash/explode with entity @s equipment.head.components."minecraft:custom_data".data
+execute if score @s RD.ai_timer matches 20.. run return run function rd_system:objects/thanatos_slash/explode with entity @s equipment.head.components."minecraft:custom_data".data

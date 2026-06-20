@@ -15,10 +15,10 @@ particle dust_color_transition{from_color:2,scale:1,to_color:215151325} ~ ~ ~ 0.
 
 
 
-scoreboard players add @s ai_timer 1
+scoreboard players add @s RD.ai_timer 1
 
-# $execute if score @s ai_timer matches 10.. run tp @n[nbt={UUID:$(owner)}] @s
+# $execute if score @s RD.ai_timer matches 10.. run tp @n[nbt={UUID:$(owner)}] @s
 
-execute if score @s ai_timer matches 20.. run return run function rd_system:objects/thanatos_slash/explode with entity @s equipment.head.components."minecraft:custom_data".data
+execute if score @s RD.ai_timer matches 20.. run return run function rd_system:objects/thanatos_slash/explode with entity @s equipment.head.components."minecraft:custom_data".data
 
 # function rd_system:objects/thanatos_slash/ with entity @s 

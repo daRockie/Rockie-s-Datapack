@@ -11,31 +11,31 @@ particle happy_villager ~ ~2 ~ 0.5 0.5 0.5 0.25 15
 particle white_smoke ~ ~1 ~ 0.5 0.5 0.5 0.05 15
 
 # ヘルス、最大体力をストア
-execute store result score $.RD.internal.health health run data get entity @s Health 100
+execute store result score $.RD.internal.health RD.health run data get entity @s Health 100
 
-execute store result score $.RD.internal.max_health health run attribute @s max_health get 100
+execute store result score $.RD.internal.max_health RD.health run attribute @s max_health get 100
 
 # tellraw @a [{"text":"体力: "},{"score":{"name":"$.RD.internal.health","objective":"health"}}]
 # tellraw @a [{"text":"最大体力: "},{"score":{"name":"$.RD.internal.max_health","objective":"health"}}]
 
 
-scoreboard players set #const.10 health 10
+scoreboard players set #const.10 RD.health 10
 
-scoreboard players set #const.100 health 100
+scoreboard players set #const.100 RD.health 100
 
 # 計算
 
-scoreboard players operation $.RD.internal.max_health health *= #const.10 health
+scoreboard players operation $.RD.internal.max_health RD.health *= #const.10 RD.health
 
-scoreboard players operation $.RD.internal.max_health health /= #const.100 health
+scoreboard players operation $.RD.internal.max_health RD.health /= #const.100 RD.health
 
 # tellraw @a [{"text":"最大体力の20%: "},{"score":{"name":"$.RD.internal.max_health","objective":"health"}}]
 
-scoreboard players operation $.RD.internal.health health += $.RD.internal.max_health health
+scoreboard players operation $.RD.internal.health RD.health += $.RD.internal.max_health RD.health
 
 # tellraw @a [{"score":{"name":"$.RD.internal.health","objective":"health"}}]
 
-scoreboard players operation @s ScoreToHealth = $.RD.internal.health health
+scoreboard players operation @s ScoreToHealth = $.RD.internal.health RD.health
 
 # tellraw @a [{"score":{"name":"@s","objective":"ScoreToHealth"}}]
 

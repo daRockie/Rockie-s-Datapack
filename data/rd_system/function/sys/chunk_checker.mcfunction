@@ -1,4 +1,4 @@
-# scoreboard players reset $Global_timer.ORE_GENERATE ai_timer
+# scoreboard players reset $Global_timer.ORE_GENERATE RD.ai_timer
 
 # tellraw @a [{"text":"Attempting to generate ore...", "color":"gray", "italic":1b}]
 # execute if entity @a[gamemode=survival] run tellraw @a [{"text":"Players in survival mode: ",color:gray,italic:1b,extra:[{"selector":"@a[gamemode=survival]"}]}]

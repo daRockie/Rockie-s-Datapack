@@ -20,6 +20,6 @@ $damage @s 8 rd_system:no_bypass_magic by @n[nbt={UUID:$(UUID)}]
 
 $scoreboard players set @n[nbt={UUID:$(UUID)}] RD.damage_dealt 0
 
-# scoreboard players reset $.one_tick_timer ai_timer
+# scoreboard players reset $.one_tick_timer RD.ai_timer
 
 kill @n[type=marker,tag=RD.crit_temp]

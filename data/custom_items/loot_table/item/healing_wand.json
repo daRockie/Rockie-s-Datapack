@@ -16,7 +16,7 @@
               "components": {
                 "!blocks_attacks":{},
                 "max_stack_size": 1,
-                "item_model":"stick",
+                "item_model":"relicraft:weapon/healing_wand",
                 "minecraft:custom_name": {
                   "text": "ヒーリングワンド",
                   "italic": false
@@ -28,7 +28,8 @@
                   "cooldown_group": "healing_wand"
                 },
                 "consumable": {
-                  "consume_seconds": 0.09,
+                  "consume_seconds": 0.05,
+                  "animation": "spear",
                   "sound": "intentionally_empty",
                   "has_consume_particles": false
                 },
@@ -40,8 +41,8 @@
                   "italic": false
                 },
                     "rarity":"uncommon",
-                    "item_model": "stick",
-                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/healing_wand\",function:\"custom_items:items/healing_wand/used\",damage_per_use:1,max_damage:32,\"weapon\":1b,skill_name:\"ヒーリング\",mana_use:30}",
+                    "item_model":"relicraft:weapon/healing_wand",
+                    "custom_data": "{\"Used\":1b,Loottable:\"custom_items:item/healing_wand\",function:\"custom_items:items/healing_wand/used\",damage_per_use:1,max_damage:72,skill_name:\"虚偽の術式\",mana_use:30,break_sound:\"entity.item.break\"}",
                     "max_damage": 32
                   }
                 },

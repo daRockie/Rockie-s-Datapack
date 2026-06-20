@@ -1,7 +1,7 @@
 scoreboard players reset @s spawnRandom
 scoreboard players reset @s RD.mana
 scoreboard players reset @s RD.mana.max
-scoreboard players reset @s ai_timer
+scoreboard players reset @s RD.ai_timer
 
 data modify entity @s Silent set value 1b
 data modify entity @s DeathLootTable set value "minecraft:empty"

@@ -1,4 +1,6 @@
-item replace entity @s weapon.mainhand from entity @p player.cursor
+execute as @a[distance=..10] if items entity @s player.cursor *[custom_data~{TempItem:1b} | !custom_data~{Ingredient:1b}] as @s run tag @s add RD.has_recipe
+
+item replace entity @s weapon.mainhand from entity @p[tag=RD.has_recipe] player.cursor
 
 
 function rd_asset_blocks:interactive/advanced_crafter/utils/item_modify/fill_blank_craft_mode

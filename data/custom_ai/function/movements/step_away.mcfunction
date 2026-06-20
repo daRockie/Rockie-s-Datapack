@@ -18,4 +18,4 @@ execute store result entity @s Motion[0] double 0.0005 run scoreboard players ge
 data modify entity @s Motion[1] set value 0.4
 execute store result entity @s Motion[2] double 0.0005 run scoreboard players get @s zDis
 
-scoreboard players reset @s ai_timer
+scoreboard players reset @s RD.ai_timer

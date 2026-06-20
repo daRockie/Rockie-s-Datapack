@@ -7,7 +7,6 @@ execute if score @s RD.isCrafting matches 1 run function rd_asset_blocks:interac
 execute if score @s RD.isCrafting matches 0 run function rd_asset_blocks:interactive/advanced_crafter/utils/recipe_mode
 
 # クリック検知
-execute unless items block ~ ~ ~ container.10 * if score @s RD.isCrafting matches 1 if items entity @a player.cursor *[custom_data={TempItem:1b}] run function rd_asset_blocks:interactive/advanced_crafter/utils/change_mode
 
 # execute if items entity @a[distance=..80] container.* *[custom_data={TempItem:1b}] run clear @a *[custom_data={TempItem:1b}]
 
@@ -16,4 +15,3 @@ execute unless items block ~ ~ ~ container.10 * if score @s RD.isCrafting matche
 # クラフト結果の判定
 execute if score @s RD.isCrafting matches 1 run function rd_asset_blocks:interactive/advanced_crafter/utils/replace_panes
 
-clear @a *[custom_data~{TempItem:1b}]

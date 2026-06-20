@@ -11,4 +11,4 @@ summon item ~ ~ ~ {Tags:["RD.fiber"],Age:5900,PickupDelay:32767,Item:{id:"cobweb
 
 playsound minecraft:entity.spider.hurt player @a ~ ~ ~ 1 0.5
 
-scoreboard players reset @s ai_timer
+scoreboard players reset @s RD.ai_timer

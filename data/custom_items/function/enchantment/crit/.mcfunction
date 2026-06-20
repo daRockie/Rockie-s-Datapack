@@ -18,7 +18,7 @@ scoreboard players operation $.addition_damage RD.damage_dealt = @s RD.damage_de
 
 scoreboard players operation $.addition_damage RD.damage_dealt *= $.crit_level RD.damage_dealt
 
-scoreboard players operation $.addition_damage RD.damage_dealt /= #const.100 health
+scoreboard players operation $.addition_damage RD.damage_dealt /= #const.100 RD.health
 
 tellraw @a [{"score":{name:"$.addition_damage",objective:"RD.damage_dealt"}}]
 

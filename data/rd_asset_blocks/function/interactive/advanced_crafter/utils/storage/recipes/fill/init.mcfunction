@@ -11,4 +11,6 @@ data modify storage rockietools:custom_recipe temp_crafter.list set from storage
 data modify storage rockietools:custom_recipe temp_crafter.meta set from storage rockietools:custom_recipe meta
 data remove storage rockietools:custom_recipe temp_crafter.list[0]
 
+execute store result score $.RD.recipe_length RD.ai_timer if data storage rockietools:custom_recipe list.crafter[]
+
 function rd_asset_blocks:interactive/advanced_crafter/utils/storage/recipes/fill/ with storage rockietools:custom_recipe temp_crafter.meta.crafter.allowed_slot[-1]

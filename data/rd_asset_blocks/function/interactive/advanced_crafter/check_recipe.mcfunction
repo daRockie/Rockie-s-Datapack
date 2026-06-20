@@ -1,5 +1,8 @@
 
 # レシピの確認
+
+execute unless items block ~ ~ ~ container.10 * if score @s RD.isCrafting matches 1 if items entity @a player.cursor *[custom_data={TempItem:1b}] run function rd_asset_blocks:interactive/advanced_crafter/utils/change_mode
+
 execute unless items block ~ ~ ~ container.16 *[custom_data~{RD.recipeResult:1b}] unless items block ~ ~ ~ container.16 barrier[custom_data={TempItem:1b}] if entity @s[tag=RD.block.customCrafter.processing] if score @s RD._BOOLEAN matches 1 run function rd_asset_blocks:interactive/advanced_crafter/utils/storage/recipes/meth/init
 
 execute if entity @e[type=item,distance=..10] run function rd_asset_blocks:interactive/advanced_crafter/utils/recipe_mode/reset_screen
@@ -9,6 +12,8 @@ execute if score @s RD.isCrafting matches 1 run function rd_asset_blocks:interac
 execute if score @s RD._BOOLEAN matches 1 run tag @s add RD.block.customCrafter.processing
 
 execute if score @s RD._BOOLEAN matches 0 run tag @s remove RD.block.customCrafter.processing
+
+clear @a *[custom_data~{TempItem:1b}]
 
 #execute if score @s RD.recipe_id matches 1.. unless items block ~ ~ ~ container.16 *[custom_data~{RD.recipeResult:1b}] run tellraw @p [{"text":"Recipe exists, but there is no item!","color":red}]
 

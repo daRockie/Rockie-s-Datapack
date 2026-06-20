@@ -2,8 +2,8 @@ execute as @e[type=!#minecraft:unliving_objects] at @s if entity @a[distance=..8
 function rd_system:objects/main
 
 
-# scoreboard players add $Global_timer.ORE_GENERATE ai_timer 1
-# execute if score $Global_timer.ORE_GENERATE ai_timer matches 200.. run function rd_system:sys/chunk_checker
+# scoreboard players add $Global_timer.ORE_GENERATE RD.ai_timer 1
+# execute if score $Global_timer.ORE_GENERATE RD.ai_timer matches 200.. run function rd_system:sys/chunk_checker
 execute if stopwatch rd._global.ore_generation 5.. run function rd_system:sys/chunk_checker
 
 # execute as @a at @s run tag @e[distance=0.01..32] add find_looking.candidate

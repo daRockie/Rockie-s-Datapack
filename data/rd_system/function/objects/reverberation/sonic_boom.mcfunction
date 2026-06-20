@@ -6,11 +6,11 @@ tag @s add pos_set
 #particle block_marker{block_state:{Name:"barrier"}} ~ ~ ~
 tp @s ^ ^ ^5
 
-execute if score @s ai_timer matches 6.. run function rd_system:objects/reverberation/kill with entity @s
+execute if score @s RD.ai_timer matches 6.. run function rd_system:objects/reverberation/kill with entity @s
 
 
 # 移動
-scoreboard players add @s ai_timer 1
+scoreboard players add @s RD.ai_timer 1
 particle sonic_boom ~ ~ ~ 0 0 0 0.025 1
 playsound entity.generic.explode player @a ~ ~ ~ 0.7 1
 
