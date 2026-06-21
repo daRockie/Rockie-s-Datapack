@@ -7,9 +7,5 @@ execute as @e[type=#custom_ai:hostile] at @s if entity @a[distance=..80] as @s r
 # オブジェクト
 execute as @e[tag=RD.object] at @s as @s run function custom_ai:object/
 
-
 # 被弾時呼び出し
 execute as @e[tag=RD.on_hurt,nbt={HurtTime:9s}] at @s as @s run function custom_ai:on_hurt/
-
-# 強化ウィッチ
-execute as @e[type=wither_skeleton] at @s if entity @s[predicate=rd_asset_mobs:in_hostile] run function rd_asset_mobs:targets/wither_skeleton
