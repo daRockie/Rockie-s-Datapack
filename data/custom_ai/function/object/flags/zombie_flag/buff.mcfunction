@@ -7,7 +7,7 @@ playsound minecraft:entity.zombie_horse.angry master @a ~ ~ ~ 1 0.5
 effect give @e[type=#undead,distance=0..8] instant_damage 1 0
 effect give @e[type=#undead,distance=0..8] resistance 5 0
 effect give @e[type=#undead,distance=0..8] strength 3 0
-effect give @e[type=#undead,distance=0..8] speed 5 1
+effect give @e[type=#undead,distance=0..8] speed 2 0
 
 execute at @e[distance=0..8,type=#undead] run particle trial_spawner_detection ~ ~ ~ 0.5 0.5 0.5 0 25
 
