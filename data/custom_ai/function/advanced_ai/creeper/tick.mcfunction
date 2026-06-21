@@ -5,6 +5,10 @@ loot replace entity @s[tag=RD.scout_creeper] armor.head mine ~ ~-1 ~ minecraft:n
 
 execute if entity @s[tag=RD.parachute_creeper] run function custom_ai:custom_mobs/parachute_creeper
 
+execute if entity @s[tag=RD.void_bellwether] run function custom_ai:custom_mobs/void/bellwether/tick
+
 execute if entity @s[tag=RD.has_head_entity] run function custom_ai:advanced_ai/creeper/head_offset
+
+execute if entity @s[tag=RD.with_mannequin] run function custom_ai:w_mannequin/tick
 
 execute if entity @s[predicate=rd_asset_mobs:in_hostile,tag=!nuka_c,tag=!RD.parachute_creeper] run function custom_ai:advanced_ai/creeper/moveset

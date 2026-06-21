@@ -27,6 +27,6 @@
     }
   },
   "rewards": {
-    "recipes": ["custom_items:healing_wand"]
+    "recipes": ["custom_items:right_click/healing_wand"]
   }
 }

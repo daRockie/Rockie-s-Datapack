@@ -29,7 +29,22 @@
                   "sound": "intentionally_empty",
                   "has_consume_particles": false
                 },
+                "banner_patterns":
+                    [
+                        {"pattern":"stripe_downright","color":"lime"},
+                        {"pattern":"small_stripes","color":"gray"},
+                        {"pattern":"curly_border","color":"black"},
+                        {"pattern":"bricks","color":"light_gray"},
+                        {"pattern":"rhombus","color":"black"},
+                        {"pattern":"circle","color":"gray"},
+                        {"pattern":"skull","color":"white"}
+                ],
                 "max_damage":2,
+                "tooltip_display":{
+                  "hidden_components": [
+                    "banner_patterns"
+                  ]
+                },
                 "use_remainder": {
                   "id": "green_banner",
                   "components": {

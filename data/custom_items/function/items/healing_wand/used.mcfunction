@@ -7,7 +7,7 @@ tag @s add SND.healing
 
 tag @s add RD.play_sound_function
 
-function rd_system:sys/heal/main {"heal":6}
+function rd_system:sys/heal/main {"heal":3}
 
 execute at @e[distance=0..4,type=!#custom_ai:hostile] run particle heart ~ ~2 ~ 0 0 0 1 3
 execute as @e[distance=0.0000001..4,type=!#custom_ai:hostile] at @s run function custom_items:items/healing_wand/heal

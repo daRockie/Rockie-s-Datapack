@@ -1,9 +1,8 @@
 execute unless score @s RD.ai_timer matches -2147483648..2147483647 run scoreboard players set @s RD.ai_timer 0
-execute at @p run tp @s[tag=!pos_set] ~ ~1 ~
-data modify entity @s[tag=!pos_set] Pose.Head[0] set from entity @p Rotation[1]
-data modify entity @s[tag=!pos_set] Rotation[0] set from entity @p Rotation[0]
-data modify entity @s[tag=!pos_set] Rotation[1] set from entity @p Rotation[1]
-execute if entity @s[tag=!pos_set] run function rd_system:register with entity @s {}
+execute at @n run tp @s[tag=!pos_set] ~ ~1 ~
+data modify entity @s[tag=!pos_set] Pose.Head[0] set from entity @n[distance=0.0000000001..3] Rotation[1]
+data modify entity @s[tag=!pos_set] Rotation[0] set from entity @n[distance=0.0000000001..3] Rotation[0]
+data modify entity @s[tag=!pos_set] Rotation[1] set from entity @n[distance=0.0000000001..3] Rotation[1]
 #execute if entity @s[tag=!pos_set] run function rd_system:getparent with entity @s {}
 
 execute if score @s[tag=!pos_set] RD.ai_timer matches 1.. run tag @s add pos_set

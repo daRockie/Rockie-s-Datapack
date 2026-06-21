@@ -5,7 +5,9 @@
 
 # レシピの長さの下りはfiller上で確認済み
 
-playsound minecraft:entity.player.levelup block @a ~ ~ ~ 0.5 2
+playsound minecraft:entity.experience_orb.pickup block @a ~ ~ ~ 1 1
+playsound block.smithing_table.use block @a ~ ~ ~ 2 1
+particle crit ~ ~ ~ 0.5 0.5 0.5 0.05 5
 
 # スロットについてのメタデータ書き込み
 data modify storage rockietools:custom_recipe temp_crafter.meta.crafting_slot set from storage rockietools:custom_recipe meta.crafter.crafting_slot

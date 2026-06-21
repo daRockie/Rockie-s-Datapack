@@ -1,0 +1,7 @@
+{
+  "function": "minecraft:set_enchantments",
+  "enchantments": {
+    "custom_items:projectile_spawn": 1
+  },
+  "conditions": []
+}

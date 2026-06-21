@@ -2,14 +2,11 @@ execute if entity @s[type=drowned] run return fail
 execute if entity @s[type=husk] run return run function rd_asset_mobs:system/randomizer/husk
 execute if entity @s[type=zombified_piglin] run return run function rd_asset_mobs:system/randomizer/zombified_piglin
 
-execute if entity @s[nbt={IsBaby:0b}] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/zombie/boomer/zombie
-execute if entity @s[tag=!RD.initialized,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/zombie/baby/boomer/zombie
+execute if entity @s[tag=!RD.initialized] if predicate {condition:"random_chance",chance:0.03} run return run function rd_asset_mobs:summon/zombie/leader/zombie
 
-execute if score @s spawnRandom matches 16..35 run function rd_asset_mobs:summon/zombie/archer/zombie
-execute if entity @s[tag=!RD.initialized,nbt={IsBaby:0b}] if score @s spawnRandom matches 36..40 run function rd_asset_mobs:summon/zombie/tank/zombie
+execute if entity @s[nbt={IsBaby:0b}] if predicate custom_ai:percent/20 run function rd_asset_mobs:summon/zombie/boomer/zombie
+execute if entity @s[tag=!RD.initialized,nbt={IsBaby:1b}] if predicate custom_ai:percent/20 run function rd_asset_mobs:summon/zombie/baby/boomer/zombie
 
-execute if entity @s[type=minecraft:husk,tag=!RD.initialized,nbt={IsBaby:0b}] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/zombie/boomer/husk
-execute as @e[type=minecraft:husk,tag=!RD.initialized,nbt={IsBaby:1b}] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/zombie/baby/boomer/husk
-execute as @e[type=minecraft:husk,tag=!RD.initialized] if score @s spawnRandom matches 16..30 run function rd_asset_mobs:summon/summon_mummy
-execute as @e[type=minecraft:husk,tag=!RD.initialized] if score @s spawnRandom matches 31..45 run function rd_asset_mobs:summon/zombie/archer/husk
-execute as @e[type=minecraft:husk,tag=!RD.initialized] if score @s spawnRandom matches 46..60 run function rd_asset_mobs:summon/zombie/tank/husk
+execute if predicate custom_ai:percent/20 run function rd_asset_mobs:summon/zombie/archer/zombie
+execute if entity @s[tag=!RD.initialized,nbt={IsBaby:0b}] if predicate custom_ai:percent/20 run return run function rd_asset_mobs:summon/zombie/tank/zombie
+

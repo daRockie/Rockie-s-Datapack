@@ -32,12 +32,9 @@
           "condition": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
-            "entity_type": [
-              "minecraft:ender_dragon",
-              "minecraft:shulker",
-              "minecraft:endermite",
-              "minecraft:enderman"
-            ]
+            "minecraft:entity_tags": {
+              "any_of": ["RD.end_mob"]
+            }
           }
         },
         "effect": {

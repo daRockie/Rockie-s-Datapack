@@ -8,10 +8,10 @@ chest:{id:leather_chestplate,components:{trim:{pattern:flow,material:gold},dyed_
 legs:{id:leather_leggings,components:{trim:{pattern:flow,material:gold},dyed_color:8991416,custom_name:[{"text":"魔法使いのレギンス","italic":false}],lore:[[{"text":"上品な布","italic":false,"color":"yellow"},{"text":"を使用してクラフトできる、下級魔導士が装備することを許された防具。","italic":false,"color":"gray"}],"",[{"text":"マナの最大量","italic":false,"color":"dark_aqua"},{"text":"を","italic":false,"color":"dark_gray"},{"text":"🖊25増加させる。","italic":false,"color":"aqua"}],"",[{"text":"a","italic":false,"obfuscated":true},{"italic":false,"text":"強化可能","underlined":true,"bold":true,"color":"light_purple","obfuscated":false},{"italic":false,"text":"a","obfuscated":true}]],rarity:rare,tooltip_display:{hidden_components:[dyed_color,trim]},custom_data:{RD.recipeResult:1b,CustomItem:"RD.equipment.wizards_leggings"}}},\
 feet:{id:leather_boots,components:{trim:{pattern:flow,material:gold},dyed_color:8991416,custom_name:[{"text":"魔法使いのブーツ","italic":false}],lore:[[{"text":"上品な布","italic":false,"color":"yellow"},{"text":"を使用してクラフトできる、下級魔導士が装備することを許された防具。","italic":false,"color":"gray"}],"",[{"text":"マナの最大量","italic":false,"color":"dark_aqua"},{"text":"を","italic":false,"color":"dark_gray"},{"text":"🖊10増加させる。","italic":false,"color":"aqua"}],"",[{"text":"a","italic":false,"obfuscated":true},{"italic":false,"text":"強化可能","underlined":true,"bold":true,"color":"light_purple","obfuscated":false},{"italic":false,"text":"a","obfuscated":true}]],rarity:rare,tooltip_display:{hidden_components:[dyed_color,trim]},custom_data:{RD.recipeResult:1b,CustomItem:"RD.equipment.wizards_boots"}}}},\
 attributes:[{id:max_health,base:24f},{id:"movement_speed",base:0.3f}],\
-DeathLootTable:"custom_ai:wizard/amature",\
-Team:"RD.type.sorcery"}
+DeathLootTable:"custom_ai:wizard/amature"}
 tp @s ~ ~-200 ~
 kill @s
 
 loot replace entity @n[tag=RD.enemy.wizard.0] weapon loot rd_asset_mobs:wizard/amature/weapon
+
 

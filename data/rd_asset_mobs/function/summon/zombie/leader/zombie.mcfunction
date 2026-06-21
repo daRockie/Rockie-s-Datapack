@@ -1,0 +1,3 @@
+summon zombie ~ ~ ~ {CustomName:["リーダーゾンビ"],Health:50,attributes:[{id:max_health,base:50f},{id:"spawn_reinforcements",base:3f},{id:"movement_speed",base:0.24f},{id:"knockback_resistance",base:0.3}],Tags:["RD.zombie_leader","RD.initialized","RD.spawned","RD.notNormal"],equipment:{chest:{id:"iron_chestplate"},legs:{id:"chainmail_leggings"},feet:{id:"leather_boots"}}}
+
+loot replace entity @n[tag=RD.zombie_leader,type=zombie] armor.head loot custom_items:enemy/zombie/flag

@@ -1,0 +1,40 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:stick",
+			"components": {
+				"minecraft:enchantment_glint_override": true,
+				"custom_model_data": {
+					"strings": [
+						"RD.wand_of_affection"
+					]
+				}
+			}
+		},
+		"title": {
+			"text": "奥深き慈愛",
+			"type": "text",
+			"italic": false
+		},
+		"description": {
+			"text": "慈愛の心を知り、その境地に辿り着く"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"parent": "rockie_advancements:healing_wands/make_healing_wand",
+	"criteria": {
+		"craft": {
+			"trigger": "minecraft:recipe_crafted",
+			"conditions": {
+				"recipe_id": "custom_items:right_click/wand_of_affection"
+			}
+		}
+	},
+	"rewards": {
+		"recipes": [
+			"custom_items:right_click/wand_of_affection"
+		]
+	}
+}

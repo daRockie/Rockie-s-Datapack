@@ -31,7 +31,7 @@
                 "rarity":"uncommon",
                 "minecraft:lore":[{"text":"\"神のご加護を...\"","italic":true,"color": "#a0522a"},"",{"text":"アビリティ：清らかな祈り","color": "gold","italic": false, "extra": [{"text":"右クリックで発動","bold": true,"italic": false,"color": "yellow"}]},{"text":"自分自身と","color": "gray", "italic": false, "extra": [{"text":"6マス以内にいる","color": "green","italic": false},{"text":"モブを回復させ、","color": "gray", "italic": false,"extra": [{"text": "衝撃吸収","color": "green","italic": false},{"text": "を付与する。","color": "gray","italic": false}]}]},"",{"text":"クールダウン：","color": "dark_gray","italic":false,"extra": [{"text":"5秒","color": "green","italic":false}]},{"text":"マナ使用量：","color": "dark_gray","italic":false,"extra": [{"text":"50","color": "dark_aqua","italic":false}]}],
                 "use_cooldown": {
-                  "seconds": 5,
+                  "seconds": 10,
                   "cooldown_group": "healing_wand"
                 },
                 "consumable": {

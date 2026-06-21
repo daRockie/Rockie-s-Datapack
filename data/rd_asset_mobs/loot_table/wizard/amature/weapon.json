@@ -10,7 +10,7 @@
             {
               "type": "item",
               "name": "bow",
-              "weight": 7
+              "weight": 3
             },
             {
               "type": "minecraft:item",
@@ -21,18 +21,15 @@
               "name": "minecraft:wooden_axe"
             },
             {
-              "type": "minecraft:item",
-              "name": "minecraft:bow",
-              "functions": [{
-                "function": "set_components",
-                "components": {
-                    "item_model": "wooden_hoe",
-                    "custom_data": {"ItemID":1}
-                }
-              }]
+              "type": "minecraft:loot_table",
+              "value": "custom_items:item/fiery_wand"
+            },
+            {
+              "type": "loot_table",
+              "value": "custom_items:item/thanatolas"
             }
+
           ],
-          "functions": [],
           "conditions": []
         }
       ]

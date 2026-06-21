@@ -18,3 +18,5 @@ execute if entity @s[tag=RD.head_entity] unless entity @n[distance=..2,tag=RD.ha
 execute if entity @s[tag=RD.marker.ore_generation,tag=!RD.initialized] run function custom_ai:object/marker/ore_generator/
 
 execute if entity @s[type=armor_stand,tag=mummy_reviving] at @s run function custom_ai:movements/mummy/mummy_revive_obj
+
+execute if entity @s[tag=RD.runaway_entity] run function custom_ai:movements/runaway/tick with entity @s equipment.head.components."minecraft:custom_data"

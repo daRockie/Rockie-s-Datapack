@@ -30,6 +30,6 @@
     }
   },
   "rewards": {
-    "recipes": ["custom_items:right_click/wand_of_ardor"]
+    "recipes": ["custom_items:right_click/wand_of_affection"]
   }
 }
