@@ -1,0 +1,11 @@
+{
+    "condition": "location_check",
+    "predicate": {
+        "position": {
+            "y": {
+                "max": 40
+            }
+        },
+        "can_see_sky": false
+    }
+}

@@ -1,10 +1,13 @@
 {
-  "values": [
-    "rd_asset_mobs:main",
-    "custom_ai:main",
-    "custom_items:main",
-    "rd_system:main",
-    "rd_asset_mobs:set_equipment/main",
-    "rd_asset_blocks:"
-  ]
+	"replace": false,
+	"values": [
+		"animated_java:global/data_manager/on_tick",
+		"custom_ai:main",
+		"custom_items:main",
+		"rd_asset_blocks:",
+		"rd_asset_mobs:main",
+		"rd_asset_mobs:set_equipment/main",
+		"rd_system:main",
+		"animated_java:global/on_tick"
+	]
 }

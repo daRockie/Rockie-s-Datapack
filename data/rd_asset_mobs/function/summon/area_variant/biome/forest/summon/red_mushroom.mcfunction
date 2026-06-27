@@ -1,0 +1,3 @@
+function rd_asset_mobs:summon/vanish
+
+summon zombie ~ ~ ~ {DeathLootTable:"custom_ai:monster/zombie/ent/oak",drop_chances:{head:0f,chest:0f,legs:0f,feet:0f},Silent:1b,equipment:{head:{id:"player_head",components:{"profile":{properties:[{name:"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzA1MjUyMGVlOTliNmZjZGJlNzBlZDFmN2NmYmMzZmI3MTc1ZjA0YTJjZWIwMDdjOWIxMWQ4ZDcyN2JjYTA0NCJ9fX0="}]}}},chest:{id:"leather_chestplate"},feet:{id:"leather_boots"},legs:{id:"leather_leggings"}},Tags:["RD.initialized","RD.ent"]}
