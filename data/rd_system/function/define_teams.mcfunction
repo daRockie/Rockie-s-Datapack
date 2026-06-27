@@ -12,3 +12,6 @@ team modify devs prefix [{"text":"[ Developer Mode ]"}]
 team add RD.no_friendly_fire [{"text":"no_friendly_fire"}]
 team modify RD.no_friendly_fire collisionRule never
 team modify RD.no_friendly_fire friendlyFire false
+
+team add RD.mannequin
+team modify RD.mannequin collisionRule never

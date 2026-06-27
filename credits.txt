@@ -1,8 +1,11 @@
 Got inspiration from Chuzume's True-Crafter-Mode
 https://github.com/Chuzume/True-Crafter-Mode
 
-Player-Motion Library by Hirobao1
-https://github.com/Hirobao1/CustomEnchant_PlayerMotion/tree/Ver1.21.5?tab=readme-ov-file
-
-アイテムのクールダウン　参考元
+Item cooldown system
 https://qiita.com/Keiragi/items/7b465bcb66db8465ab88
+
+ScoreToHealth
+https://github.com/Ai-Akaishi/ScoreToHealth
+
+Player Motion
+https://modrinth.com/datapack/player_motion

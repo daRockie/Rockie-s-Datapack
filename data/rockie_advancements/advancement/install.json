@@ -6,7 +6,7 @@
         "minecraft:enchantment_glint_override": true
       }
     },
-    "title": "新たなる冒険のはじまり",
+    "title": "Relicraft: 新たなる冒険のはじまり",
     "description": "データパックを導入する",
     "background": "minecraft:block/stone_bricks",
     "frame": "task",

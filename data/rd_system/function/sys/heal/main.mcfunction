@@ -15,3 +15,5 @@ execute if score $.RD.internal.max_health RD.health < $.RD.internal.health RD.he
 # tellraw @a [{"score":{"name":"$.RD.internal.health","objective":"health"}}]
 
 scoreboard players operation @s ScoreToHealth = $.RD.internal.health RD.health
+
+execute if entity @s[type=!player] run function score_to_health:player_tick

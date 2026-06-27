@@ -6,7 +6,7 @@ execute if predicate {condition:"random_chance",chance:0.01} run playsound entit
 
 execute if entity @s[nbt={HurtTime:10s}] run scoreboard players add @s RD.ai_timer_2 70
 
-execute if score @s RD.ai_timer_2 matches 240.. run function custom_ai:custom_mobs/void/bellwether/attacks/run
+execute if score @s[tag=!RD.void_bellwether.attack_beam.charged] RD.ai_timer_2 matches 240.. run function custom_ai:custom_mobs/void/bellwether/attacks/run
 
 execute if score @s[tag=!RD.void_bellwether.attack_prepared] RD.ai_timer matches 60.. run function custom_ai:custom_mobs/void/bellwether/attack_prepare
 

@@ -10,8 +10,11 @@ execute if entity @s[type=#skeletons] run function rd_asset_mobs:system/randomiz
 # クリーパー族
 execute if entity @s[type=creeper] run function rd_asset_mobs:system/randomizer/creeper
 
-# クモの親子　召喚
+# クモ系
 execute if entity @s[type=minecraft:spider] run function rd_asset_mobs:system/randomizer/spider
+
+# エンダーマン
+execute if entity @s[type=minecraft:enderman] run function rd_asset_mobs:system/randomizer/enderman
 
 # ---------------------------------------------------------------------------------------------------------------
 
@@ -28,9 +31,6 @@ execute if entity @s[type=minecraft:wither_skeleton] if score @s spawnRandom mat
 
 # 骸骨騎馬戦士　召喚
 execute if entity @s[type=minecraft:horse] if score @s spawnRandom matches 0..15 run function rd_asset_mobs:summon/summon_s_rider
-
-# 最果てのシ者　召喚
-execute if entity @s[type=minecraft:enderman] if score @s spawnRandom matches 0..10 run function rd_asset_mobs:summon/sisha/1
 
 # ガチギレエンダーマン　改
 execute if entity @s[type=enderman,tag=elite_eman,predicate=!rd_asset_mobs:in_hostile] at @s run data modify entity @s angry_at set from entity @e[type=#custom_ai:inhostile,distance=0..10,limit=1] UUID

@@ -12,3 +12,5 @@ give @p zombie_spawn_egg[custom_name=[{"text":"アーチャーゾンビのスポ
 
 # 
 give @s armor_stand[entity_data={id:"armor_stand",Tags:["RD.cmd","RD.object"],equipment:{head:{id:"command_block",components:{custom_data:{data:[{key:"kill @s"},{key:"function rd_asset_mobs:summon/zombie/leader/zombie"}]}}}}},item_name={"text":"リーダーゾンビのスポーンエッグ"},item_model="zombie_spawn_egg"]
+
+give @s armor_stand[entity_data={id:"armor_stand",Tags:["RD.cmd","RD.object"],equipment:{head:{id:"command_block",components:{custom_data:{data:[{key:"kill @s"},{key:"function rd_asset_mobs:summon/sisha/2"}]}}}}},item_name={"text":"奈落の使者のスポーンエッグ"},item_model="enderman_spawn_egg"]

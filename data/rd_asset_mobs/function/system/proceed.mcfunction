@@ -12,4 +12,4 @@ execute if entity @s[type=player] run return run function rd_asset_mobs:system/l
 
 execute store result score @s spawnRandom run random value 0..100
 
-execute if entity @s[predicate=!rd_asset_mobs:has_any_tag] run function rd_asset_mobs:randomize
+execute if entity @s[predicate=rd_asset_mobs:has_any_tag] run function rd_asset_mobs:randomize

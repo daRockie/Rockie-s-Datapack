@@ -3,7 +3,7 @@ execute if entity @s[tag=RD.scout_creeper] run particle dust{color:[0,1,0],scale
 
 loot replace entity @s[tag=RD.scout_creeper] armor.head mine ~ ~-1 ~ minecraft:netherite_pickaxe[enchantments={silk_touch:1},custom_data={"getID":true}]
 
-execute if entity @s[tag=RD.parachute_creeper] run function custom_ai:custom_mobs/parachute_creeper
+execute if entity @s[tag=RD.parachute_creeper] run function custom_ai:custom_mobs/creeper/parachute/tick
 
 execute if entity @s[tag=RD.void_bellwether] run function custom_ai:custom_mobs/void/bellwether/tick
 

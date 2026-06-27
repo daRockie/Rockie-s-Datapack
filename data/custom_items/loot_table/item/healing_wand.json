@@ -32,6 +32,11 @@
                   "seconds": 2,
                   "cooldown_group": "healing_wand"
                 },
+                "food":{
+                  "nutrition": 0.5,
+                  "saturation": 0,
+                  "can_always_eat": true
+                },
                 "consumable": {
                   "consume_seconds": 0.05,
                   "animation": "spear",

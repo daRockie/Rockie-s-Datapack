@@ -1,0 +1,40 @@
+{
+  "parent": "rockie_advancements:mob_slaying/undead/zombie/kill_archer",
+  "criteria": {
+    "deflected_projectile": {
+      "conditions": {
+        "damage": {
+          "type": {
+            "source_entity": {
+                "entity_tags": {
+                    "any_of": [
+                        "RD.archer_zombie"
+                    ]
+                }
+            }
+          },
+          "blocked": true
+        }
+      },
+      "trigger": "minecraft:entity_hurt_player"
+    }
+  },
+  "display": {
+    "description": {
+        "text": "アーチャーゾンビの矢を盾で防ぐ"
+    },
+    "icon": {
+      "id": "minecraft:shield"
+    },
+    "title": {
+        "text": "明日も別にいいかな"
+    },
+    "hidden": true
+  },
+  "requirements": [
+    [
+      "deflected_projectile"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

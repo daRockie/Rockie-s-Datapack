@@ -1,0 +1,48 @@
+{
+  "parent": "rockie_advancements:mob_slaying/arthropod/creeper/parachute_creeper",
+  "criteria": {
+    "spyglass_at_parachute": {
+      "conditions": {
+        "item": {
+          "items": "minecraft:spyglass"
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific/player": {
+                "looking_at": {
+                  "entity_type": "minecraft:creeper",
+                  "entity_tags": {
+                    "any_of": ["RD.parachute_creeper"]
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:using_item"
+    }
+  },
+  "display": {
+    "description": {
+        "text": "あれは鳥？飛行機？いや……",
+        "extra": [{"text": "《隠し実績》","color": "gold","bold": true}]
+    },
+    "icon": {
+      "id": "minecraft:spyglass"
+    },
+    "title": {
+      "text": "不吉な飛行物体"
+    },
+    "hidden": true
+  },
+  "requirements": [
+    [
+      "spyglass_at_parachute"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

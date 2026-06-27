@@ -2,6 +2,10 @@
     "condition": "entity_properties",
     "entity": "this",
     "predicate": {
-        "entity_tags": {}
+        "entity_tags": {
+            "all_of": [
+                "RD.initialized"
+            ]
+        }
     }
 }

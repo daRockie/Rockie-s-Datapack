@@ -8,5 +8,5 @@ data modify entity @s DeathLootTable set value "minecraft:empty"
 data modify entity @s DeathTime set value 19
 data modify entity @s PersistenceRequired set value 1b
 
-tp @s ~ ~-200 ~
+tp @s ~ ~-60 ~
 kill @s
