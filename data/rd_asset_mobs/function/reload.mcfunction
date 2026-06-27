@@ -21,4 +21,4 @@ scoreboard objectives add RD.mobs.temp dummy "仮数値"
 scoreboard objectives add RD.enemy.wizard.char dummy "魔法使い分類"
 
 forceload add 0 0 0 0
-execute unless entity @n[tag=RD.data_holder,type=marker] run summon marker 0 0 0 {Tags:["RD.data_holder"],data:{players:[]}}
+execute unless entity @n[tag=RD.data_holder,type=marker] run function rd_asset_mobs:marker_initialize

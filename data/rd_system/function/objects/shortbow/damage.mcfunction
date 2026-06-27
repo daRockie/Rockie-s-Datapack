@@ -1,5 +1,7 @@
 # say 
 
+playsound entity.arrow.hit hostile @a ~ ~ ~ 1 1
+
 # ゾンビ同士討ち防止（ゾンビに対して敵対状態の場合、これを解除）
 $execute if entity @n[distance=0.00001..,nbt={UUID:$(owner)},type=#zombies] unless entity @n[distance=0.0001..,type=#zombies,predicate=rd_asset_mobs:in_hostile_to_each_other,tag=RD.archer_zombie,nbt={UUID:$(owner)}] if entity @n[type=#zombies,distance=..2] run return fail
 

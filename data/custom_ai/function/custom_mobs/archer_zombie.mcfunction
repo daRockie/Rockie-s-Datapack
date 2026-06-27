@@ -1,3 +1,5 @@
+execute on target run tag @s add zombies.target
+
 execute if entity @e[tag=RD.archer_zombie.shooting] run attribute @s movement_speed base set 0
 execute unless entity @s[tag=RD.archer_zombie.shooting] run attribute @s movement_speed base set 0.25
 
@@ -12,3 +14,5 @@ execute if score @s[predicate=rd_asset_mobs:in_hostile] RD.ai_timer matches 60..
 
 execute if entity @s[tag=RD.archer_zombie.shooting] run scoreboard players add @s RD.ai_timer_2 1
 execute if score @s RD.ai_timer_2 matches 20.. run scoreboard players reset @s RD.ai_timer_2
+
+tag @n[tag=zombies.target] remove zombies.target

@@ -24,7 +24,11 @@
       "conditions": {
         "entity": {
           "entity_type": "skeleton",
-          "nbt": "{Tags:[\"RD.spawned\",\"RD.initialized\",\"RD.enemy.wizard.0\",\"RD.damage_player_sound\"]}"
+          "entity_tags": {
+            "any_of": [
+              "RD.enemy.wizard.0"
+            ]
+          }
         }
       }
     }
