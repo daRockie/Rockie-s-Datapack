@@ -2,6 +2,7 @@ execute if entity @s[tag=RD.tank,type=zombie] run playsound minecraft:entity.zom
 execute if entity @s[tag=RD.damage_player_sound] run playsound entity.player.death hostile @a ~ ~ ~ 1 1
 execute if entity @s[tag=RD.with_mannequin] run damage @n[type=mannequin,distance=..0.1] 0.0000005
 
+execute if entity @s[tag=RD.blackstone_golem] run function custom_ai:custom_mobs/animated_java/blackstone_golem/hurt
 
 execute if entity @s[tag=RD.void_bellwether] run playsound minecraft:entity.enderman.hurt hostile @a ~ ~ ~ 1 0.7
 

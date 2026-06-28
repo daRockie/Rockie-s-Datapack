@@ -1,0 +1,1 @@
+$data modify entity @s item.components."minecraft:profile".properties[] set value {name:"textures",value:"$(macro)"}
